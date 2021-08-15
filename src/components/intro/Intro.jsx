@@ -3,9 +3,9 @@ import "./intro.scss";
 import backgroundvid from "./nightsky.mp4"
 export default function Intro() {
     return (
-        <div className="intro" id="intro">
+        <div className="home" id="home">
 
-            <video width="1920" height="1080" autoPlay loop muted
+            <video width="1920" height="1080" autoPlay loop muted alt=""
                 style={
                     {
                         position: "absolute",
@@ -30,13 +30,13 @@ export default function Intro() {
                 
             </div> */}
 
-            <section class="home" id="home">
-                <div class="max-width">
-                    <div class="home-content">
-                        <div class="text-1">Hello, my name is</div>
-                        <div class="text-2">Nicholas Lin</div>
-                        <div class="text-3">and I am a <span>tall person</span></div>
-                        <a href="#">Learn more</a>
+            <section className="Home" id="Home">
+                <div className="max-width">
+                    <div className="home-content">
+                        <div className="text-1">Hello, my name is</div>
+                        <div className="text-2">Nicholas Lin</div>
+                        <div className="text-3">and I am a <span>tall person</span></div>
+                        <a href="#aboutme">Learn more</a>
                     </div>
                 </div>
             </section>

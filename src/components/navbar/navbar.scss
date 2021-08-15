@@ -1,89 +1,116 @@
 @import "../../global.scss";
 
-
-.navbar{
-    
+.max-width{
+    padding: 0 80px;
+    margin: auto;
 }
-// .navbar{
-//     background-color: white;
-//     width: 100%;
-//     height: 70px;
-//     position: fixed;
-//     color: $mainColour;
-//     top: 20px;
-//     z-index: 3;
-//     transition: all 1s ease;
+.navbar{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    padding: 30px 0;
+    background: black;
+    transition: all 0.3s ease;
+    z-index: 3;
+    .max-width{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            a{
+                color: #fff;
+                font-size: 35px;
+                font-weight: 600;
+            }
+        }
+        .menu {
+            li{
+                list-style: none;
+                display: inline-block;
+                a{
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-left: 25px;
+                    transition: cover 0.3s ease;
+                    &:hover{
+                        color: #FFCD33;
+                    }
+                }
+            }
+        }
+    }
+}
 
-//     .wrapper{
-//         padding: 10px 30px;
-//         display: flex; 
-//         align-items: center;
-//         justify-content: space-between;
 
-//         .left{
-//             display: flex;
-//             align-items: center;
-
-//             .logo{
-//                 font-size: 40px;
-//                 font-weight: 700;
-//                 text-decoration: none;
-//                 color:inherit;
-//                 margin-right: 40px;
-//             }
-
-//             // .itemContainer{
-//             //     display: flex;
-//             //     align-items: center;
-//             //     margin-left: 30px;
-//             // }
-
-//             // .icon{
-//             //     font-size: 18px;
-//             //     margin-right: 5px;
-//             // }
-//             // span{
-//             //     font-size: 15px;
-//             //     font-weight: 500;
-//             //     margin-left: 5px;
-//             // }
-//         }
-//         .right {
-//             .hamburger {
-//                 width: 32px;
-//                 height: 25px;
-//                 display: flex;
-//                 flex-direction: column;
-//                 justify-content: space-between;
-      
-//                 span {
-//                     width: 100%;
-//                     height: 3px;
-//                     background-color: $mainColour;
-//                     transform-origin: left;
-//                     transition: all 2s ease;
-//                 }
-//             }
-//         }
-//     }
-//     &.active{
-//         background-color: $mainColour;
-//         color: white;
-
-//         .hamburger{
-//             span{
-//                 &:first-child{
-//                     background-color:white;
-//                     transform: rotate(45deg);
-//                 }
-//                 &:nth-child(2){
-//                     opacity: 0;
-//                 }
-//                 &:last-child{
-//                     background-color: white;
-//                     transform: rotate(-45deg);
-//                 }
-//             }
-//         }
-//     }
-// }
+@media (max-width: 947px){    
+    .navbar{
+        overflow-y: hidden;
+        .max-width{
+            padding: 0 50px;
+            .hamburger {
+                overflow-y: hidden;
+                width: 30px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+        
+                span {
+                    overflow-y: hidden;
+                    width: 100%;
+                    height: 3px;
+                    background-color: white;
+                    transform-origin: left;
+                    transition: all 2s ease;
+                }
+            }
+            .menu{
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                left: -150%;
+                top: 0;
+                background: transparent;
+                text-align: center;
+                padding-top: 80px;
+                transition: all 0.3s ease;
+                &.active{
+                    left: 0;
+                }
+                .li{
+                    display: block;
+    
+                    a{
+                        display: inline-block;
+                        margin: 20px 0;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        &.active{
+            .max-width{
+                .menu{
+                    left: 0;
+                }
+                .hamburger{
+                    span{
+                        &:first-child{
+                            background-color:white;
+                            transform: rotate(45deg);
+                        }
+                        &:nth-child(2){
+                            opacity: 0;
+                        }
+                        &:last-child{
+                            background-color: white;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

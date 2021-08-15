@@ -1,17 +1,24 @@
 import './navbar.scss';
 // import {Phone, Mail} from "@material-ui/icons";
 
-function Navbar() {
+export default function Navbar({menuOpen, setMenuOpen}) {
     return (
-        <div className="navbar" id = "navbar">
-            <div class="logo"><a href="#intro">[NL]</a></div>
-            <ul class="menu">
-                <li><a href="#intro">Home</a></li>
-                <li><a href="#aboutme">About</a></li>
-                <li><a href="#experience">Experiences</a></li>
-                <li><a href="#projects">Project Portfolio</a></li>
-            </ul>
-        </div>
+        <nav className= {"navbar " + (menuOpen && "active")}>
+            <div className="max-width">
+                <div className="logo"><a href="#home">[NL]</a></div>
+                <ul className="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutme">About</a></li>
+                    <li><a href="#experience">Experiences</a></li>
+                    <li><a href="#projects">Project Portfolio</a></li>
+                </ul>
+                <div className={"hamburger " + (menuOpen && "active")} onClick={()=>setMenuOpen(!menuOpen)}>
+                    <span className="line1"></span>
+                    <span className="line2"></span>
+                    <span className="line3"></span>
+                </div>
+            </div>
+        </nav>
     )
 }
 
@@ -41,4 +48,3 @@ function Navbar() {
 //         </div>
 //     )
 // }
-export default Navbar
