@@ -1,0 +1,40 @@
+.intro{
+    .home{
+        .home-content{
+            margin: 150px 150px;
+            .text-1{
+                color: #fff;
+                font-size: 2vw;
+            }
+            .text-2{
+                color: #fff;
+                font-size: 4vw;
+                font-weight: 600;
+                margin-left: -3px;
+            }
+            .text-3{
+                color: #fff;
+                font-size: 3vw;
+                margin: 5px 0;
+            }
+            a{
+                text-decoration: none;
+                display: inline-block;
+                background: #FFCD33;
+                color: #fff;
+                font-size: 2vw;
+                padding: 1vw 3vw;
+                margin-top: 2vh;
+                border-radius: 6px;
+                border: 2px solid #FFCD33;
+                transition: all 0.3s ease;
+                &:hover{
+                    color: #FFCD33;
+                    background: none;
+                }
+            }
+
+            
+        }
+    }
+}
