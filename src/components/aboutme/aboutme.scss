@@ -1,3 +1,55 @@
-.aboutme{
-    height: 500px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap');
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
 }
+.aboutme {
+    background: #1d2430;
+    padding-top: 70px;
+    padding-bottom: 66px;
+    overflow: hidden;
+    .max-width{
+        .about-content{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            .left{
+                width: 35%;
+                a{
+                    .profile-pic{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .right{
+                width: 65%;
+                color:white;
+            }
+        }
+    }
+}
+
+@media (max-width: 1076px){
+    .aboutme {
+        .max-width{
+            .about-content{
+                .column{
+                    width: 100%;
+                }
+                .left{
+                    display: flex;
+                    justify-content: center;
+                    margin: 0 auto 60px;
+                }
+                .right{
+                    flex: 100%;
+                }
+
+            }
+        }
+    }
+}
+

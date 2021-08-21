@@ -3,7 +3,7 @@ import "./intro.scss";
 import backgroundvid from "./nightsky.mp4"
 export default function Intro() {
     return (
-        <div className="home" id="home">
+        <div className="intro" id="intro">
 
             <video width="1920" height="1080" autoPlay loop muted alt=""
                 style={
@@ -30,7 +30,7 @@ export default function Intro() {
                 
             </div> */}
 
-            <section className="Home" id="Home">
+            <section className="home" id="home">
                 <div className="max-width">
                     <div className="home-content">
                         <div className="text-1">Hello, my name is</div>

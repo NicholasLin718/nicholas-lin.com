@@ -1,116 +1,193 @@
-@import "../../global.scss";
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
 .max-width{
+    max-width: 1300px;
     padding: 0 80px;
     margin: auto;
 }
+/*Navbar Styling*/
 .navbar{
     position: fixed;
-    height: 50px;
     width: 100%;
     padding: 30px 0;
-    background: black;
+    /* background: #FFCD33; */
+    font-family: 'Ubuntu', 'sans-serif';
     transition: all 0.3s ease;
-    z-index: 3;
+    &.active{
+        background-color: yellow;
+    }
     .max-width{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .logo{
+    }
+    .logo{
+        a{
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+        }
+    }
+    .menu{
+        li{
+            list-style: none;
+            display: inline-block;
             a{
                 color: #fff;
-                font-size: 35px;
-                font-weight: 600;
+                font-size: 18px;
+                font-weight: 500;
+                margin-left: 25px;
+                transition: cover 0.3s ease;
+
+                &:hover{
+                    color: #FFCD33;
+                    transition: all 0.3s ease-out;
+                }
             }
         }
-        .menu {
-            li{
-                list-style: none;
-                display: inline-block;
-                a{
-                    color: #fff;
-                    font-size: 18px;
-                    font-weight: 500;
-                    margin-left: 25px;
-                    transition: cover 0.3s ease;
-                    &:hover{
-                        color: #FFCD33;
-                    }
+    }
+    .menu-active{
+        li{
+            list-style: none;
+            display: inline-block;
+            a{
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                margin-left: 25px;
+                transition: cover 0.3s ease;
+
+                &:hover{
+                    color: #FFCD33;
+                    transition: all 0.3s ease-out;
                 }
             }
         }
     }
 }
 
+/* menu button styling */
+.menu-icon{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
 
-@media (max-width: 947px){    
-    .navbar{
-        overflow-y: hidden;
-        .max-width{
-            padding: 0 50px;
-            .hamburger {
-                overflow-y: hidden;
-                width: 30px;
-                height: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-        
-                span {
-                    overflow-y: hidden;
-                    width: 100%;
-                    height: 3px;
-                    background-color: white;
-                    transform-origin: left;
-                    transition: all 2s ease;
-                }
-            }
-            .menu{
-                position: fixed;
-                height: 100vh;
-                width: 100%;
-                left: -150%;
-                top: 0;
-                background: transparent;
-                text-align: center;
-                padding-top: 80px;
-                transition: all 0.3s ease;
-                &.active{
-                    left: 0;
-                }
-                .li{
-                    display: block;
-    
-                    a{
-                        display: inline-block;
-                        margin: 20px 0;
-                        font-size: 25px;
-                    }
+@media (max-width: 1240px){
+    .navbar .menu-active{
+        li{
+            list-style: none;
+            display: inline-block;
+            a{
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                margin-left: 25px;
+                transition: cover 0.3s ease;
+
+                &:hover{
+                    color: #FFCD33;
+                    transition: all 0.3s ease-out;
                 }
             }
         }
-        &.active{
-            .max-width{
-                .menu{
-                    left: 0;
-                }
-                .hamburger{
-                    span{
-                        &:first-child{
-                            background-color:white;
-                            transform: rotate(45deg);
-                        }
-                        &:nth-child(2){
-                            opacity: 0;
-                        }
-                        &:last-child{
-                            background-color: white;
-                            transform: rotate(-45deg);
-                        }
-                    }
+    }
+}
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .navbar .menu-active{
+        li{
+            list-style: none;
+            display: inline-block;
+            a{
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                margin-left: 25px;
+                transition: cover 0.3s ease;
+
+                &:hover{
+                    color: #FFCD33;
+                    transition: all 0.3s ease-out;
                 }
             }
         }
-        
+    }
+}
+@media (max-width: 947px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-icon{
+        display: block;
+        z-index: 999;
+        color: #fff;
+        font-size: 23px;
+        cursor: pointer;
+    }
+    .logo{
+        z-index: 999;
+        a{
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+        }
+    }
+    .navbar {
+        position: fixed;
+        width: 100%;
+        padding: 30px 0;
+        /* background: #FFCD33; */
+        font-family: 'Ubuntu', 'sans-serif';
+        transition: all 0.3s ease;
+        .menu{
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            left: -100%;
+            top: 0;
+            background: #111;
+            text-align: center;
+            padding-top: 80px;
+            transition: all 0.3s ease;
+
+            li{
+                display: block;
+                a{
+                    color: white;
+                    display: inline-block;
+                    margin: 20px 0;
+                    font-size: 25px;
+                }
+            }
+        }
+        .menu-active{
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: #111;
+            text-align: center;
+            padding-top: 80px;
+            transition: all 0.3s ease;
+            li{
+                display: block;
+                a{
+                    color: white;
+                    display: inline-block;
+                    margin: 20px 0;
+                    font-size: 25px;
+                }
+            }
+        }
     }
 }

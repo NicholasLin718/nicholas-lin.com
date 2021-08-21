@@ -1,50 +1,35 @@
+import React, {useState}  from 'react';
 import './navbar.scss';
-// import {Phone, Mail} from "@material-ui/icons";
 
-export default function Navbar({menuOpen, setMenuOpen}) {
+export default function Navbar(){
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick (false);
+    const [navbar,setNavbar] = useState(false);
+
+    const changeNavBackground = () => {
+        if(window.scrollY >= 80){
+            setNavbar(true);
+        }else{
+            setNavbar(false);
+        }
+    };
+
+    window.addEventListener('scroll', changeNavBackground);
     return (
-        <nav className= {"navbar " + (menuOpen && "active")}>
-            <div className="max-width">
-                <div className="logo"><a href="#home">[NL]</a></div>
-                <ul className="menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#aboutme">About</a></li>
-                    <li><a href="#experience">Experiences</a></li>
-                    <li><a href="#projects">Project Portfolio</a></li>
-                </ul>
-                <div className={"hamburger " + (menuOpen && "active")} onClick={()=>setMenuOpen(!menuOpen)}>
-                    <span className="line1"></span>
-                    <span className="line2"></span>
-                    <span className="line3"></span>
-                </div>
+        <nav className= {navbar ? 'navbar active' : 'navbar'}>
+        <div className="max-width">
+            <div className="logo"><a href="#home">[NL]</a></div>
+            <ul className={click ? "menu-active" : "menu"} >
+                <li><a href="#home" onClick={closeMobileMenu}>Home</a></li>
+                <li><a href="#aboutme" onClick={closeMobileMenu}>About</a></li>
+                <li><a href="#experience" onClick={closeMobileMenu}>Experiences</a></li>
+                <li><a href="#projects" onClick={closeMobileMenu}>Project Portfolio</a></li>
+            </ul>
+            <div className = "menu-icon" onClick={handleClick}>
+                <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
             </div>
-        </nav>
-    )
+        </div>
+    </nav>
+)
 }
-
-// export default function Navbar({menuOpen, setMenuOpen}) {
-//     return (
-//         <div className = {"navbar " + (menuOpen && "active")}>
-//             <div className="wrapper">
-//                 <div className="left">
-//                     <a href="#intro" className="logo">[NL]</a>
-//                     {/* <div className="itemContainer">
-//                         <Phone className="icon"/>
-//                         <span>(647)-878-6886</span>
-//                     </div>
-//                     <div className="itemContainer">
-//                         <Mail className="icon"/>
-//                         <span>nlin311@gmail.com</span>
-//                     </div> */}
-//                 </div>
-//                 <div className="right">
-//                     <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>
-//                         <span className="line1"></span>
-//                         <span className="line2"></span>
-//                         <span className="line3"></span>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
