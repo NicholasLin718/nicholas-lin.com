@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap');
+@import "../../global.scss";
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
 }
 .aboutme {
-    background: #1d2430;
-    padding-top: 70px;
+    // background: #1d2430;
+    background: $mainColour;
+    padding-top: 90px;
     padding-bottom: 66px;
     overflow: hidden;
     .max-width{

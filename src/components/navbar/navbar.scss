@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap');
+@import "../../global.scss";
 *{
     margin: 0;
     padding: 0;
@@ -14,12 +15,17 @@
 .navbar{
     position: fixed;
     width: 100%;
-    padding: 30px 0;
+    padding: 20px 0;
     /* background: #FFCD33; */
     font-family: 'Ubuntu', 'sans-serif';
     transition: all 0.3s ease;
     &.active{
-        background-color: yellow;
+        transition: all 0.3s ease;
+        background-color: $mainColour;
+    }
+    &.invis{
+        transition: all 0.3s ease;
+        opacity: 0;
     }
     .max-width{
         display: flex;
@@ -29,7 +35,7 @@
     .logo{
         a{
             color: #fff;
-            font-size: 35px;
+            font-size: 32px;
             font-weight: 600;
         }
     }
@@ -39,7 +45,21 @@
             display: inline-block;
             a{
                 color: #fff;
-                font-size: 18px;
+                font-size: 16px;
+                font-weight: 500;
+                margin-left: 25px;
+                transition: cover 0.3s ease;
+
+                &:hover{
+                    color: #FFCD33;
+                    transition: all 0.3s ease-out;
+                }
+            }            
+        }
+        .current{
+            a{
+                color: #FFCD33;
+                font-size: 16px;
                 font-weight: 500;
                 margin-left: 25px;
                 transition: cover 0.3s ease;
@@ -50,6 +70,7 @@
                 }
             }
         }
+
     }
     .menu-active{
         li{
@@ -144,7 +165,7 @@
     .navbar {
         position: fixed;
         width: 100%;
-        padding: 30px 0;
+        padding: 20px 0;
         /* background: #FFCD33; */
         font-family: 'Ubuntu', 'sans-serif';
         transition: all 0.3s ease;
@@ -170,6 +191,7 @@
             }
         }
         .menu-active{
+            z-index: 998;
             position: fixed;
             height: 100vh;
             width: 100%;
@@ -186,6 +208,27 @@
                     display: inline-block;
                     margin: 20px 0;
                     font-size: 25px;
+                    transition: cover 0.3s ease;
+    
+                    &:hover{
+                        color: #FFCD33;
+                        transition: all 0.3s ease-out;
+                    }
+                }
+            }
+            .current{
+                display: block;
+                a{
+                    color: #FFCD33;
+                    display: inline-block;
+                    margin: 20px 0;
+                    font-size: 25px;
+                    transition: cover 0.3s ease;
+    
+                    &:hover{
+                        color: #FFCD33;
+                        transition: all 0.3s ease-out;
+                    }
                 }
             }
         }

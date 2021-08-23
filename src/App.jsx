@@ -9,9 +9,7 @@ import "./app.scss";
 function App() {
   return (
     <div className="app">
-      {/* <Navbar/> */}
       <Navbar/>
-      {/* <Menu  menuOpen={menuOpen} setMenuOpen={setMenuOpen}/> */}
       <div className="sections">
         <Intro/>
         <Aboutme/>

@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import timelineImage from "../images/timeline-banner.png";
 
-const timeLineStyles = makeStyles({
+const websiteStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
@@ -21,7 +21,7 @@ const timeLineStyles = makeStyles({
 });
 
 export default function ImgMediaCard() {
-  const timeLine = timeLineStyles();
+  const timeLine = websiteStyles();
 
   const darkTheme = createTheme({
     palette: {
@@ -36,13 +36,13 @@ export default function ImgMediaCard() {
           <CardActionArea>
             <CardMedia 
               className={timeLine.media}
-              alt="TimeLine"
+              alt="Personal Website"
               image={timelineImage}
-              title="TimeLine"
+              title="Personal Website"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                TimeLine
+                Personal Website
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
