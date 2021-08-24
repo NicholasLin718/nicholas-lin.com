@@ -9,10 +9,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-
-import countdownImage from "../images/countdownBuddyDemo.png";
-
-const countdownBuddyStyles = makeStyles((theme) => ({
+import boggleImage from "../images/boggle.png";
+const boggleStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
   },
@@ -32,7 +30,7 @@ const countdownBuddyStyles = makeStyles((theme) => ({
 }));
 
 export default function ImgMediaCard() {
-  const countdownBuddy = countdownBuddyStyles();
+  const boggle = boggleStyles();
 
   const darkTheme = createTheme({
     palette: {
@@ -51,12 +49,12 @@ export default function ImgMediaCard() {
   return (
 
     <ThemeProvider theme={darkTheme}>
-        <Card className={countdownBuddy.root}>
+        <Card className={boggle.root}>
         <CardActionArea>
             <CardMedia 
-            className={countdownBuddy.media}
+            className={boggle.media}
             alt="Countdown Buddy"
-            image={countdownImage}
+            image={boggleImage}
             title="Countdown Buddy"
             />
             <CardContent>
@@ -67,7 +65,7 @@ export default function ImgMediaCard() {
                 Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                 across all continents except Antarctica
             </Typography>
-            <div className={countdownBuddy.chip}>
+            <div className={boggle.chip}>
                 <Chip
                     icon= {<i className = {"fab fa-python"} style={chipIconStyle}/>}
                     label="Python"

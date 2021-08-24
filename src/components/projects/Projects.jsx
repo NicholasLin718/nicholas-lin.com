@@ -3,7 +3,7 @@ import Card from "./Cards";
 import TimeLineCard from "../cards/TimeLineCard";
 import CountdownBuddyCard from "../cards/CountdownBuddyCard";
 import PersonalWebsiteCard from "../cards/PersonalWebsiteCard";
-
+import BoggleCard from "../cards/BoggleCard";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from '@material-ui/styles';
 import "./projects.scss";
@@ -28,8 +28,10 @@ export default function Projects() {
                 <Grid item xs = {12} sm ={6} md={4}>
                     <PersonalWebsiteCard className = "cards"/>
                 </Grid>
+                <Grid>
+                    <BoggleCard className = "cards"/>
+                </Grid>
             </Grid>
         </section>
-        
     )
 }

@@ -19,6 +19,7 @@
     /* background: #FFCD33; */
     font-family: 'Ubuntu', 'sans-serif';
     transition: all 0.3s ease;
+    z-index: 997;
     &.active{
         transition: all 0.3s ease;
         background-color: $mainColour;

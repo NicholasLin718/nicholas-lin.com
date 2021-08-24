@@ -1,4 +1,7 @@
 .experience{
-    height: 500px;
+    min-height: 500px;
     background-color: darkcyan;
+    overflow-y: hidden;
+    z-index: 5;
+    position: relative;
 }
