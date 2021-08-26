@@ -14,7 +14,7 @@ import countdownImage from "../images/countdownBuddyDemo.png";
 
 const countdownBuddyStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 350,
   },
   media: {
     height: "259px",

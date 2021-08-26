@@ -14,12 +14,9 @@ import PeopleIcon from '@material-ui/icons/People';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import PersonIcon from '@material-ui/icons/Person';
 
-const shadStyles = makeStyles((theme) => ({
+const opportuniteensStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
-    minWidth: 345,
-    maxHeight: 420,
-    minHeight: 700,
+    maxWidth: 525,
     zIndex: 5
   },
   media: {
@@ -38,7 +35,7 @@ const shadStyles = makeStyles((theme) => ({
 }));
 
 export default function ImgMediaCard() {
-  const shad = shadStyles();
+  const opportuniteens = opportuniteensStyles();
 
   const darkTheme = createTheme({
     palette: {
@@ -49,10 +46,10 @@ export default function ImgMediaCard() {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={shad.root}>
+        <Card className={opportuniteens.root}>
           <CardActionArea>
             <CardMedia 
-              className={shad.media}
+              className={opportuniteens.media}
               alt="Catalyst"
               image={catalystImage}
               title="Catalyst"
@@ -69,7 +66,7 @@ export default function ImgMediaCard() {
                 Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                 across all continents except Antarctica
               </Typography>
-              <div className={shad.chip}>
+              <div className={opportuniteens.chip}>
                 <Chip
                     icon= {<PeopleIcon style={{fill: 'white'}} />}
                     label="Teamwork"
@@ -119,7 +116,7 @@ export default function ImgMediaCard() {
                 Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                 across all continents except Antarctica
               </Typography>
-              <div className={shad.chip}>
+              <div className={opportuniteens.chip}>
                 <Chip
                     icon= {<i className = {"fas fa-brain"} style={{ marginTop: "4px",
                                                                     display: "flex",

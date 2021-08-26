@@ -13,7 +13,7 @@ import timelineImage from "../images/timeline-banner.png";
 
 const websiteStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 350,
   },
   media: {
     height: "259px",

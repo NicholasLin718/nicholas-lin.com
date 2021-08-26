@@ -13,7 +13,7 @@ import timelineImage from "../images/timeline-banner.png";
 
 const timeLineStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 345
   },
   media: {
     height: "259px",
@@ -43,16 +43,22 @@ export default function ImgMediaCard() {
   display: "flex",
   justifyContent: "center",
   flexWrap: "wrap",
-  color: "white",
+  color: "black",
   overflow: 'hidden',
   fontSize: '14px',
   }
+
+  const chipTextStyle = { backgroundColor: "#FFCD33",
+                          paddingRight: "6px",
+                          paddingLeft: "10px",
+                          overflow: "hidden",
+                          color: "black" }
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={timeLine.root}>
+        <Card className={timeLine.root} id = "cards">
           <CardActionArea>
-            <CardMedia 
+          <CardMedia 
               className={timeLine.media}
               alt="TimeLine"
               image={timelineImage}
@@ -72,52 +78,35 @@ export default function ImgMediaCard() {
                     label="HTML"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipTextStyle}
                 />
                 <Chip
                     icon= {<i className = {"fab fa-css3-alt"} style={chipIconStyle}/>}
                     label="CSS"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipTextStyle}
                 />
                 <Chip
                     icon= {<i className = {"fab fa-js-square"} style={chipIconStyle}/>}
                     label="Javascript"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipTextStyle}
                 />
                 <Chip
                     icon= {<i className = {"fas fa-pepper-hot"} style={chipIconStyle}/>}
                     label="Flask"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipTextStyle}
                 />
               </div>
               
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>
+            <a href = "https://github.com/NicholasLin718/TimeLine" target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i></a>
           </CardActions>
         </Card>
       </ThemeProvider>
