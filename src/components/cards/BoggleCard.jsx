@@ -10,13 +10,19 @@ import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import boggleImage from "../images/boggle.png";
+import "./cards.scss";
 const boggleStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    
   },
   media: {
     height: "259px",
     width: '100%',
+  },
+  contentHeight: {
+    maxHeight: 305,
+    minHeight: 305,
   },
   chip: {
     marginTop: "16px",
@@ -50,25 +56,24 @@ export default function ImgMediaCard() {
 
     <ThemeProvider theme={darkTheme}>
         <Card className={boggle.root}>
-        <CardActionArea>
+        <CardActionArea href = "https://en.wikipedia.org/wiki/Boggle" target = "_blank" rel = "noreferrer">
             <CardMedia 
             className={boggle.media}
-            alt="Countdown Buddy"
+            alt="Boggle"
             image={boggleImage}
-            title="Countdown Buddy"
+            title="Boggle"
             />
-            <CardContent>
+            <CardContent className = {boggle.contentHeight} id = "card">
             <Typography gutterBottom variant="h5" component="h2">
-                Countdown Buddy
+                Boggle
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+            Created a Boggle Game (AKA Word Hunt) using java and java swing for the GUI. The game offers 3 modes, singleplayer, player vs player, and player vs computer. The computer has 3 difficulties, and can select certain words from a list of predetermined words that were calculated using a trie. This list of predetermined words is also used to check for the validity of the user’s input word.
             </Typography>
             <div className={boggle.chip}>
                 <Chip
-                    icon= {<i className = {"fab fa-python"} style={chipIconStyle}/>}
-                    label="Python"
+                    icon= {<i className = {"fab fa-java"} style={chipIconStyle}/>}
+                    label="Java"
                     size="small"
                     variant="outlined"
                     style={{ backgroundColor: "#FFCD33",
@@ -77,18 +82,8 @@ export default function ImgMediaCard() {
                              overflow: "hidden" }}
                 />
                 <Chip
-                    icon= {<i className = {"fab fa-discord"} style={chipIconStyle}/>}
-                    label="Discord.py"
-                    size="small"
-                    variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
-                />
-                <Chip
-                    icon= {<i className = {"fas fa-file"} style={chipIconStyle}/>}
-                    label="JSON"
+                    icon= {<i className = {"fab fa-java"} style={chipIconStyle}/>}
+                    label="Java Swing"
                     size="small"
                     variant="outlined"
                     style={{ backgroundColor: "#FFCD33",
@@ -99,13 +94,10 @@ export default function ImgMediaCard() {
               </div>
             </CardContent>
         </CardActionArea>
-        <CardActions>
-            <Button size="small" color="primary">
-            Share
-            </Button>
-            <Button size="small" color="primary">
-            Learn More
-            </Button>
+        <CardActions style={{height: "50px"}}>
+        <a href="https://youtu.be/RT1EIRt_i2U" 
+              target= "_blank" rel = "noreferrer"><i class="fas fa-link" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
+              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px"}}>TimeLine Demo</span></a>          
         </CardActions>
         </Card>
     </ThemeProvider>

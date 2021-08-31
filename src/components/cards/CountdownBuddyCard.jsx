@@ -20,6 +20,10 @@ const countdownBuddyStyles = makeStyles((theme) => ({
     height: "259px",
     width: '100%',
   },
+  contentHeight: {
+    maxHeight: 305,
+    minHeight: 305,
+  },
   chip: {
     marginTop: "16px",
     display: "flex",
@@ -52,20 +56,19 @@ export default function ImgMediaCard() {
 
     <ThemeProvider theme={darkTheme}>
         <Card className={countdownBuddy.root}>
-        <CardActionArea>
+        <CardActionArea href = "https://github.com/NicholasLin718/TimeLine" target = "_blank" rel = "noreferrer">
             <CardMedia 
             className={countdownBuddy.media}
             alt="Countdown Buddy"
             image={countdownImage}
             title="Countdown Buddy"
             />
-            <CardContent>
+            <CardContent className = {countdownBuddy.contentHeight}>
             <Typography gutterBottom variant="h5" component="h2">
                 Countdown Buddy
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+            Countdown Buddy is a discord bot that allows you to create your own customizable countdown timer! Once you create your timer, it will update every few seconds and alert you with a customizable message when it reaches the preset end time.
             </Typography>
             <div className={countdownBuddy.chip}>
                 <Chip
@@ -101,13 +104,8 @@ export default function ImgMediaCard() {
               </div>
             </CardContent>
         </CardActionArea>
-        <CardActions>
-            <Button size="small" color="primary">
-            Share
-            </Button>
-            <Button size="small" color="primary">
-            Learn More
-            </Button>
+        <CardActions style={{height: "50px"}}>
+        <a href = "https://github.com/NicholasLin718/Countdown-Buddy" target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i></a>
         </CardActions>
         </Card>
     </ThemeProvider>

@@ -8,15 +8,15 @@ import { makeStyles } from '@material-ui/styles';
 import "./experience.scss";
 const useStyles = makeStyles({
     gridContainer: {
-        paddingLeft: "6vw",
-        paddingRight: "6vw",
+        paddingLeft: "50px",
+        paddingRight: "50px",
     }
 });
 export default function Experience() {
     const classes = useStyles();
     return (
         <section className="experience" id="experience">
-            <Grid container spacing={4} className = {classes.gridContainer} justify="center">
+            <Grid container spacing={4} className = {classes.gridContainer} direction= "row" justifyContent="space-evenly">
                 <Grid item xs = {12} sm ={6} md = {6} xl={3}>
                     <ShadCard className = "cards"/>
                 </Grid>

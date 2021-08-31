@@ -1,10 +1,13 @@
 .projects{
-    background-color: #093156;
+    background: url("../images/starrynightskybg.jpg");
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-y: hidden;
     padding-top: 3vh;
     scroll-behavior: smooth;
-    position: relative;
 }
+
 
 
 

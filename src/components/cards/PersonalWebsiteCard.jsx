@@ -19,6 +19,10 @@ const websiteStyles = makeStyles((theme) => ({
     height: "259px",
     width: '100%',
   },
+  contentHeight: {
+    maxHeight: 305,
+    minHeight: 305,
+  },
   chip: {
     marginTop: "16px",
     display: "flex",
@@ -59,13 +63,12 @@ export default function ImgMediaCard() {
               image={timelineImage}
               title="Personal Website"
             />
-            <CardContent>
+            <CardContent className = {website.contentHeight}>
               <Typography gutterBottom variant="h5" component="h2">
                 Personal Website
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+              My personal website created using the React.js library to create components and Sass to style. The cards were created using Material UI's premade attributes.
               </Typography>
               <div className={website.chip}>
                 <Chip
@@ -101,7 +104,7 @@ export default function ImgMediaCard() {
               </div>
             </CardContent>
           </CardActionArea>
-          <CardActions>
+          <CardActions style={{height: "50px"}}>
             <Button size="small" color="primary">
               Share
             </Button>

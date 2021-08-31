@@ -16,7 +16,6 @@ export default function Projects() {
     const classes = useStyles();
     return (
         <section className="projects" id="projects">
-            <h1>My Projects</h1>
             <Grid container spacing={4} className = {classes.gridContainer} justify="center">
                 <Grid item xs = {12} sm ={6} md={4} xl = {3}>
                     <TimeLineCard className = "cards"/>

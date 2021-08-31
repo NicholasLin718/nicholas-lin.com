@@ -2,6 +2,16 @@ import './aboutme.scss';
 import React from 'react';
 import ReactRoundedImage from "react-rounded-image";
 import profilepic from "../images/profilepicture.png";
+
+const img = <ReactRoundedImage 
+className="profile-pic"
+image={profilepic}
+imageWidth="300"
+imageHeight="300"
+roundedSize="7"
+roundedColor="#FFCD33"
+/>
+
 function Aboutme() {
     var email = <a href="mailto:n39lin@uwaterloo.ca" target="_blank" rel="noreferrer">email</a>
     return (
@@ -10,14 +20,7 @@ function Aboutme() {
                 <div className="about-content">
                     <div className="column left">
                         <a href="mailto:n39lin@uwaterloo.ca" target="_blank" rel="noreferrer">
-                            <ReactRoundedImage 
-                                className="profile-pic"
-                                image={profilepic}
-                                imageWidth="300"
-                                imageHeight="300"
-                                roundedSize="7"
-                                roundedColor="#FFCD33"
-                            />
+                            {img}
                         </a>
                     </div>
                     <div className="column right">

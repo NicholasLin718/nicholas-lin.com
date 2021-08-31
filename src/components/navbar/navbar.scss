@@ -13,6 +13,8 @@
 }
 /*Navbar Styling*/
 .navbar{
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
     position: fixed;
     width: 100%;
     padding: 20px 0;
@@ -41,6 +43,7 @@
         }
     }
     .menu{
+        overflow: hidden;
         li{
             list-style: none;
             display: inline-block;
@@ -58,6 +61,7 @@
             }            
         }
         .current{
+            overflow: hidden;
             a{
                 color: #FFCD33;
                 font-size: 16px;
@@ -74,6 +78,7 @@
 
     }
     .menu-active{
+        overflow: hidden;
         li{
             list-style: none;
             display: inline-block;
@@ -103,6 +108,7 @@
 
 @media (max-width: 1240px){
     .navbar .menu-active{
+        overflow: hidden;
         li{
             list-style: none;
             display: inline-block;

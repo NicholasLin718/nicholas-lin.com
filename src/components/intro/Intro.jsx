@@ -1,11 +1,14 @@
 import React from 'react';
 import "./intro.scss";
-import backgroundvid from "./nightsky.mp4"
+import backgroundvid from "./nightsky.mp4";
+import Typist from "react-typist";
+import Typical from 'react-typical'
+
 export default function Intro() {
     return (
         <div className="intro" id="intro">
 
-            <video width="1920" height="1080" autoPlay loop muted alt=""
+            <video autoPlay loop muted alt=""
                 style={
                     {
                         position: "absolute",
@@ -16,27 +19,51 @@ export default function Intro() {
                         objectFit: 'cover',
                         transform: "translate(-50%, -50%)",
                         zIndex: "-1"
+
                     }
                 }
             >
                 <source src={backgroundvid} type = "video/mp4"/>
             </video>
-            {/* <div className="left">
-                <div className="imgContainer">
-                    <img src = "images/face.png" alt = ""/>
+            {/* <section>
+                <div className = "home-icon-div">
+                    <h1>hi</h1>
+                    <i className="fab fa-github" id = "home-icons"/>
+                    <i className="fab fa-linkedin-in" id = "home-icons"/>
+                    <i className="fas fa-file" id = "home-icons"/>
                 </div>
-            </div>
-            <div className="right">
-                
-            </div> */}
-
+            </section> */}
             <section className="home" id="home">
                 <div className="max-width">
                     <div className="home-content">
-                        <div className="text-1">Hello, my name is</div>
-                        <div className="text-2">Nicholas Lin</div>
-                        <div className="text-3">and I am a <span>tall person</span></div>
-                        <a href="#aboutme">Learn more</a>
+                        <Typist cursor={{show: false}}>
+                            <div className="text-1">Howdy, my name is</div>
+                            <Typist.Delay ms={800} />
+                            <div className="text-2">Nicholas Lin</div>
+                            <Typist.Delay ms={1300} />
+                            <div className="text-3">I am a 
+                                <span className = "text-3"> Programmer</span>                        
+                                <Typist.Backspace count={10} delay={1300} ms={1300} />
+                                <span className="text-3">Badminton Player</span>
+                                <Typist.Backspace count={16} delay={1300} ms={1300}/>
+                                <span className="text-3">Hobbyist</span>
+                                <Typist.Backspace count={8} delay={1300} ms={1300}/>
+                                <span className="text-3">
+                                Software Engineering student
+                                <br></br>
+                                from the University of Waterloo
+                                </span>
+                            </div>
+                        </Typist>
+                        <div>
+                        <a href="#aboutme">Learn more</a>                    
+                            <ul className = "home-icon-div">
+                                <li><i className="fab fa-github" id = "home-icons"/></li>
+                                <li><i className="fab fa-linkedin-in" id = "home-icons"/></li>
+                                <li><i className="fas fa-file" id = "home-icons"/></li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </section>

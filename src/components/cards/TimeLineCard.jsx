@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import timelineImage from "../images/timeline-banner.png";
+import "./cards.scss";
 
 const timeLineStyles = makeStyles((theme) => ({
   root: {
@@ -18,6 +19,10 @@ const timeLineStyles = makeStyles((theme) => ({
   media: {
     height: "259px",
     width: '100%',
+  },
+  contentHeight: {
+    maxHeight: 305,
+    minHeight: 305,
   },
   chip: {
     marginTop: "16px",
@@ -52,25 +57,24 @@ export default function ImgMediaCard() {
                           paddingRight: "6px",
                           paddingLeft: "10px",
                           overflow: "hidden",
-                          color: "black" }
+                          color: "#04132c" }
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={timeLine.root} id = "cards">
-          <CardActionArea>
+        <Card className={timeLine.root}>
+          <CardActionArea href = "https://github.com/NicholasLin718/TimeLine" target = "_blank" rel = "noreferrer">
           <CardMedia 
               className={timeLine.media}
               alt="TimeLine"
               image={timelineImage}
               title="TimeLine"
             />
-            <CardContent>
+            <CardContent className = {timeLine.contentHeight} id = "card">
               <Typography gutterBottom variant="h5" component="h2">
                 TimeLine
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+              As global COVID-19 health restrictions begin to relax in many countries, public spaces now seem to be home to comically long lineups. TimeLine is a solution to that problem, a real-time, community-driven foot traffic indicator to help everyone avoid busy <b>times</b> and busy <b>lines</b> everywhere they go.
               </Typography>
               <div className={timeLine.chip}>
                 <Chip
@@ -101,12 +105,22 @@ export default function ImgMediaCard() {
                     variant="outlined"
                     style={chipTextStyle}
                 />
+                <Chip
+                    icon= {<i className = {"fas fa-map-marker-alt"} style={chipIconStyle}/>}
+                    label="Google Map APIs"
+                    size="small"
+                    variant="outlined"
+                    style={chipTextStyle}
+                />
               </div>
               
             </CardContent>
           </CardActionArea>
-          <CardActions>
+          <CardActions style={{height: "50px"}}>
             <a href = "https://github.com/NicholasLin718/TimeLine" target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i></a>
+            <a href="https://youtu.be/RT1EIRt_i2U" 
+              target= "_blank" rel = "noreferrer"><i class="fas fa-link" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
+              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px"}}>TimeLine Demo</span></a>          
           </CardActions>
         </Card>
       </ThemeProvider>

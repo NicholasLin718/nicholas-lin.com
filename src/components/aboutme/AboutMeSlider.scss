@@ -1,0 +1,109 @@
+@import "../../global.scss";
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about-me{
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 500px;
+  background: $mainColour;
+  padding-top: 90px;
+  padding-bottom: 66px;
+  overflow: hidden;
+  min-height: 400px;
+    
+  #arrow-right{
+      font-size: 25px;
+      position: absolute;
+      margin-left: 400px;
+      color: white;
+      margin-top: 450px;
+  }
+  #arrow-left{
+    font-size: 25px;
+    position: absolute;
+    margin-right: 1200px;
+    color: white;
+  }
+  .slider{
+    overflow: hidden;
+    height: 450px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+    .container{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        .max-width{
+            .about-content{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                .left{
+                    width: 35%;
+                    a{
+                        .profile-pic{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                .right{
+                    width: 65%;
+                    color:white;
+                }
+            }
+        }
+
+        
+    }
+    }
+    .container-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+      }
+      .dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 3px solid #f1f1f1;
+        margin: 0 5px;
+        background: #f1f1f1;
+      }
+      .dot.active {
+        background: #FFCD33;
+      }
+}
+
+@media (max-width: 1076px){
+    .about-me {
+        .max-width{
+            .about-content{
+                .column{
+                    width: 100%;
+                }
+                .left{
+                    display: flex;
+                    justify-content: center;
+                    margin: 0 auto 60px;
+                }
+                .right{
+                    flex: 100%;
+                }
+            }
+        }
+        
+    }
+}
