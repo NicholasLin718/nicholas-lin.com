@@ -33,7 +33,7 @@
                     margin-left: -40px;
                     align-items: center;
                     display: flex;
-                    a{
+                    .learn{
                         text-decoration: none;
                         display: inline-block;
                         background: #FFCD33;
@@ -92,7 +92,7 @@
                 }
                 .home-icon-div{
                     margin-top: -2px;
-                    a{
+                    .learn{
                         font-size: 13px;
                         padding: 7x 13px;
                         margin-top: 13px;
@@ -137,7 +137,7 @@
                     // margin-left: 50px;
                     align-items: center;
                     display: flex;
-                    a{
+                    .learn{
                         font-size: 10px;
                         padding: 6px 12px;
                     }

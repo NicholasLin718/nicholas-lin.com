@@ -3,7 +3,7 @@ import "./intro.scss";
 import backgroundvid from "./nightsky.mp4";
 import Typist from "react-typist";
 import Typical from 'react-typical'
-
+import resume from "../../files/Resume.pdf";
 export default function Intro() {
     return (
         <div className="intro" id="intro">
@@ -56,10 +56,10 @@ export default function Intro() {
                         </Typist>
                         <div>                  
                             <ul className = "home-icon-div">
-                                <li><a href="#about-me">Learn more</a></li>
-                                <li><i className="fab fa-github" id = "home-icons"/></li>
-                                <li><i className="fab fa-linkedin-in" id = "home-icons"/></li>
-                                <li><i className="fas fa-file" id = "home-icons"/></li>
+                                <li><a className= "learn" href="#about-me">Learn more</a></li>
+                                <li><a href = "https://github.com/NicholasLin718" target="_blank" rel="noreferrer"><i className="fab fa-github" id = "home-icons"/></a></li>
+                                <li><a href = "https://www.linkedin.com/in/nicholas-lin-87368a20b/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin-in" id = "home-icons"/></a></li>
+                                <li><a href={resume} target="_blank"><i className="fas fa-file" id = "home-icons"/></a></li>
                             </ul>
                         </div>
                     </div>

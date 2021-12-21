@@ -16,7 +16,7 @@ export default function Projects() {
     const classes = useStyles();
     return (
         <section className="projects" id="projects">
-            <Grid container spacing={4} className = {classes.gridContainer} justify="center">
+            <Grid container spacing={4} className = {classes.gridContainer} justifyContent="center">
                 <Grid item xs = {12} sm ={6} md={4} xl = {3}>
                     <TimeLineCard className = "cards"/>
                 </Grid>
@@ -29,8 +29,10 @@ export default function Projects() {
                 <Grid  item xs = {12} sm ={6} md={4} xl = {3}>
                     <BoggleCard className = "cards"/>
                 </Grid>
+                <Grid  item xs = {12} sm ={6} md={4} xl = {3}>
+                    <BoggleCard className = "cards"/>
+                </Grid>
             </Grid>
-            <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div>
         </section>
         
     )
