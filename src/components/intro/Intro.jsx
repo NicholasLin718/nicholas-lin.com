@@ -40,7 +40,7 @@ export default function Intro() {
                             <div className="text-1" style={{fontFamily: 'Helvetica'}}>Hello, my name is</div>
                             <Typist.Delay ms={800} />
                             <div className="text-2" style={{fontFamily: 'Copperplate'}}>Nicholas Lin</div>
-                            <Typist.Delay ms={1300} />
+                            <Typist.Delay ms={1200} />
                             <div className="text-3" style={{fontFamily: 'Helvetica'}}>I am a Software Engineering student
                                 {/* <span className = "text-3" style={{fontFamily: 'Helvetica'}}> Programmer</span>                        
                                 <Typist.Backspace count={10} delay={1300} ms={1300} />

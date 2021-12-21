@@ -81,18 +81,29 @@
     .intro{
         .home{
             .home-content{
+                .text-1{
+                    font-size: 21px;
+                }
                 .text-2{
-                    font-size: 50px;
+                    font-size: 55px;
                 }
                 .text-3{
                     font-size: 16px;
                 }
                 .home-icon-div{
+                    margin-top: -2px;
                     a{
-                        font-size: 12px;
-                        padding: 6x 12px;
-                        margin-top: 12px;
-                        border-radius: 15px;
+                        font-size: 13px;
+                        padding: 7x 13px;
+                        margin-top: 13px;
+                        border-radius: 17px;
+                    }
+                    #home-icons{
+                        padding-left: 15px;
+                        z-index: 6;
+                        color:white;
+                        font-size: 20px;
+                        padding-bottom: 20px;
                     }
                 }          
             }
@@ -115,10 +126,10 @@
                     font-size: 18px;
                 }
                 .text-2{
-                    font-size: 40px;
+                    font-size: 45px;
                 }
                 .text-3{
-                    font-size: 15px;
+                    font-size: 13px;
                 }
                 .home-icon-div{
                     position: relative;
@@ -151,7 +162,7 @@
                 font-size: 15px;
             }
             .text-2{
-                font-size: 30px;
+                font-size: 35px;
             }
             .text-3{
                 font-size: 12px;
