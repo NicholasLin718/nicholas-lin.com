@@ -12,7 +12,6 @@ roundedSize="7"
 roundedColor="#FFCD33"
 />
 
-// test commit
 function Aboutme() {
     var email = <a href="mailto:n39lin@uwaterloo.ca" target="_blank" rel="noreferrer">email</a>
     return (

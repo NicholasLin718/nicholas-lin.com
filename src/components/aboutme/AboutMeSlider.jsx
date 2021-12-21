@@ -20,39 +20,26 @@ const mainAbout =
         </a>
     </div>
     <div className="column right">
-        <h2>Hey there,</h2>
-        <p style={{fontSize: '20px'}}>
+        <h2 style={{fontFamily: 'Helvetica', color: "#FFCD33"}}>Hey there,</h2>
+        <p style={{fontSize: '16px', fontFamily: 'Helvetica'}}>
 
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione dignissimos distinctio aperiam laborum delectus mollitia quos, labore quisquam pariatur voluptates cupiditate, harum inventore iste architecto quibusdam dicta, saepe odit. Iste. <br />
+        My name is Nicholas, and I am a first-year Software Engineering student at the University of Waterloo. My interest in analytical thinking and problem solving from strategy games growing up has inspired me to pursue the field of technology. My obsession with coding can really be explained by my innate curiosity that drives my desire to fully understand why and how things around me work, and my ability to to devote my full focus and energy when I engage myself in a problem. Continue reading if you want to learn more about me :)  <br />
         <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum soluta ex incidunt molestias delectus sunt, tempora quas molestiae voluptas?  
+        If you need to get in touch, please email: 
+        <a href="mailto:n39lin@uwaterloo.ca" target="_blank" rel="noreferrer" style={{color: 'white'}}> n39lin@uwaterloo.ca </a>
         </p>
+        
     </div>
 </div>
 
 const interestsAbout =                         
 <div className="about-content">
-    <div className="column left">
-        <a href="mailto:n39lin@uwaterloo.ca" target="_blank" rel="noreferrer">
-        <ReactRoundedImage 
-            className="profile-pic"
-            image={profilepic}
-            imageWidth="300"
-            imageHeight="300"
-            roundedSize="7"
-            roundedColor="#FFCD33"
-            />
-        </a>
-    </div>
-    <div className="column right">
-        <h2>Hi there,</h2>
-        <p style={{fontSize: '20px'}}>
-
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione dignissimos distinctio aperiam laborum delectus mollitia quos, labore quisquam pariatur voluptates cupiditate, harum inventore iste architecto quibusdam dicta, saepe odit. Iste. <br />
-        <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum soluta ex incidunt molestias delectus sunt, tempora quas molestiae voluptas?  
-        </p>
-    </div>
+    <h2 style={{color: "#FFCD33"}}>Hi there,</h2>
+    <p style={{fontSize: '20px', fontFamily: 'sans-serif'}}>
+    Outside of coding, in my freetime I enjoy participating in sports such as badminton and basketball, playing Minecraft, watching anime, and a few other random hobbies. You can also find me binging random youtube videos, which typically I have different phases for, as one moment I could be watching basketball analysis videos to binging short comedy skits.  <br />
+    <br />
+    Learn more about my past experiences and projects below, or swipe to see more pictures of me :)
+    </p>
 </div>
 
 const whyAbout =                         
@@ -70,12 +57,12 @@ const whyAbout =
         </a>
     </div>
     <div className="column right">
-        <h2>Howdy there,</h2>
+        <h2>Hey there!</h2>
         <p style={{fontSize: '20px'}}>
 
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione dignissimos distinctio aperiam laborum delectus mollitia quos, labore quisquam pariatur voluptates cupiditate, harum inventore iste architecto quibusdam dicta, saepe odit. Iste. <br />
+        My name is Nicholas Lin, and I am a first-year Software Engineering student at the University of Waterloo. My interest in logical thinking and problem solving from strategy games growing up has inspired me to pursue the field of technology. I'm fascinated by the growing development of technological advancements in the past decade, and I’d like to imagine that I would be able to make contributions to this rapidly growing field.  <br />
         <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni laborum soluta ex incidunt molestias delectus sunt, tempora quas molestiae voluptas?  
+        My obsession with coding can really be explained by my innate curiosity that drives my desire to fully understand how and why things around me work. I find myself putting 100% of my focus and energy when I engage myself in a problem, and when I do, it's almost as if I can time travel from the numerous hours that fly by.   
         </p>
     </div>
 </div>
@@ -130,15 +117,15 @@ return (
               </div>
           ))}
       </div>
-      <i className="fas fa-arrow-circle-left" id = "arrow-left" style = {leftArrowDisplay} onClick={()=>handleClick("left")}></i>
-      <i className="fas fa-arrow-circle-right" id = "arrow-right" style = {rightArrowDisplay} onClick={()=>handleClick("right")}></i>
+      <div className="arrows">
+        <i className="fas fa-arrow-circle-left" id = "arrow-left" style = {leftArrowDisplay} onClick={()=>handleClick("left")}></i>
+        <i className="fas fa-arrow-circle-right" id = "arrow-right" style = {rightArrowDisplay} onClick={()=>handleClick("right")}></i>
+      </div>
+        
       <div className="container-dots">
-          {Array.from({length: 3}).map((item, index) => (
-<div 
-                    onClick={() => moveDot(index + 1)}
-                    className={currentSlide === index ? "dot active" : "dot"}
-                    ></div>
-          ))}
+        {Array.from({length: 3}).map((item, index) => (
+        <div onClick={() => moveDot(index + 1)} className={currentSlide === index ? "dot active" : "dot"}></div>
+         ))}
       </div>
     </div>
   );

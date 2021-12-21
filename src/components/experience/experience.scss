@@ -6,4 +6,14 @@
     background-color: #0A3154;
     overflow-y: hidden;
     z-index: 5;
+    .header{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+    }
 }

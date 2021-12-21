@@ -1,11 +1,26 @@
 .projects{
-    background: url("../images/starrynightskybg.jpg");
-    background-position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background: url("../images/starrynightskybg.jpg");
+    // background-position: absolute;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // overflow-y: hidden;
+    // padding-top: 3vh;
+    // scroll-behavior: smooth;
+    min-height: 1000px;
+    background-color: #0A3154;
     overflow-y: hidden;
-    padding-top: 3vh;
-    scroll-behavior: smooth;
+    z-index: 5;
+    padding-bottom: 100px;
+    .header{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+    }
 }
 
 

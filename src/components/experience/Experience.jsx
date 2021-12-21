@@ -16,6 +16,7 @@ export default function Experience() {
     const classes = useStyles();
     return (
         <section className="experience" id="experience">
+            <div className= "header"><h1>TAKE A LOOK AT THE COOL ORGANIZATIONS I JOINED</h1></div>
             <Grid container spacing={4} className = {classes.gridContainer} direction= "row" justifyContent="space-evenly">
                 <Grid item xs = {12} sm ={6} md = {6} xl={3}>
                     <ShadCard className = "cards"/>

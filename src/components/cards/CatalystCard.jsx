@@ -68,7 +68,7 @@ export default function ImgMediaCard() {
     <div>
       <ThemeProvider theme={darkTheme}>
         <Card className={catalyst.root}>
-          <CardActionArea href = "https://uwaterloo.ca/catalyst/catalyst-summer-program" target = "_blank" rel = "noreferrer">
+          <CardActionArea href = "https://uwaterloo.ca/catalyst/" target = "_blank" rel = "noreferrer">
             <CardMedia 
               className={catalyst.media}
               alt="Catalyst"

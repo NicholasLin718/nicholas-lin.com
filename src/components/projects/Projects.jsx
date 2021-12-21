@@ -30,6 +30,8 @@ export default function Projects() {
                     <BoggleCard className = "cards"/>
                 </Grid>
             </Grid>
+            <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div>
         </section>
+        
     )
 }

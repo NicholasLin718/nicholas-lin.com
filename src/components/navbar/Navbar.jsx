@@ -40,13 +40,13 @@ export default function Navbar(){
             setExperience(false);
             setProject(false);
         }
-        else if(window.scrollY > 900 && window.scrollY <= 1400){
+        else if(window.scrollY > 900 && window.scrollY <= 2800){
             setHome(false);
             setAbout(false);
             setExperience(true);
             setProject(false);
         }
-        else if(window.scrollY > 1400 && window.scrollY <= 1800){
+        else if(window.scrollY > 2800 && window.scrollY <= 5000){
             setHome(false);
             setAbout(false);
             setExperience(false);
@@ -80,7 +80,7 @@ export default function Navbar(){
                 <div className="logo"><a href="#home">[NL]</a></div>
                 <ul className={click ? "menu-active" : "menu"} >
                     <li className = {home ? "current" : "HOME"}><a href="#home" onClick={closeMobileMenu}>Home</a></li>
-                    <li className = {about ? "current" : "ABOUT"}><a href="#aboutme" onClick={closeMobileMenu}>About</a></li>
+                    <li className = {about ? "current" : "ABOUT"}><a href="#about-me" onClick={closeMobileMenu}>About</a></li>
                     <li className = {experience ? "current" : "EXP"}><a href="#experience" onClick={closeMobileMenu}>Experiences</a></li>
                     <li className= {project ? "current" : "PROJ"}><a href="#projects" onClick={closeMobileMenu}>Projects</a></li>
                 </ul>
