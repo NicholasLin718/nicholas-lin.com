@@ -40,13 +40,13 @@ export default function Navbar(){
             setExperience(false);
             setProject(false);
         }
-        else if(window.scrollY > 900 && window.scrollY <= 2800){
+        else if(window.scrollY > 900 && window.scrollY <= 2750){
             setHome(false);
             setAbout(false);
             setExperience(true);
             setProject(false);
         }
-        else if(window.scrollY > 2800 && window.scrollY <= 5000){
+        else if(window.scrollY > 2750 && window.scrollY <= 5000){
             setHome(false);
             setAbout(false);
             setExperience(false);

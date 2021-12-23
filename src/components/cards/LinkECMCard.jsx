@@ -49,7 +49,7 @@ export default function ImgMediaCard() {
   display: "flex",
   justifyContent: "center",
   flexWrap: "wrap",
-  color: "white",
+  color: "#04132c",
   overflow: 'hidden',
   fontSize: '14px',
   }
@@ -58,7 +58,8 @@ export default function ImgMediaCard() {
     backgroundColor: "#FFCD33",
     paddingRight: "6px",
     paddingLeft: "10px",
-    overflow: "hidden"
+    overflow: "hidden",
+    color: "#04132c",
   }
 
   return (
@@ -74,8 +75,7 @@ export default function ImgMediaCard() {
             />
             <CardContent className = {linkECM.contentHeight} id = "card">
               <Typography gutterBottom variant="h5" component="h2">
-                LinkECM Consulting Inc.
-                <br></br>
+                <div style={{fontWeight: "450"}}>LinkECM Consulting Inc.</div>
                 <div style={{fontSize: "14px", marginTop: "3px"}}>
                 Data Analyst (Jan 2019 - Jan 2021)
                 </div>
@@ -93,7 +93,7 @@ export default function ImgMediaCard() {
                 />
               </div>
               <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px"}}>
-              As a data analyst, I managed their stock option trade through downloading data from the internet and creating perspectives using the VLookUp function, and then analyzed and edited Excel files accordingly to share with the team in Microsoft's OneDrive.
+              As a data analyst, I managed their stock option trade through downloading data from the internet and utilizing Excel functions such as VLookup to create perspectives. I then analyzed and edited Excel files within the required timeframe whilst maintaining high quality which is then shared on Microsoft's OneDrive.
               </Typography>
               <div className={linkECM.chip}>
                 <Chip
@@ -111,7 +111,7 @@ export default function ImgMediaCard() {
                     style={chipStyle}
                 />
                 <Chip
-                    icon= {<LocalAtmIcon style={{fill: 'white'}} />}
+                    icon= {<LocalAtmIcon style={{fill: '#04132c'}} />}
                     label="Stock Transactions"
                     size="small"
                     variant="outlined"
@@ -121,9 +121,6 @@ export default function ImgMediaCard() {
             </CardContent>
           </CardActionArea>
           <CardActions style={{height: "50px"}}>
-              <a href="https://www.youtube.com/watch?v=2-LoJipgtxU" 
-              target= "_blank" rel = "noreferrer"><i class="fas fa-link" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
-              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px"}}>Sequence Memory Game Demo</span></a>
           </CardActions>
         </Card>
       </ThemeProvider>

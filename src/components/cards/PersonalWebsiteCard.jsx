@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import timelineImage from "../images/timeline-banner.png";
+import "./cards.scss";
 
 const websiteStyles = makeStyles((theme) => ({
   root: {
@@ -44,13 +45,19 @@ export default function ImgMediaCard() {
   });
 
   const chipIconStyle = { marginTop: "4px",
-  display: "flex",
-  justifyContent: "center",
-  flexWrap: "wrap",
-  color: "white",
-  overflow: 'hidden',
-  fontSize: '14px',
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    color: "white",
+    overflow: 'hidden',
+    fontSize: '14px',
   }
+
+  const chipStyle = { backgroundColor: "#04132c",
+    paddingRight: "6px",
+    paddingLeft: "10px",
+    overflow: "hidden" 
+}
 
   return (
     <div>
@@ -64,7 +71,7 @@ export default function ImgMediaCard() {
               title="Personal Website"
             />
             <CardContent className = {website.contentHeight}>
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold"}}>
                 Personal Website
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
@@ -76,30 +83,21 @@ export default function ImgMediaCard() {
                     label="React.js"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipStyle}
                 />
                 <Chip
                     icon= {<i className = {"fab fa-sass"} style={chipIconStyle}/>}
                     label="Sass"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipStyle}
                 />
                 <Chip
                     icon= {<i className = {"fab fa-html5"} style={chipIconStyle}/>}
                     label="HTML"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipStyle}
                 />
               </div>
             </CardContent>

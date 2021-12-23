@@ -52,16 +52,17 @@ export default function ImgMediaCard() {
   display: "flex",
   justifyContent: "center",
   flexWrap: "wrap",
-  color: "white",
+  color: "#04132c",
   overflow: 'hidden',
   fontSize: '14px',
   }
 
   const chipStyle = {
-    backgroundColor: "#FFBB0E",
+    backgroundColor: "#FFCD33",
     paddingRight: "6px",
     paddingLeft: "10px",
-    overflow: "hidden"
+    overflow: "hidden",
+    color: "#04132c",
   }
 
   return (
@@ -77,10 +78,9 @@ export default function ImgMediaCard() {
             />
             <CardContent className = {shad.contentHeight} id = "card">
               <Typography gutterBottom variant="h5" component="h2">
-                Shad Canada
-                <br></br>
+                <div style={{fontWeight: "450"}}>Shad Canada</div>
                 <div style={{fontSize: "14px", marginTop: "3px"}}>
-                Ryerson University
+                Ryerson University (July 2019)
                 </div>
               </Typography>
               <Typography gutterBottom variant="h6" component="h2">
@@ -91,21 +91,21 @@ export default function ImgMediaCard() {
               </Typography>
               <div className={shad.chip}>
                 <Chip
-                    icon= {<PeopleIcon style={{fill: 'white'}} />}
+                    icon= {<PeopleIcon style={{fill: '#04132c'}} />}
                     label="Teamwork"
                     size="small"
                     variant="outlined"
                     style={chipStyle}
                 />
                 <Chip
-                    icon= {<PersonAddIcon style={{fill: 'white'}} />}
+                    icon= {<PersonAddIcon style={{fill: '#04132c'}} />}
                     label="Networking"
                     size="small"
                     variant="outlined"
                     style={chipStyle}
                 />
                 <Chip
-                    icon= {<PersonIcon style={{fill: 'white'}} />}
+                    icon= {<PersonIcon style={{fill: '#04132c'}} />}
                     label="Leadership"
                     size="small"
                     variant="outlined"

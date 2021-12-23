@@ -11,6 +11,7 @@ import Chip from '@material-ui/core/Chip';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import boggleImage from "../images/boggle.png";
 import "./cards.scss";
+
 const boggleStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -52,6 +53,13 @@ export default function ImgMediaCard() {
                           overflow: 'hidden',
                           fontSize: '14px',
   }
+
+  const chipStyle = { 
+    backgroundColor: "#04132c",
+    paddingRight: "6px",
+    paddingLeft: "10px",
+    overflow: "hidden" 
+}
   return (
 
     <ThemeProvider theme={darkTheme}>
@@ -64,7 +72,7 @@ export default function ImgMediaCard() {
             title="Boggle"
             />
             <CardContent className = {boggle.contentHeight} id = "card">
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold"}}>
                 Boggle
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
@@ -76,20 +84,14 @@ export default function ImgMediaCard() {
                     label="Java"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipStyle}
                 />
                 <Chip
                     icon= {<i className = {"fab fa-java"} style={chipIconStyle}/>}
                     label="Java Swing"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipStyle}
                 />
               </div>
             </CardContent>

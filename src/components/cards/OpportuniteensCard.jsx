@@ -49,7 +49,7 @@ export default function ImgMediaCard() {
   display: "flex",
   justifyContent: "center",
   flexWrap: "wrap",
-  color: "white",
+  color: "#04132c",
   overflow: 'hidden',
   fontSize: '14px',
   }
@@ -58,7 +58,8 @@ export default function ImgMediaCard() {
     backgroundColor: "#FFCD33",
     paddingRight: "6px",
     paddingLeft: "10px",
-    overflow: "hidden"
+    overflow: "hidden",
+    color: "#04132c",
   }
 
   return (
@@ -74,8 +75,7 @@ export default function ImgMediaCard() {
             />
             <CardContent className = {opportuniteens.contentHeight} id = "card">
               <Typography gutterBottom variant="h5" component="h2">
-                OpportuniTeens Canadian Branch
-                <br></br>
+                <div style={{fontWeight: "450"}}>OpportuniTeens Canadian Branch</div>
                 <div style={{fontSize: "14px", marginTop: "3px"}}>
                 Researcher (July 2021 - Present)
                 </div>
@@ -92,7 +92,7 @@ export default function ImgMediaCard() {
                     style={chipStyle}
                 />
                 <Chip
-                    icon= {<i className= {"fas fa-hand-helping"} style={chipIconStyle}/>}
+                    icon= {<i className= {"fas fa-hands-helping"} style={chipIconStyle}/>}
                     label="Volunteering"
                     size="small"
                     variant="outlined"
@@ -100,18 +100,18 @@ export default function ImgMediaCard() {
                 />
               </div>        
               <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px"}}>
-              Founded the OpportuniTeens Canadian Branch with two other Canadian highschool students. My role as a researcher is to compile valuable opportunities that I obtain from social media and websites onto a shared spreadsheet, in which the information is then converted into a visually appealing Instagram graphic. Within the first few weeks of this new branch, we have garnered over 140 new followers.
+              Founded the OpportuniTeens Canadian Branch with two other Canadian highschool students. My role as a researcher is to compile valuable opportunities that I obtain from social media and websites onto a shared spreadsheet, in which the information is then converted into a visually appealing Instagram graphic. Within the first few weeks of this new branch, we have garnered 150+ new followers.
               </Typography>
               <div className={opportuniteens.chip}>
                 <Chip
-                    icon= {<PeopleIcon style={{fill: 'white'}} />}
+                    icon= {<PeopleIcon style={{fill: '#04132c'}} />}
                     label="Teamwork"
                     size="small"
                     variant="outlined"
                     style={chipStyle}
                 />
                 <Chip
-                    icon= {<SearchIcon style={{fill: 'white'}} />}
+                    icon= {<SearchIcon style={{fill: '#04132c'}} />}
                     label="Research"
                     size="small"
                     variant="outlined"

@@ -5,16 +5,16 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-
 import countdownImage from "../images/countdownBuddyDemo.png";
+import "./cards.scss";
 
 const countdownBuddyStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 350,
+    maxWidth: 345,
+    
   },
   media: {
     height: "259px",
@@ -63,8 +63,8 @@ export default function ImgMediaCard() {
             image={countdownImage}
             title="Countdown Buddy"
             />
-            <CardContent className = {countdownBuddy.contentHeight}>
-            <Typography gutterBottom variant="h5" component="h2">
+            <CardContent className = {countdownBuddy.contentHeight} id = "card">
+            <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold"}}>
                 Countdown Buddy
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
@@ -76,7 +76,7 @@ export default function ImgMediaCard() {
                     label="Python"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
+                    style={{ backgroundColor: "#04132c",
                              paddingRight: "6px",
                              paddingLeft: "10px",
                              overflow: "hidden" }}
@@ -86,7 +86,7 @@ export default function ImgMediaCard() {
                     label="Discord.py"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
+                    style={{ backgroundColor: "#04132c",
                              paddingRight: "6px",
                              paddingLeft: "10px",
                              overflow: "hidden" }}
@@ -96,7 +96,7 @@ export default function ImgMediaCard() {
                     label="JSON"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#FFCD33",
+                    style={{ backgroundColor: "#04132c",
                              paddingRight: "6px",
                              paddingLeft: "10px",
                              overflow: "hidden" }}
