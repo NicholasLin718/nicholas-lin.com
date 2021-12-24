@@ -19,6 +19,7 @@ export default function Projects() {
         <section className="projects" id="projects">
             <div className= "header"><h1>TAKE A LOOK AT THE COOL ORGANIZATIONS I JOINED</h1></div>
             <Grid container spacing={4} className = "grid" justifyContent="center">
+                <div className= "header"><h1>CHECK OUT MY PAST PROJECTS</h1></div>
                 <Grid item xs = {8} sm ={6} md={4} xl = {2}>
                     <TimeLineCard className = "cards"/>
                 </Grid>
