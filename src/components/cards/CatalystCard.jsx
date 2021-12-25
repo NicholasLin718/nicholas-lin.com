@@ -48,12 +48,12 @@ export default function ImgMediaCard() {
   });
 
   const chipIconStyle = { marginTop: "4px",
-  display: "flex",
-  justifyContent: "center",
-  flexWrap: "wrap",
-  color: "#04132c",
-  overflow: 'hidden',
-  fontSize: '14px',
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    color: "#04132c",
+    overflow: 'hidden',
+    fontSize: '14px',
   }
 
   const chipStyle = {
@@ -68,7 +68,7 @@ export default function ImgMediaCard() {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={catalyst.root}>
+        <Card className={catalyst.root} id = "card">
           <CardActionArea href = "https://uwaterloo.ca/catalyst/" target = "_blank" rel = "noreferrer">
             <CardMedia 
               className={catalyst.media}
@@ -76,7 +76,7 @@ export default function ImgMediaCard() {
               image={catalystImage}
               title="Catalyst"
             />
-            <CardContent className = {catalyst.contentHeight} id = "card">
+            <CardContent className = {catalyst.contentHeight} id = "cardContent">
               <Typography gutterBottom variant="h5" component="h2">
                 <div style={{fontWeight: "450"}}>Catalyst</div>
                 <div style={{fontSize: "14px", marginTop: "3px"}}>

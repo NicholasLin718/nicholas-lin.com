@@ -65,7 +65,7 @@ export default function ImgMediaCard() {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={linkECM.root}>
+        <Card className={linkECM.root} id = "card">
           <CardActionArea>
             <CardMedia 
               className={linkECM.media}
@@ -73,7 +73,7 @@ export default function ImgMediaCard() {
               image={LinkECMLogo}
               title="LinkECM"
             />
-            <CardContent className = {linkECM.contentHeight} id = "card">
+            <CardContent className = {linkECM.contentHeight} id = "cardContent">
               <Typography gutterBottom variant="h5" component="h2">
                 <div style={{fontWeight: "450"}}>LinkECM Consulting Inc.</div>
                 <div style={{fontSize: "14px", marginTop: "3px"}}>

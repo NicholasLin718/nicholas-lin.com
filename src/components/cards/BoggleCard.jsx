@@ -63,7 +63,7 @@ export default function ImgMediaCard() {
   return (
 
     <ThemeProvider theme={darkTheme}>
-        <Card className={boggle.root}>
+        <Card className={boggle.root} id = "card">
         <CardActionArea href = "https://en.wikipedia.org/wiki/Boggle" target = "_blank" rel = "noreferrer">
             <CardMedia 
             className={boggle.media}
@@ -71,11 +71,11 @@ export default function ImgMediaCard() {
             image={boggleImage}
             title="Boggle"
             />
-            <CardContent className = {boggle.contentHeight} id = "card">
-            <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold"}}>
+            <CardContent className = {boggle.contentHeight} id = "cardContent">
+            <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
                 Boggle
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
             Created a Boggle Game (AKA Word Hunt) using java and java swing for the GUI. The game offers 3 modes, singleplayer, player vs player, and player vs computer. The computer has 3 difficulties, and can select certain words from a list of predetermined words that were calculated using a trie. This list of predetermined words is also used to check for the validity of the user’s input word.
             </Typography>
             <div className={boggle.chip}>

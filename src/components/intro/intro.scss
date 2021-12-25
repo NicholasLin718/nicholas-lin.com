@@ -2,9 +2,11 @@
 .intro{
     height: 100vh;
     overflow-y: hidden;
+    font-family: 'Poppins', sans-serif;
     .home{
             .home-content{
                 margin: 30vh 0vw;
+                z-index: 1;
                 // font-family: 'Poppins', sans-serif;
                 .text-1{
                     color: #fff;
@@ -53,7 +55,7 @@
                     #home-icons{
                         margin-top: 35px;
                         padding-left: 15px;
-                        z-index: 6;
+                        z-index: 1;
                         color:white;
                         font-size: 25px;
                         padding-bottom: 20px;

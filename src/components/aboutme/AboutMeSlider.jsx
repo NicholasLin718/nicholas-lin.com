@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./AboutMeSlider.scss";
 import ReactRoundedImage from "react-rounded-image";
-import profilepic from "../images/profilepicture.png";
-
+import profilepic from "../images/lightsPortrait.png";
 export default function AboutMeSlider() {
+    const standoutColour = "#FFCD33";
     const [currentSlide,setCurrentSlide] = useState(0);
 const mainAbout =                         
 <div className="about-content">
@@ -15,13 +15,13 @@ const mainAbout =
             imageWidth="300"
             imageHeight="300"
             roundedSize="7"
-            roundedColor="#FFCD33"
+            roundedColor={standoutColour}
             />
         </a>
     </div>
     <div className="column right">
-        <h2 style={{fontFamily: 'Helvetica', color: "#FFCD33"}}>Hey there,</h2>
-        <p style={{fontSize: '16px', fontFamily: 'Helvetica'}}>
+        <h2 style={{color: standoutColour, overflow: 'hidden'}}>Hey there,</h2>
+        <p style={{fontSize: '16px', overflow: 'hidden'}}>
 
         My name is Nicholas, and I am a first-year Software Engineering student at the University of Waterloo. My interest in analytical thinking and problem solving from strategy games growing up has inspired me to pursue the field of technology. My obsession with coding can really be explained by my innate curiosity that drives my desire to fully understand why and how things around me work, and my ability to to devote my full focus and energy when I engage myself in a problem. Continue reading if you want to learn more about me :)  <br />
         <br />
@@ -34,8 +34,8 @@ const mainAbout =
 
 const interestsAbout =                         
 <div className="about-content">
-    <h2 style={{color: "#FFCD33"}}>Hi there,</h2>
-    <p style={{fontSize: '20px', fontFamily: 'sans-serif'}}>
+    <h2 style={{color: standoutColour}}>IKEA,</h2>
+    <p style={{fontSize: '20px'}}>
     Outside of coding, in my freetime I enjoy participating in sports such as badminton and basketball, playing Minecraft, watching anime, and a few other random hobbies. You can also find me binging random youtube videos, which typically I have different phases for, as one moment I could be watching basketball analysis videos to binging short comedy skits.  <br />
     <br />
     Learn more about my past experiences and projects below, or swipe to see more pictures of me :)

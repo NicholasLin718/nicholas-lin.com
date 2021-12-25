@@ -48,20 +48,20 @@ export default function ImgMediaCard() {
   display: "flex",
   justifyContent: "center",
   flexWrap: "wrap",
-  color: "white",
+  color: "#04132c",
   overflow: 'hidden',
   fontSize: '14px',
   }
 
-  const chipTextStyle = { backgroundColor: "#04132c",
+  const chipTextStyle = { backgroundColor: "#FFCD33",
                           paddingRight: "6px",
                           paddingLeft: "10px",
                           overflow: "hidden",
-                          color: "white" }
+                          color: "#04132c" }
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={timeLine.root}>
+        <Card className={timeLine.root} id = "card">
           <CardActionArea href = "https://github.com/NicholasLin718/TimeLine" target = "_blank" rel = "noreferrer">
           <CardMedia 
               className={timeLine.media}
@@ -69,11 +69,11 @@ export default function ImgMediaCard() {
               image={timelineImage}
               title="TimeLine"
             />
-            <CardContent className = {timeLine.contentHeight} id = "card">
-              <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold"}}>
+            <CardContent className = {timeLine.contentHeight} id = "cardContent">
+              <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
                 TimeLine
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
               As global COVID-19 health restrictions begin to relax in many countries, public spaces now seem to be home to comically long lineups. TimeLine is a solution to that problem, a real-time, community-driven foot traffic indicator to help everyone avoid busy <b>times</b> and busy <b>lines</b> everywhere they go.
               </Typography>
               <div className={timeLine.chip}>
@@ -120,7 +120,7 @@ export default function ImgMediaCard() {
             <a href = "https://github.com/NicholasLin718/TimeLine" target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i></a>
             <a href="https://youtu.be/RT1EIRt_i2U" 
               target= "_blank" rel = "noreferrer"><i class="fas fa-link" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
-              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px"}}>Demo</span></a>          
+              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>Demo</span></a>          
           </CardActions>
         </Card>
       </ThemeProvider>

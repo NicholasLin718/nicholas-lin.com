@@ -15,8 +15,8 @@
     position: relative;
     height: 500px;
     background: $mainColour;
-    overflow: hidden;
     min-height: 400px;
+    font-family: 'Open Sans', sans-serif;
     .arrows{
         #arrow-right{
             position: absolute;
@@ -29,7 +29,7 @@
             user-select: none;
             transition: all 0.3s ease;
             &:hover{
-                color: #FFCD33;
+                color: $standoutColour;
                 background: none;
             }
         }
@@ -44,7 +44,7 @@
             user-select: none;
             transition: all 0.3s ease;
             &:hover{
-                color: #FFCD33;
+                color: $standoutColour;
                 background: none;
             }
         }
@@ -134,12 +134,12 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            border: 3px solid #f1f1f1;
+            // border: 3px solid #f1f1f1;
             margin: 0 5px;
             background: #f1f1f1;
         }
         .dot.active {
-            background: #FFCD33;
+            background: $standoutColour;
         }
     }
 }
@@ -181,9 +181,9 @@
     }
 }
 
-@media (max-width: 991px){
+// @media (max-width: 991px){
 
-}
-@media (max-width: 947px){
+// }
+// @media (max-width: 947px){
 
-}
+// }

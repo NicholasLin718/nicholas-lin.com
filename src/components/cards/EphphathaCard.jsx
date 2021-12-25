@@ -48,20 +48,20 @@ export default function ImgMediaCard() {
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
-    color: "white",
+    color: "#04132c",
     overflow: 'hidden',
     fontSize: '14px',
   }
 
-  const chipTextStyle = { backgroundColor: "#04132c",
+  const chipTextStyle = { backgroundColor: "#FFCD33",
                           paddingRight: "6px",
                           paddingLeft: "10px",
                           overflow: "hidden",
-                          color: "white" }
+                          color: "#04132c" }
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={ephphatha.root}>
+        <Card className={ephphatha.root} id = "card">
           <CardActionArea href = "https://www.youtube.com/watch?v=Kypr42PMlr0" target = "_blank" rel = "noreferrer">
           <CardMedia 
               className={ephphatha.media}
@@ -69,11 +69,11 @@ export default function ImgMediaCard() {
               image={EphphathaImage}
               title="Ephphatha"
             />
-            <CardContent className = {ephphatha.contentHeight} id = "card">
-              <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold"}}>
+            <CardContent className = {ephphatha.contentHeight} id = "cardContent">
+              <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
                 Ephphatha
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
               In the world of silence, it is challenging to learn written English without knowing the sounds of words and letters. A recent study shows that on average, a deaf high school senior is likely to read at the level of a nine-year-old. We designed this project as a solution to tackle this challenge: an ASL translator built from a Raspberry Pi that recognizes ASL hand signals in an image and translates the signals into written English. 
               </Typography>
               <div className={ephphatha.chip}>
@@ -89,10 +89,7 @@ export default function ImgMediaCard() {
                     label="Python"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#04132c",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipTextStyle}
                 />  
                 <Chip
                     icon= {<i className = {"fab fa-js-square"} style={chipIconStyle}/>}
@@ -106,10 +103,7 @@ export default function ImgMediaCard() {
                     label="JSON"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#04132c",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipTextStyle}
                 />
                 <Chip
                     icon= {<i className = {"fas fa-pepper-hot"} style={chipIconStyle}/>}

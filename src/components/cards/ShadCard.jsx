@@ -68,7 +68,7 @@ export default function ImgMediaCard() {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={shad.root}>
+        <Card className={shad.root} id = "card">
           <CardActionArea href = "https://www.shad.ca/about-shad/" target = "_blank" rel = "noreferrer">
             <CardMedia 
               className={shad.media}
@@ -76,7 +76,7 @@ export default function ImgMediaCard() {
               image={shadImage}
               title="Shad Canada"
             />
-            <CardContent className = {shad.contentHeight} id = "card">
+            <CardContent className = {shad.contentHeight} id = "cardContent">
               <Typography gutterBottom variant="h5" component="h2">
                 <div style={{fontWeight: "450"}}>Shad Canada</div>
                 <div style={{fontSize: "14px", marginTop: "3px"}}>

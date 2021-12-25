@@ -65,7 +65,7 @@ export default function ImgMediaCard() {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={opportuniteens.root}>
+        <Card className={opportuniteens.root} id = "card">
           <CardActionArea href = "https://opportuniteens.org/" target = "_blank" rel = "noreferrer">
             <CardMedia 
               className={opportuniteens.media}
@@ -73,7 +73,7 @@ export default function ImgMediaCard() {
               image={opportuniteensPost}
               title="opportuniteens"
             />
-            <CardContent className = {opportuniteens.contentHeight} id = "card">
+            <CardContent className = {opportuniteens.contentHeight} id = "cardContent">
               <Typography gutterBottom variant="h5" component="h2">
                 <div style={{fontWeight: "450"}}>OpportuniTeens Canadian Branch</div>
                 <div style={{fontSize: "14px", marginTop: "3px"}}>

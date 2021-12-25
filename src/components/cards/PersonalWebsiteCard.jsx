@@ -45,24 +45,23 @@ export default function ImgMediaCard() {
   });
 
   const chipIconStyle = { marginTop: "4px",
-    display: "flex",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    color: "white",
-    overflow: 'hidden',
-    fontSize: '14px',
+  display: "flex",
+  justifyContent: "center",
+  flexWrap: "wrap",
+  color: "#04132c",
+  overflow: 'hidden',
+  fontSize: '14px',
   }
 
-  const chipStyle = { backgroundColor: "#04132c",
-    paddingRight: "6px",
-    paddingLeft: "10px",
-    overflow: "hidden" 
-}
-
+  const chipStyle = { backgroundColor: "#FFCD33",
+                          paddingRight: "6px",
+                          paddingLeft: "10px",
+                          overflow: "hidden",
+                          color: "#04132c" }
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Card className={website.root}>
+        <Card className={website.root} id = "card">
           <CardActionArea>
             <CardMedia 
               className={website.media}
@@ -70,11 +69,11 @@ export default function ImgMediaCard() {
               image={timelineImage}
               title="Personal Website"
             />
-            <CardContent className = {website.contentHeight}>
-              <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold"}}>
+            <CardContent className = {website.contentHeight} id = "cardContent">
+              <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
                 Personal Website
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
               My personal website created using the React.js library to create components and Sass to style. The cards were created using Material UI's premade attributes.
               </Typography>
               <div className={website.chip}>

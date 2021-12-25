@@ -52,10 +52,16 @@ export default function ImgMediaCard() {
                           overflow: 'hidden',
                           fontSize: '14px',
   }
+  
+  const chipStyle = { backgroundColor: "#062375",
+                      paddingRight: "6px",
+                      paddingLeft: "10px",
+                      overflow: "hidden",
+                    }
   return (
 
     <ThemeProvider theme={darkTheme}>
-        <Card className={countdownBuddy.root}>
+        <Card className={countdownBuddy.root} id = "card">
         <CardActionArea href = "https://github.com/NicholasLin718/TimeLine" target = "_blank" rel = "noreferrer">
             <CardMedia 
             className={countdownBuddy.media}
@@ -63,11 +69,11 @@ export default function ImgMediaCard() {
             image={countdownImage}
             title="Countdown Buddy"
             />
-            <CardContent className = {countdownBuddy.contentHeight} id = "card">
-            <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold"}}>
+            <CardContent className = {countdownBuddy.contentHeight} id = "cardContent">
+            <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
                 Countdown Buddy
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
             Countdown Buddy is a discord bot that allows you to create your own customizable countdown timer! Once you create your timer, it will update every few seconds and alert you with a customizable message when it reaches the preset end time.
             </Typography>
             <div className={countdownBuddy.chip}>
@@ -76,30 +82,21 @@ export default function ImgMediaCard() {
                     label="Python"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#04132c",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipStyle}
                 />
                 <Chip
                     icon= {<i className = {"fab fa-discord"} style={chipIconStyle}/>}
                     label="Discord.py"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#04132c",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipStyle}
                 />
                 <Chip
                     icon= {<i className = {"fas fa-file"} style={chipIconStyle}/>}
                     label="JSON"
                     size="small"
                     variant="outlined"
-                    style={{ backgroundColor: "#04132c",
-                             paddingRight: "6px",
-                             paddingLeft: "10px",
-                             overflow: "hidden" }}
+                    style={chipStyle}
                 />
               </div>
             </CardContent>
