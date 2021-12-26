@@ -129,7 +129,7 @@ export default function ImgMediaCard() {
             <a href = "https://github.com/NicholasLin718/KNIVX-SE101-Project" target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i></a>
             <a href="https://youtu.be/RT1EIRt_i2U" 
               target= "_blank" rel = "noreferrer"><i class="fas fa-link" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
-              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px"}}>Demo</span></a>          
+              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>Demo</span></a>          
           </CardActions>
         </Card>
       </ThemeProvider>

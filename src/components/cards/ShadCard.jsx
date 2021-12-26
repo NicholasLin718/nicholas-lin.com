@@ -80,7 +80,7 @@ export default function ImgMediaCard() {
             />
             <CardContent className = {shad.contentHeight} id = "cardContent">
               <Typography gutterBottom variant="h5" component="h2">
-                <div style= {{color:"white", fontWeight: "500", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>Shad Canada</div>
+                <div style= {{color:"white", fontWeight: "600", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>Shad Canada</div>
                 <div style={{fontSize: "14px", marginTop: "3px", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>
                 Ryerson University
                 </div>
