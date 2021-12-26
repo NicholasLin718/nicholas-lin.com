@@ -45,19 +45,22 @@ export default function ImgMediaCard() {
   });
 
   const chipIconStyle = { marginTop: "4px",
-  display: "flex",
-  justifyContent: "center",
-  flexWrap: "wrap",
-  color: "#04132c",
-  overflow: 'hidden',
-  fontSize: '14px',
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    color: "#04132c",
+    overflow: 'hidden',
+    fontSize: '14px',
   }
 
   const chipTextStyle = { backgroundColor: "#FFCD33",
                           paddingRight: "6px",
                           paddingLeft: "10px",
                           overflow: "hidden",
-                          color: "#04132c" }
+                          color: "#04132c",
+                          fontFamily: "Open Sans, sans-serif",
+                          fontWeight: "500"
+                        }
   return (
     <div>
       <ThemeProvider theme={darkTheme}>

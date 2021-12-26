@@ -24,8 +24,8 @@ const catalystStyles = makeStyles((theme) => ({
     width: '100%',
   },
   contentHeight: {
-    maxHeight: 575,
-    minHeight: 575,
+    maxHeight: 550,
+    minHeight: 550,
   },
   chip: {
     marginTop: "16px",
@@ -62,6 +62,8 @@ export default function ImgMediaCard() {
     paddingLeft: "10px",
     overflow: "hidden",
     color: "#04132c",
+    fontFamily: "Open Sans, sans-serif",
+    fontWeight: "500"
   }
 
   const textDescriptionStyle = {fontSize:"15px"};
@@ -78,12 +80,12 @@ export default function ImgMediaCard() {
             />
             <CardContent className = {catalyst.contentHeight} id = "cardContent">
               <Typography gutterBottom variant="h5" component="h2">
-                <div style={{fontWeight: "450"}}>Catalyst</div>
-                <div style={{fontSize: "14px", marginTop: "3px"}}>
-                University of Waterloo (July 2020)
+                <div style= {{color:"white", fontWeight: "600", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>Catalyst</div>
+                <div style={{fontSize: "14px", marginTop: "3px", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>
+                University of Waterloo
                 </div>
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p" style = {{fontSize: "15px"}}>
+              <Typography variant="body2" color="textSecondary" component="p" style = {{fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
               Catalyst is a two-week enrichment program from the University of Waterloo that provides high school students an opportunity to develop leadership skills and collaborate with like-minded peers to explore engineering, science, and innovation.
               </Typography>
               <div className={catalyst.chip}>
@@ -168,7 +170,7 @@ export default function ImgMediaCard() {
           <CardActions style={{height: "50px"}}>
               <a href="https://www.youtube.com/watch?v=2-LoJipgtxU" 
               target= "_blank" rel = "noreferrer"><i class="fas fa-link" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
-              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px"}}>Sequence Memory Game Demo</span></a>
+              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>Sequence Memory Game Demo</span></a>
           </CardActions>
         </Card>
       </ThemeProvider>

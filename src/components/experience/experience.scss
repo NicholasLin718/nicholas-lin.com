@@ -3,14 +3,13 @@
     // background: url("../images/darkbluepatterned.jpg");
     // background-position: absolute;
     min-height: 1000px;
-    background-color: #0c1f24;
+    background-color: rgb(24, 26, 29);
     overflow-y: hidden;
-    z-index: 5;
     .header{
         padding-top: 50px;
         padding-bottom: 50px;
         h1{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: 'Poppins, sans-serif';
             color: white;
             font-size: 40px;
             text-align: center;

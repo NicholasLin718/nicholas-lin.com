@@ -22,8 +22,8 @@ const linkECMStyles = makeStyles((theme) => ({
     width: '100%',
   },
   contentHeight: {
-    maxHeight: 575,
-    minHeight: 575,
+    maxHeight: 550,
+    minHeight: 550,
   },
   chip: {
     marginTop: "16px",
@@ -60,6 +60,8 @@ export default function ImgMediaCard() {
     paddingLeft: "10px",
     overflow: "hidden",
     color: "#04132c",
+    fontFamily: "Open Sans, sans-serif",
+    fontWeight: "500"
   }
 
   return (
@@ -75,12 +77,12 @@ export default function ImgMediaCard() {
             />
             <CardContent className = {linkECM.contentHeight} id = "cardContent">
               <Typography gutterBottom variant="h5" component="h2">
-                <div style={{fontWeight: "450"}}>LinkECM Consulting Inc.</div>
-                <div style={{fontSize: "14px", marginTop: "3px"}}>
-                Data Analyst (Jan 2019 - Jan 2021)
+              <div style= {{color:"white", fontWeight: "600", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>LinkECM Consulting Inc.</div>
+                <div style={{fontSize: "14px", marginTop: "3px", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>
+                Data Analyst
                 </div>
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p" style = {{fontSize: "15px"}}>
+              <Typography variant="body2" color="textSecondary" component="p" style = {{fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
               Founded in 2005, LINKECM consulting Inc is specialized in Open Text Content Server (OTCS) solution design and module development. OTCS is the flagship product from Open Text Corporation who offers content services; digital process automation, which enables organizations to transform into digital and data-driven businesses through automation; and discovery suite that provides forensics and unstructured data analytics for searching, collecting, and investigating enterprise data to manage legal obligations and risk.
               </Typography>
               <div className={linkECM.chip}>

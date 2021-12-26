@@ -1,7 +1,7 @@
 @import "../../global.scss";
 footer{
     background-color: $mainColour;
-    padding-top: 48px;
+    padding-top: 24px;
     padding-bottom: 30px;
     color: #191e29;
     font-size: 14px;
@@ -20,21 +20,4 @@ footer{
             color: white;
         }
     }
-    .back{
-        text-decoration: none;
-        display: inline-block;
-        background: #FFCD33;
-        color: #fff;
-        font-size: 15px;
-        padding: 8px 16px;
-        margin-top: 16px;
-        border-radius: 15px;
-        border: 2px solid #FFCD33;
-        transition: all 0.3s ease;
-        &:hover{
-            color: #FFCD33;
-            background: none;
-        }
-    }
-
 }

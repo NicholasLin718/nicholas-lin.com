@@ -8,10 +8,10 @@ import resume from "../../files/Resume.pdf";
 export default function Intro() {
     return (
         <div className="intro" id="intro">
-
             <video autoPlay loop muted alt={backgroundImage}
                 style={
                     {
+                        // position: "fixed",
                         position: "absolute",
                         width:"100%",
                         left: "50%",
@@ -19,7 +19,7 @@ export default function Intro() {
                         height: "100%",
                         objectFit: 'cover',
                         transform: "translate(-50%, -50%)",
-                        zIndex: "-1"
+                        zIndex: "-2"
 
                     }
                 }
@@ -42,17 +42,13 @@ export default function Intro() {
                             <Typist.Delay ms={800} />
                             <div className="text-2" >Nicholas Lin</div>
                             <Typist.Delay ms={1200} />
-                            <div className="text-3">I am a Software Engineer from 
+                            <div className="text-3">Software Engineer from the University of Waterloo
                                 {/* <span className = "text-3" style={{fontFamily: 'Helvetica'}}> Programmer</span>                        
                                 <Typist.Backspace count={10} delay={1300} ms={1300} />
                                 <span className="text-3" style={{fontFamily: 'Helvetica'}}>Badminton Player</span>
                                 <Typist.Backspace count={16} delay={1300} ms={1300}/>
                                 <span className="text-3" style={{fontFamily: 'Helvetica'}}>Hobbyist</span>
                                 <Typist.Backspace count={8} delay={1300} ms={1300}/> */}
-                                <span className="text-3">
-                                <br></br>
-                                the University of Waterloo
-                                </span>
                             </div>
                         </Typist>
                         <div>                  

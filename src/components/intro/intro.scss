@@ -6,7 +6,8 @@
     .home{
             .home-content{
                 margin: 30vh 0vw;
-                z-index: 1;
+                z-index: 0;
+                // position: fixed;
                 // font-family: 'Poppins', sans-serif;
                 .text-1{
                     color: #fff;
@@ -15,7 +16,7 @@
                 }
                 .text-2{
                     color: #fff;
-                    padding: 20px 0;
+                    padding-top: 10px;
                     font-size: 75px;
                     font-weight: 600;
                     margin-left: -3px;
@@ -24,7 +25,6 @@
                 .text-3{
                     color: #fff;
                     font-size: 20px;
-                    margin: 5px 0;
                     transition: all 0.3s ease;
                     line-height: 1.4;
                 }
@@ -48,14 +48,14 @@
                         border: 2px solid #ffc61c;
                         transition: all 0.3s ease;
                         &:hover{
-                            color: #FFCD33;
-                            background: none;
+                            // color: #FFCD33;
+                            background-color: #ffda6b;
                         }
                     }
                     #home-icons{
                         margin-top: 35px;
                         padding-left: 15px;
-                        z-index: 1;
+                        z-index: -1;
                         color:white;
                         font-size: 25px;
                         padding-bottom: 20px;
@@ -103,7 +103,7 @@
                     }
                     #home-icons{
                         padding-left: 15px;
-                        z-index: 6;
+                        z-index: -1;
                         color:white;
                         font-size: 20px;
                         padding-bottom: 20px;
@@ -146,7 +146,7 @@
                     }
                     #home-icons{
                         padding-left: 15px;
-                        z-index: 6;
+                        z-index: -1;
                         color:white;
                         font-size: 15px;
                         padding-bottom: 20px;

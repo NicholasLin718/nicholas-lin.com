@@ -48,15 +48,18 @@ export default function ImgMediaCard() {
                           display: "flex",
                           justifyContent: "center",
                           flexWrap: "wrap",
-                          color: "white",
+                          color: "#04132c",
                           overflow: 'hidden',
                           fontSize: '14px',
   }
   
-  const chipStyle = { backgroundColor: "#062375",
-                      paddingRight: "6px",
-                      paddingLeft: "10px",
-                      overflow: "hidden",
+  const chipStyle = { backgroundColor: "#FFCD33",
+  paddingRight: "6px",
+  paddingLeft: "10px",
+  overflow: "hidden",
+  color: "#04132c",
+  fontFamily: "Open Sans, sans-serif",
+  fontWeight: "500"
                     }
   return (
 
@@ -70,7 +73,7 @@ export default function ImgMediaCard() {
             title="Countdown Buddy"
             />
             <CardContent className = {countdownBuddy.contentHeight} id = "cardContent">
-            <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
+            <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "600", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>
                 Countdown Buddy
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>

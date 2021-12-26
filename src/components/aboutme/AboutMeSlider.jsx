@@ -20,10 +20,10 @@ const mainAbout =
         </a>
     </div>
     <div className="column right">
-        <h2 style={{color: standoutColour, overflow: 'hidden'}}>Hey there,</h2>
+        <h2 style={{color: standoutColour, overflow: 'hidden', paddingBottom:"15px"}}>Hey there!</h2>
         <p style={{fontSize: '16px', overflow: 'hidden'}}>
 
-        My name is Nicholas, and I am a first-year Software Engineering student at the University of Waterloo. My interest in analytical thinking and problem solving from strategy games growing up has inspired me to pursue the field of technology. My obsession with coding can really be explained by my innate curiosity that drives my desire to fully understand why and how things around me work, and my ability to to devote my full focus and energy when I engage myself in a problem. Continue reading if you want to learn more about me :)  <br />
+        My name is Nicholas, and I am a first-year Software Engineering student at the University of Waterloo. My interest in strategy games growing up has developed my analytical thinking and problem solving skills which inspired me to pursue a career in technology. My obsession with coding can really be explained by my innate curiosity that drives my desire to fully understand why and how things around me work, and my ability to to devote my full focus and energy when I engage myself in a problem. Continue reading if you want to learn more about me :)  <br />
         <br />
         If you need to get in touch, please email: 
         <a href="mailto:n39lin@uwaterloo.ca" target="_blank" rel="noreferrer" style={{color: 'white'}}> n39lin@uwaterloo.ca </a>

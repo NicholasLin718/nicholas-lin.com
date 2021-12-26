@@ -16,26 +16,27 @@ import "./projects.scss";
 export default function Projects() {
     // const classes = useStyles();
     return (
-        <section className="projects" id="projects">
+        <div className="projects" id="projects">
              <div className= "header"><h1>CHECK OUT MY PAST PROJECTS</h1></div>
             <Grid container spacing={4} className = "grid" justifyContent="center">
-                <Grid item xs = {8} sm ={6} md={4} xl = {2}>
+                <Grid item xs = {12} sm ={6} md={4} xl = {2}>
                     <TimeLineCard className = "cards"/>
                 </Grid>
-                <Grid item xs = {8} sm ={6} md={4} xl = {2}>
+                <Grid item xs = {12} sm ={6} md={4} xl = {2}>
                     <CountdownBuddyCard className = "cards"/>
                 </Grid>
-                <Grid item xs = {8} sm ={6} md={4} xl = {2}>
+                <Grid item xs = {12} sm ={6} md={4} xl = {2}>
                     <PersonalWebsiteCard className = "cards"/>
                 </Grid>
-                <Grid  item xs = {8} sm ={6} md={4} xl = {2}>
+                <Grid  item xs = {12} sm ={6} md={4} xl = {2}>
                     <BoggleCard className = "cards"/>
                 </Grid>
-                <Grid  item xs = {8} sm ={6} md={4} xl = {2}>
+                <Grid  item xs = {12} sm ={6} md={4} xl = {2}>
                     <EphphathaCard className = "cards"/>
                 </Grid>
             </Grid>
-        </section>
+            <a className="button" href="#home"><i class="fas fa-chevron-up" id = "arrow"></i></a>
+        </div>
         
     )
 }

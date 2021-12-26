@@ -23,8 +23,8 @@ const opportuniteensStyles = makeStyles((theme) => ({
     width: '100%',
   },
   contentHeight: {
-    maxHeight: 575,
-    minHeight: 575,
+    maxHeight: 550,
+    minHeight: 550,
   },
   chip: {
     marginTop: "16px",
@@ -60,6 +60,8 @@ export default function ImgMediaCard() {
     paddingLeft: "10px",
     overflow: "hidden",
     color: "#04132c",
+    fontFamily: "Open Sans, sans-serif",
+    fontWeight: "500"
   }
 
   return (
@@ -75,12 +77,12 @@ export default function ImgMediaCard() {
             />
             <CardContent className = {opportuniteens.contentHeight} id = "cardContent">
               <Typography gutterBottom variant="h5" component="h2">
-                <div style={{fontWeight: "450"}}>OpportuniTeens Canadian Branch</div>
-                <div style={{fontSize: "14px", marginTop: "3px"}}>
-                Researcher (July 2021 - Present)
+              <div style= {{color:"white", fontWeight: "600", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>OpportuniTeens Canadian Branch</div>
+                <div style={{fontSize: "14px", marginTop: "3px", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>
+                Researcher
                 </div>
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p" style = {{fontSize: "15px"}}>
+              <Typography variant="body2" color="textSecondary" component="p" style = {{fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
               OpportuniTeens is a database of internships, volunteering events and other programs compiled by highschool students in the United States. It focuses on several career fields such as STEM, Healthcare, and Civil Services. 
               </Typography>
               <div className={opportuniteens.chip}>
@@ -124,7 +126,7 @@ export default function ImgMediaCard() {
           <CardActions style={{height: "50px"}}>
           <a href="https://www.instagram.com/opportuniteens.can/" 
               target= "_blank" rel = "noreferrer"><i class="fab fa-instagram" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
-              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px"}}>OpportuniTeens Canada</span></a>
+              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>OpportuniTeens Canada</span></a>
           </CardActions>
         </Card>
       </ThemeProvider>

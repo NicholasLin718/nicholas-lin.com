@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap');
 @import "../../global.scss";
 *{
-    // margin: 0;
-    // padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
@@ -13,15 +11,17 @@
 // }
 /*Navbar Styling*/
 .navbar{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'open-sans', sans-serif;
     overflow: hidden;
     position: fixed;
     width: 100%;
-    padding: 20px 0;
+    padding: 18px 0;
     /* background: #FFCD33; */
     font-family: 'Ubuntu', 'sans-serif';
     transition: all 0.3s ease;
     z-index: 997;
+
+
     &.active{
         transition: all 0.3s ease;
         background-color: $mainColour;
@@ -37,8 +37,8 @@
     }
     .logo{
         a{
-            color: #fff;
-            font-size: 32px;
+            color: #FFCD33;
+            font-size: 28px;
             font-weight: 600;
         }
     }
@@ -47,13 +47,16 @@
         li{
             list-style: none;
             display: inline-block;
+
             a{
+
                 color: #fff;
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: 500;
                 margin-left: 25px;
                 transition: cover 0.3s ease;
 
+            
                 &:hover{
                     color: #FFCD33;
                     transition: all 0.3s ease-out;
@@ -64,11 +67,9 @@
             overflow: hidden;
             a{
                 color: #FFCD33;
-                font-size: 16px;
                 font-weight: 500;
                 margin-left: 25px;
                 transition: cover 0.3s ease;
-
                 &:hover{
                     color: #FFCD33;
                     transition: all 0.3s ease-out;

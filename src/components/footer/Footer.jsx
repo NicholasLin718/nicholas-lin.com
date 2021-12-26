@@ -11,7 +11,7 @@ class Footer extends Component {
                <li><a href = "https://github.com/NicholasLin718" target="_blank" rel="noreferrer"><i className ="fab fa-github" style = {{color: 'white'}}></i></a></li>
                <li><a href = "https://www.linkedin.com/in/nicholas-lin-87368a20b/" target="_blank" rel="noreferrer"><i className ="fab fa-linkedin" style = {{color: 'white'}}></i></a></li>
            </ul>
-           <a className = "back" href="#home">Back to the top</a>      
+           <div style = {{color: "white", fontFamily: "Open Sans, sans-serif"}}>n39lin@uwaterloo.ca | Nicholas Lin © 2021</div>
         </div>
      </div>
     </footer>

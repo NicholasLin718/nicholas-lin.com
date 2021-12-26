@@ -25,8 +25,8 @@ const shadStyles = makeStyles((theme) => ({
     objectFit: "cover"
   },
   contentHeight: {
-    maxHeight: 575,
-    minHeight: 575,
+    maxHeight: 550,
+    minHeight: 550,
   },
   chip: {
     marginTop: "16px",
@@ -63,6 +63,8 @@ export default function ImgMediaCard() {
     paddingLeft: "10px",
     overflow: "hidden",
     color: "#04132c",
+    fontFamily: "Open Sans, sans-serif",
+    fontWeight: "500"
   }
 
   return (
@@ -78,14 +80,14 @@ export default function ImgMediaCard() {
             />
             <CardContent className = {shad.contentHeight} id = "cardContent">
               <Typography gutterBottom variant="h5" component="h2">
-                <div style={{fontWeight: "450"}}>Shad Canada</div>
-                <div style={{fontSize: "14px", marginTop: "3px"}}>
-                Ryerson University (July 2019)
+                <div style= {{color:"white", fontWeight: "500", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>Shad Canada</div>
+                <div style={{fontSize: "14px", marginTop: "3px", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>
+                Ryerson University
                 </div>
               </Typography>
               <Typography gutterBottom variant="h6" component="h2">
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p" style={{fontSize: "15px"}}>
+              <Typography variant="body2" color="textSecondary" component="p" style={{fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
                 Participated in Canada’s premier month-long STEAM and entrepreneurship program, featuring hands-on workshops, 
                 engaging seminars, team building events, and opportunities to network with amazing people. 
               </Typography>
@@ -153,7 +155,7 @@ export default function ImgMediaCard() {
           <CardActions style={{height: "50px"}}>
               <a href="https://docs.google.com/presentation/d/1k_6jDZFNFLPTgoY51hii79riYn_GcU_QEu5IXVq6Su0/edit#slide=id.g5dd95b87a5_0_0" 
               target= "_blank" rel = "noreferrer"><i class="far fa-file-powerpoint" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
-              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px"}}>Presentation</span></a>
+              <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>Presentation</span></a>
           </CardActions>
         </Card>
       </ThemeProvider>

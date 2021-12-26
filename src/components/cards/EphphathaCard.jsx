@@ -54,10 +54,12 @@ export default function ImgMediaCard() {
   }
 
   const chipTextStyle = { backgroundColor: "#FFCD33",
-                          paddingRight: "6px",
-                          paddingLeft: "10px",
-                          overflow: "hidden",
-                          color: "#04132c" }
+  paddingRight: "6px",
+  paddingLeft: "10px",
+  overflow: "hidden",
+  color: "#04132c",
+  fontFamily: "Open Sans, sans-serif",
+  fontWeight: "500" }
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
@@ -70,7 +72,7 @@ export default function ImgMediaCard() {
               title="Ephphatha"
             />
             <CardContent className = {ephphatha.contentHeight} id = "cardContent">
-              <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "bold", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
+              <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "600", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>
                 Ephphatha
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
