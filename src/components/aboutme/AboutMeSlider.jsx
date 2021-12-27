@@ -45,17 +45,17 @@ const interestsAbout =
 
 const whyAbout =                         
 <div className="about-content">
-    <div className="column left">
-        <img src = {treeImage} style = {{height: "375px", marginLeft: "125px"}}></img>
-    </div>
-    <div className="column right">
-        <h2 style={{color: standoutColour, overflow: 'hidden', paddingBottom:"15px", marginLeft: "75px"}}>My Goals</h2>
-        <p style={{fontSize: '16px', overflow: 'hidden', marginLeft: "75px"}}>
+    <div id = "twoText">
+        <h2 style={{color: standoutColour, overflow: 'hidden', paddingBottom:"15px"}}>My Goals</h2>
+        <p style={{fontSize: '16px', overflow: 'hidden'}}>
         My goal as an aspiring software engineer is to delve into a variety of programming fields. I recently found myself working on web development, and I mainly focused on that in my past projects. However, I am also eager to explore and learn more backend work and perhaps even game development. I believe that the most important skill to have is to be flexible and integrate as many opportunities to learn as possible, especially in this rapidly evolving field.
         <br />
         <br />
         But, there's a lot more to me than just programming! Swipe to learn more about my hobbies :D
         </p>
+    </div>
+    <div className="column left">
+        <img src = {treeImage} className = "tree"></img>
     </div>
 </div>
 
