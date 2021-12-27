@@ -3,16 +3,16 @@
     height: 100vh;
     overflow-y: hidden;
     font-family: 'Poppins', sans-serif;
+    // background-color: rgb(24, 26, 29);
     .home{
             .home-content{
                 margin: 30vh 0vw;
-                z-index: 0;
+                z-index: 2;
                 // position: fixed;
                 // font-family: 'Poppins', sans-serif;
                 .text-1{
                     color: #fff;
                     font-size: 25px;
-                    transition: all 0.3s ease;
                 }
                 .text-2{
                     color: #fff;
@@ -20,12 +20,10 @@
                     font-size: 75px;
                     font-weight: 600;
                     margin-left: -3px;
-                    transition: all 0.3s ease;
                 }
                 .text-3{
                     color: #fff;
                     font-size: 20px;
-                    transition: all 0.3s ease;
                     line-height: 1.4;
                 }
                 .home-icon-div{
@@ -46,7 +44,10 @@
                         margin-top: 16px;
                         border-radius: 15px;
                         border: 2px solid #ffc61c;
-                        transition: all 0.3s ease;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        -moz-transition: all 0.3s ease-in-out;
+                        -o-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
                         &:hover{
                             // color: #FFCD33;
                             background-color: #ffda6b;
@@ -55,7 +56,7 @@
                     #home-icons{
                         margin-top: 35px;
                         padding-left: 15px;
-                        z-index: -1;
+                        z-index: 2;
                         color:white;
                         font-size: 25px;
                         padding-bottom: 20px;
@@ -103,7 +104,7 @@
                     }
                     #home-icons{
                         padding-left: 15px;
-                        z-index: -1;
+                        z-index: 2;
                         color:white;
                         font-size: 20px;
                         padding-bottom: 20px;
@@ -146,7 +147,7 @@
                     }
                     #home-icons{
                         padding-left: 15px;
-                        z-index: -1;
+                        z-index: 2;
                         color:white;
                         font-size: 15px;
                         padding-bottom: 20px;

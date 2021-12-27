@@ -18,16 +18,17 @@
     padding: 18px 0;
     /* background: #FFCD33; */
     font-family: 'Ubuntu', 'sans-serif';
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     z-index: 997;
 
 
     &.active{
-        transition: all 0.3s ease;
         background-color: $mainColour;
     }
     &.invis{
-        transition: all 0.3s ease;
         opacity: 0;
     }
     .max-width{
@@ -54,12 +55,16 @@
                 font-size: 15px;
                 font-weight: 500;
                 margin-left: 25px;
-                transition: cover 0.3s ease;
-
-            
+                -webkit-transition: cover 0.3s ease-in-out;
+                -moz-transition: cover 0.3s ease-in-out;
+                -o-transition: cover 0.3s ease-in-out;
+                transition: cover 0.3s ease-in-out;
                 &:hover{
                     color: #FFCD33;
-                    transition: all 0.3s ease-out;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                 }
             }            
         }
@@ -69,10 +74,16 @@
                 color: #FFCD33;
                 font-weight: 500;
                 margin-left: 25px;
-                transition: cover 0.3s ease;
+                -webkit-transition: cover 0.3s ease-in-out;
+                -moz-transition: cover 0.3s ease-in-out;
+                -o-transition: cover 0.3s ease-in-out;
+                transition: cover 0.3s ease-in-out;
                 &:hover{
                     color: #FFCD33;
-                    transition: all 0.3s ease-out;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                 }
             }
         }
@@ -88,11 +99,17 @@
                 font-size: 18px;
                 font-weight: 500;
                 margin-left: 25px;
-                transition: cover 0.3s ease;
+                -webkit-transition: cover 0.3s ease-in-out;
+                -moz-transition: cover 0.3s ease-in-out;
+                -o-transition: cover 0.3s ease-in-out;
+                transition: cover 0.3s ease-in-out;
 
                 &:hover{
                     color: #FFCD33;
-                    transition: all 0.3s ease-out;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                 }
             }
         }
@@ -118,11 +135,9 @@
                 font-size: 18px;
                 font-weight: 500;
                 margin-left: 25px;
-                transition: cover 0.3s ease;
 
                 &:hover{
                     color: #FFCD33;
-                    transition: all 0.3s ease-out;
                 }
             }
         }
@@ -141,11 +156,8 @@
                 font-size: 18px;
                 font-weight: 500;
                 margin-left: 25px;
-                transition: cover 0.3s ease;
-
                 &:hover{
                     color: #FFCD33;
-                    transition: all 0.3s ease-out;
                 }
             }
         }
@@ -216,11 +228,9 @@
                     display: inline-block;
                     margin: 20px 0;
                     font-size: 25px;
-                    transition: cover 0.3s ease;
     
                     &:hover{
                         color: #FFCD33;
-                        transition: all 0.3s ease-out;
                     }
                 }
             }
@@ -231,11 +241,9 @@
                     display: inline-block;
                     margin: 20px 0;
                     font-size: 25px;
-                    transition: cover 0.3s ease;
     
                     &:hover{
                         color: #FFCD33;
-                        transition: all 0.3s ease-out;
                     }
                 }
             }

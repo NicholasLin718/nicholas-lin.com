@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./AboutMeSlider.scss";
 import ReactRoundedImage from "react-rounded-image";
+import treeImage from "../images/tree.jpg";
 import profilepic from "../images/lightsPortrait.png";
 export default function AboutMeSlider() {
     const standoutColour = "#FFCD33";
@@ -45,24 +46,15 @@ const interestsAbout =
 const whyAbout =                         
 <div className="about-content">
     <div className="column left">
-        <a href="mailto:n39lin@uwaterloo.ca" target="_blank" rel="noreferrer">
-        <ReactRoundedImage 
-            className="profile-pic"
-            image={profilepic}
-            imageWidth="300"
-            imageHeight="300"
-            roundedSize="7"
-            roundedColor="#FFCD33"
-            />
-        </a>
+        <img src = {treeImage} style = {{height: "375px", marginLeft: "125px"}}></img>
     </div>
     <div className="column right">
-        <h2>Hey there!</h2>
-        <p style={{fontSize: '20px'}}>
-
-        My name is Nicholas Lin, and I am a first-year Software Engineering student at the University of Waterloo. My interest in logical thinking and problem solving from strategy games growing up has inspired me to pursue the field of technology. I'm fascinated by the growing development of technological advancements in the past decade, and I’d like to imagine that I would be able to make contributions to this rapidly growing field.  <br />
+        <h2 style={{color: standoutColour, overflow: 'hidden', paddingBottom:"15px", marginLeft: "75px"}}>My Goals</h2>
+        <p style={{fontSize: '16px', overflow: 'hidden', marginLeft: "75px"}}>
+        My goal as an aspiring software engineer is to delve into a variety of programming fields. I recently found myself working on web development, and I mainly focused on that in my past projects. However, I am also eager to explore and learn more backend work and perhaps even game development. I believe that the most important skill to have is to be flexible and integrate as many opportunities to learn as possible, especially in this rapidly evolving field.
         <br />
-        My obsession with coding can really be explained by my innate curiosity that drives my desire to fully understand how and why things around me work. I find myself putting 100% of my focus and energy when I engage myself in a problem, and when I do, it's almost as if I can time travel from the numerous hours that fly by.   
+        <br />
+        But, there's a lot more to me than just programming! Swipe to learn more about my hobbies :D
         </p>
     </div>
 </div>
@@ -72,15 +64,16 @@ const data = [
         id: "1",
         div: mainAbout
     },
+    
     {
         id: "2",
+        div: whyAbout
+    },
+    {
+        id: "3",
         div: interestsAbout
     },
 
-    {
-        id: "3",
-        div: whyAbout
-    }
 ]
 
 const handleClick = (way) =>{

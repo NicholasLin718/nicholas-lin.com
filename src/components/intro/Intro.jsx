@@ -19,8 +19,7 @@ export default function Intro() {
                         height: "100%",
                         objectFit: 'cover',
                         transform: "translate(-50%, -50%)",
-                        zIndex: "-2"
-
+                        zIndex: "-1"
                     }
                 }
             >
