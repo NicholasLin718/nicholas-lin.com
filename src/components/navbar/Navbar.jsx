@@ -12,7 +12,7 @@ export default function Navbar(){
     const [experience,setExperience] = useState(false);
     const [project,setProject] = useState(false);
     const changeNavBackground = () => {
-        if(window.scrollY >= 80 && window.scrollY < 500){
+        if(window.scrollY >= 80 && window.scrollY < 500 && click == false){
             setNavbar(false);
             setNavbarInvis(true);
         }
@@ -77,7 +77,7 @@ export default function Navbar(){
         <nav className= {navbarStatus}>
             <div className="max-width">
                 <div className="logo"><a href="#home">[NL]</a></div>
-                <ul className={click ? "menu-active" : "menu"} >
+                <ul className={click ? "mobile-menu" : "menu"} > 
                     <li className = {home ? "current" : "HOME"}><a href="#home" data-hover= "Home" onClick={closeMobileMenu}>Home</a></li>
                     <li className = {about ? "current" : "ABOUT"}><a href="#about-me" data-hover= "About" onClick={closeMobileMenu}>About</a></li>
                     <li className = {experience ? "current" : "EXP"}><a href="#experience" data-hover= "Experience" onClick={closeMobileMenu}>Experiences</a></li>

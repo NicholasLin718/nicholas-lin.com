@@ -46,6 +46,7 @@
         li{
             list-style: none;
             display: inline-block;
+            font-size: 16px;
             a{
                 color: #fff;
                 font-size: 15px;
@@ -69,7 +70,7 @@
             a{
                 color: #FFCD33;
                 font-weight: 500;
-                margin-left: 25px;
+                // margin-left: 25px;
                 -webkit-transition: cover 0.3s ease-in-out;
                 -moz-transition: cover 0.3s ease-in-out;
                 -o-transition: cover 0.3s ease-in-out;
@@ -85,7 +86,7 @@
         }
 
     }
-    .menu-active{
+    .mobile-menu{
         overflow: hidden;
         li{
             list-style: none;
@@ -94,7 +95,7 @@
                 color: #fff;
                 font-size: 18px;
                 font-weight: 500;
-                margin-left: 25px;
+                // margin-left: 25px;
                 -webkit-transition: cover 0.3s ease-in-out;
                 -moz-transition: cover 0.3s ease-in-out;
                 -o-transition: cover 0.3s ease-in-out;
@@ -121,14 +122,14 @@
 }
 
 @media (max-width: 1240px){
-    .navbar .menu-active{
+    .navbar .mobile-menu{
         overflow: hidden;
         li{
             list-style: none;
             display: inline-block;
             a{
                 color: #fff;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 500;
                 margin-left: 25px;
                 
@@ -143,13 +144,13 @@
     .max-width{
         padding: 0 50px;
     }
-    .navbar .menu-active{
+    .navbar .mobile-menu{
         li{
             list-style: none;
             display: inline-block;
             a{
                 color: #fff;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 500;
                 margin-left: 25px;
                 &:hover{
@@ -181,7 +182,7 @@
     .navbar {
         position: fixed;
         width: 100%;
-        padding: 20px 0;
+        // padding: 20px 0;
         /* background: #FFCD33; */
         font-family: 'Ubuntu', 'sans-serif';
         -webkit-transition: all 0.3s ease-in-out;
@@ -189,12 +190,14 @@
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
         .menu{
+            padding: 0;
             position: fixed;
             height: 100vh;
+            min-height: 1000px;
             width: 100%;
             left: -100%;
             top: 0;
-            background: #111;
+            background: $mainColour;
             text-align: center;
             padding-top: 80px;
             -webkit-transition: all 0.3s ease-in-out;
@@ -207,19 +210,23 @@
                 a{
                     color: white;
                     display: inline-block;
-                    margin: 20px 0;
+                    margin: 25px 0;
                     font-size: 25px;
+                    padding: 0;
                 }
             }
         }
-        .menu-active{
+        .mobile-menu{
+            padding: 0;
             z-index: 998;
             position: fixed;
             height: 100vh;
+            min-height: 1000px;
             width: 100%;
             left: 0;
             top: 0;
-            background: #111;
+
+            background: $mainColour;
             text-align: center;
             padding-top: 80px;
             -webkit-transition: all 0.3s ease-in-out;
@@ -231,7 +238,7 @@
                 a{
                     color: white;
                     display: inline-block;
-                    margin: 20px 0;
+                    margin: 25px 0;
                     font-size: 25px;
     
                     &:hover{
@@ -240,11 +247,13 @@
                 }
             }
             .current{
+                padding: 0;
                 display: block;
                 a{
+                    padding: 0;
                     color: #FFCD33;
                     display: inline-block;
-                    margin: 20px 0;
+                    margin: 25px 0;
                     font-size: 25px;
                     &:hover{
                         color: #FFCD33;
