@@ -65,7 +65,7 @@ export default function ImgMediaCard() {
 
     <ThemeProvider theme={darkTheme}>
         <Card className={countdownBuddy.root} id = "card">
-        <CardActionArea href = "https://github.com/NicholasLin718/TimeLine" target = "_blank" rel = "noreferrer">
+        <CardActionArea href = "https://github.com/NicholasLin718/Countdown-Buddy" target = "_blank" rel = "noreferrer">
             <CardMedia 
             className={countdownBuddy.media}
             alt="Countdown Buddy"
@@ -77,7 +77,7 @@ export default function ImgMediaCard() {
                 Countdown Buddy
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
-            Countdown Buddy is a discord bot that allows you to create your own customizable countdown timer! Once you create your timer, it will update every few seconds and alert you with a customizable message when it reaches the preset end time.
+            Ever wanted to create countdown for your discord server to look forward to important events? Countdown buddy is here to help! It is a discord bot that allows you to create your own customizable countdown timer that updates in real time and it comes with many other customizable features! 
             </Typography>
             <div className={countdownBuddy.chip}>
                 <Chip

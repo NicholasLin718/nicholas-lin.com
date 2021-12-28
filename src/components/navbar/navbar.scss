@@ -4,11 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-// .max-width{
-//     max-width: 1300px;
-//     padding: 0 80px;
-//     margin: auto;
-// }
+
 /*Navbar Styling*/
 .navbar{
     font-family: 'open-sans', sans-serif;
@@ -37,6 +33,7 @@
         justify-content: space-between;
     }
     .logo{
+        margin-left: -15px;
         a{
             color: #FFCD33;
             font-size: 28px;
@@ -45,12 +42,11 @@
     }
     .menu{
         overflow: hidden;
+        margin-right: -10px;
         li{
             list-style: none;
             display: inline-block;
-
             a{
-
                 color: #fff;
                 font-size: 15px;
                 font-weight: 500;
@@ -135,7 +131,7 @@
                 font-size: 18px;
                 font-weight: 500;
                 margin-left: 25px;
-
+                
                 &:hover{
                     color: #FFCD33;
                 }
@@ -188,7 +184,10 @@
         padding: 20px 0;
         /* background: #FFCD33; */
         font-family: 'Ubuntu', 'sans-serif';
-        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         .menu{
             position: fixed;
             height: 100vh;
@@ -198,7 +197,10 @@
             background: #111;
             text-align: center;
             padding-top: 80px;
-            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
 
             li{
                 display: block;
@@ -220,7 +222,10 @@
             background: #111;
             text-align: center;
             padding-top: 80px;
-            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             li{
                 display: block;
                 a{
@@ -241,7 +246,6 @@
                     display: inline-block;
                     margin: 20px 0;
                     font-size: 25px;
-    
                     &:hover{
                         color: #FFCD33;
                     }

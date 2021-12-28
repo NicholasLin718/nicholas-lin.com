@@ -5,7 +5,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import catalystImage from "../images/catalyst.png";
@@ -24,8 +23,8 @@ const catalystStyles = makeStyles((theme) => ({
     width: '100%',
   },
   contentHeight: {
-    maxHeight: 550,
-    minHeight: 550,
+    maxHeight: 525,
+    minHeight: 525,
   },
   chip: {
     marginTop: "16px",
@@ -66,7 +65,6 @@ export default function ImgMediaCard() {
     fontWeight: "500"
   }
 
-  const textDescriptionStyle = {fontSize:"15px"};
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
@@ -121,7 +119,7 @@ export default function ImgMediaCard() {
               <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px"}}>
                 <b>Projects:</b> 
                 <br></br>
-                Collaborated with 5 individuals to devise a concept of a water tank that can filtrate and purify water for communal use as a means to tackle UN’s SDG #6.
+                Collaborated with 5 individuals to devise a concept of a water tank that can filter and purify water for communal use as a means to tackle UN’s SDG #6.
               </Typography>
               <div className={catalyst.chip}>
                 <Chip
@@ -147,7 +145,7 @@ export default function ImgMediaCard() {
                 />          
               </div>
               <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px"}}>
-                Created a sequence memory game using Arduino and breadboarding. A pattern will be displayed using LEDs and the user will have to press the corresponding buttons in order. The number of lights in the pattern increments by one for each successful round, up to 10 rounds where the user will receive some nice victory music!
+              Created a sequence memory game using Arduino and breadboarding. A pattern is displayed using LEDs and the player will enter the corresponding buttons in the correct order. The pattern increments by one light for each successful round, up to 10 rounds where the player will be rewarded with victory music!
               </Typography>
               <div className={catalyst.chip}>
                 <Chip

@@ -2,7 +2,9 @@ import { useState } from "react";
 import "./AboutMeSlider.scss";
 import ReactRoundedImage from "react-rounded-image";
 import treeImage from "../images/tree.jpg";
+import badmintonImage from "../images/badminton.jpg";
 import profilepic from "../images/lightsPortrait.png";
+
 export default function AboutMeSlider() {
     const standoutColour = "#FFCD33";
     const [currentSlide,setCurrentSlide] = useState(0);
@@ -21,8 +23,8 @@ const mainAbout =
         </a>
     </div>
     <div className="column right">
-        <h2 style={{color: standoutColour, overflow: 'hidden', paddingBottom:"15px"}}>Hey there!</h2>
-        <p style={{fontSize: '16px', overflow: 'hidden'}}>
+        <h2 style={{color: standoutColour, overflow: 'hidden', paddingBottom:"15px", fontFamily: 'Open Sans, sans-serif'}}>Hey there!</h2>
+        <p style={{fontSize: '16px', fontFamily: 'Open Sans, sans-serif', overflow: 'hidden'}}>
 
         My name is Nicholas, and I am a first-year Software Engineering student at the University of Waterloo. My interest in strategy games growing up has developed my analytical thinking and problem solving skills which inspired me to pursue a career in technology. My obsession with coding can really be explained by my innate curiosity that drives my desire to fully understand why and how things around me work, and my ability to to devote my full focus and energy when I engage myself in a problem. Continue reading if you want to learn more about me :)  <br />
         <br />
@@ -35,12 +37,17 @@ const mainAbout =
 
 const interestsAbout =                         
 <div className="about-content">
-    <h2 style={{color: standoutColour}}>IKEA,</h2>
-    <p style={{fontSize: '20px'}}>
-    Outside of coding, in my freetime I enjoy participating in sports such as badminton and basketball, playing Minecraft, watching anime, and a few other random hobbies. You can also find me binging random youtube videos, which typically I have different phases for, as one moment I could be watching basketball analysis videos to binging short comedy skits.  <br />
-    <br />
-    Learn more about my past experiences and projects below, or swipe to see more pictures of me :)
-    </p>
+    <div id = "threeText">
+    <h2 style={{color: standoutColour, overflow: 'hidden', paddingBottom:"15px"}}>What do I do in my free time?</h2>
+    <ul>
+        <li><strong>» </strong> I used to play badminton competitively, but now I mostly play recreationally with friends</li>
+        <li><strong>» </strong> I'm a basketball stats nerd, you can usually find me watching analysis videos on Youtube</li>
+        <li><strong>» </strong> My Youtube phases range from binging short comedy skits to storytime animations, and more recently I've watched a lot of movie recaps</li>
+        <li><strong>» </strong> I also enjoy playing Minecraft with my buddies and recently started watching anime</li>
+        <li><strong>» </strong> Late night walks with friends around campus is also a top tier pastime!</li>
+    </ul>
+    </div>
+    <div className="column left"><img src = {badmintonImage} className = "badminton" alt = ""></img></div>
 </div>
 
 const whyAbout =                         
@@ -55,7 +62,7 @@ const whyAbout =
         </p>
     </div>
     <div className="column left">
-        <img src = {treeImage} className = "tree"></img>
+        <img src = {treeImage} className = "tree" alt = ""></img>
     </div>
 </div>
 

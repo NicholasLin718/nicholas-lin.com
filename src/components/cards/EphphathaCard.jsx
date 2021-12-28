@@ -76,16 +76,9 @@ export default function ImgMediaCard() {
                 Ephphatha
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
-              In the world of silence, it is challenging to learn written English without knowing the sounds of words and letters. A recent study shows that on average, a deaf high school senior is likely to read at the level of a nine-year-old. We designed this project as a solution to tackle this challenge: an ASL translator built from a Raspberry Pi that recognizes ASL hand signals in an image and translates the signals into written English. 
+              In the world of silence, it is challenging to learn written English without knowing the sounds of words and letters. This project is an ASL translator built from a Raspberry Pi that recognizes ASL hand signals from a captured image and translates the signals into written English. 
               </Typography>
               <div className={ephphatha.chip}>
-                <Chip
-                    icon= {<i className = {"fab fa-html5"} style={chipIconStyle}/>}
-                    label="HTML"
-                    size="small"
-                    variant="outlined"
-                    style={chipTextStyle}
-                />
                 <Chip
                     icon= {<i className = {"fab fa-python"} style={chipIconStyle}/>}
                     label="Python"
@@ -101,13 +94,6 @@ export default function ImgMediaCard() {
                     style={chipTextStyle}
                 />
                 <Chip
-                    icon= {<i className = {"fas fa-file"} style={chipIconStyle}/>}
-                    label="JSON"
-                    size="small"
-                    variant="outlined"
-                    style={chipTextStyle}
-                />
-                <Chip
                     icon= {<i className = {"fas fa-pepper-hot"} style={chipIconStyle}/>}
                     label="Flask"
                     size="small"
@@ -117,6 +103,13 @@ export default function ImgMediaCard() {
                 <Chip
                     icon= {<i className = {"fas fa-robot"} style={chipIconStyle}/>}
                     label="Machine Learning"
+                    size="small"
+                    variant="outlined"
+                    style={chipTextStyle}
+                />
+                <Chip
+                    icon= {<i className = {"fab fa-html5"} style={chipIconStyle}/>}
+                    label="HTML"
                     size="small"
                     variant="outlined"
                     style={chipTextStyle}

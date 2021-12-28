@@ -3,7 +3,7 @@ import "./intro.scss";
 import backgroundvid from "./nightsky.mp4";
 import backgroundImage from "./backgroundWebsite.png";
 import Typist from "react-typist";
-import Typical from 'react-typical'
+// import Typical from 'react-typical'
 import resume from "../../files/Resume.pdf";
 export default function Intro() {
     return (

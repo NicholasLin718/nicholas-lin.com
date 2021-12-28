@@ -104,12 +104,7 @@ export default function ImgMediaCard() {
             </CardContent>
           </CardActionArea>
           <CardActions style={{height: "50px"}}>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>
+            <a href = "https://github.com/NicholasLin718/NicholasLinWebsite" target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i></a>
           </CardActions>
         </Card>
       </ThemeProvider>

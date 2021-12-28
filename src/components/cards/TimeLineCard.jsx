@@ -5,7 +5,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -77,7 +76,7 @@ export default function ImgMediaCard() {
                 TimeLine
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
-              As global COVID-19 health restrictions begin to relax in many countries, public spaces now seem to be home to comically long lineups. TimeLine is a solution to that problem, a real-time, community-driven foot traffic indicator to help everyone avoid busy <b>times</b> and busy <b>lines</b> everywhere they go.
+              As global COVID-19 health restrictions begin to relax in many countries, public spaces now seem to be home to comically long lineups. TimeLine is a solution to that problem, a real-time, community-driven foot traffic indicator to help everyone avoid busy <b>times</b> and busy <b>lines</b> wherever they go.
               </Typography>
               <div className={timeLine.chip}>
                 <Chip
