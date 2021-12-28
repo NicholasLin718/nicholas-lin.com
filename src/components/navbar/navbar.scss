@@ -4,7 +4,6 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
 /*Navbar Styling*/
 .navbar{
     font-family: 'open-sans', sans-serif;
@@ -19,7 +18,9 @@
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     z-index: 997;
-
+    .max-width{
+        padding: 0px 40px;
+    }
 
     &.active{
         background-color: $mainColour;
@@ -33,7 +34,7 @@
         justify-content: space-between;
     }
     .logo{
-        margin-left: -15px;
+        margin-left: -5px;
         a{
             color: #FFCD33;
             font-size: 28px;
@@ -42,7 +43,6 @@
     }
     .menu{
         overflow: hidden;
-        margin-right: -10px;
         li{
             list-style: none;
             display: inline-block;

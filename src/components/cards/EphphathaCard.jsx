@@ -87,8 +87,8 @@ export default function ImgMediaCard() {
                     style={chipTextStyle}
                 />  
                 <Chip
-                    icon= {<i className = {"fab fa-js-square"} style={chipIconStyle}/>}
-                    label="Javascript"
+                    icon= {<i className = {"fab fa-html5"} style={chipIconStyle}/>}
+                    label="HTML"
                     size="small"
                     variant="outlined"
                     style={chipTextStyle}
@@ -101,15 +101,15 @@ export default function ImgMediaCard() {
                     style={chipTextStyle}
                 />
                 <Chip
-                    icon= {<i className = {"fas fa-robot"} style={chipIconStyle}/>}
-                    label="Machine Learning"
+                    icon= {<i className = {"fab fa-js-square"} style={chipIconStyle}/>}
+                    label="Javascript"
                     size="small"
                     variant="outlined"
                     style={chipTextStyle}
                 />
                 <Chip
-                    icon= {<i className = {"fab fa-html5"} style={chipIconStyle}/>}
-                    label="HTML"
+                    icon= {<i className = {"fas fa-robot"} style={chipIconStyle}/>}
+                    label="Machine Learning"
                     size="small"
                     variant="outlined"
                     style={chipTextStyle}

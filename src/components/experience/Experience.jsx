@@ -10,7 +10,7 @@ export default function Experience() {
     return (
         <section className="experience" id="experience">
             <div className= "header">
-                <h3 style = {{fontFamily: "Poppins, sans-serif"}}>Experience / Skills</h3>
+                <h3 style = {{fontFamily: "Poppins, sans-serif"}}>Experience</h3>
                 <h6 style = {{fontFamily: "Open Sans, sans-serif"}}>I've had an opportunity to join many amazing organizations, below you can explore and dive in through some of my past experiences and the skills I've gained out of them!</h6>
             </div>
             <Grid container spacing={4} className = "grid" direction= "row">
