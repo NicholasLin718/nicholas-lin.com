@@ -23,8 +23,8 @@ const catalystStyles = makeStyles((theme) => ({
     width: '100%',
   },
   contentHeight: {
-    maxHeight: 525,
-    minHeight: 525,
+    maxHeight: 500,
+    minHeight: 500,
   },
   chip: {
     marginTop: "16px",
@@ -84,7 +84,7 @@ export default function ImgMediaCard() {
                 </div>
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p" style = {{fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
-              Catalyst is a two-week enrichment program from the University of Waterloo that provides high school students an opportunity to develop leadership skills and collaborate with like-minded peers to explore engineering, science, and innovation.
+              Catalyst is a two-week enrichment program that provides high school students an opportunity to develop leadership skills and collaborate with like-minded peers to explore engineering, science, and innovation.
               </Typography>
               <div className={catalyst.chip}>
                 <Chip
@@ -145,7 +145,7 @@ export default function ImgMediaCard() {
                 />          
               </div>
               <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px"}}>
-              Created a sequence memory game using Arduino and breadboarding. A pattern is displayed using LEDs and the player will enter the corresponding buttons in the correct order. The pattern increments by one light for each successful round, up to 10 rounds where the player will be rewarded with victory music!
+              Created a sequence memory game using Arduino and breadboarding. A pattern is displayed using LEDs and the player will enter the corresponding buttons in the correct order. The pattern increments by one light for each successful round, up to 10 total rounds.
               </Typography>
               <div className={catalyst.chip}>
                 <Chip

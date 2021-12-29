@@ -24,8 +24,8 @@ const shadStyles = makeStyles((theme) => ({
     objectFit: "cover"
   },
   contentHeight: {
-    maxHeight: 525,
-    minHeight: 525,
+    maxHeight: 500,
+    minHeight: 500,
   },
   chip: {
     marginTop: "16px",

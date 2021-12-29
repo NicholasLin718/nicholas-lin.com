@@ -21,8 +21,8 @@ const linkECMStyles = makeStyles((theme) => ({
     width: '100%',
   },
   contentHeight: {
-    maxHeight: 525,
-    minHeight: 525,
+    maxHeight: 500,
+    minHeight: 500,
   },
   chip: {
     marginTop: "16px",
@@ -82,7 +82,7 @@ export default function ImgMediaCard() {
                 </div>
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p" style = {{fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
-              Founded in 2005, LINKECM consulting Inc is specialized in Open Text Content Server (OTCS) solution design and module development. OTCS is the flagship product from Open Text Corporation who offers content services; digital process automation, which enables organizations to transform into digital and data-driven businesses through automation; and discovery suite that provides forensics and unstructured data analytics for searching, collecting, and investigating enterprise data to manage legal obligations and risk.
+              Founded in 2005, LINKECM consulting Inc is specialized in Open Text Content Server (OTCS) solution design and module development.
               </Typography>
               <div className={linkECM.chip}>
                 <Chip
