@@ -12,7 +12,7 @@ export default function Navbar(){
     const [experience,setExperience] = useState(false);
     const [project,setProject] = useState(false);
     const changeNavBackground = () => {
-        if(window.scrollY >= 80 && window.scrollY < 500 && click == false){
+        if(window.scrollY >= 80 && window.scrollY < 500 && click === false){
             setNavbar(false);
             setNavbarInvis(true);
         }
