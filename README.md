@@ -1,5 +1,5 @@
 # 🌐 Personal Website 🌐
-My first version of my personal website! https://nicholaslin718.github.io/
+My first version of my personal website! https://nicholas-lin.com
 
 If you want to learn more about me, my past experiences or projects, here's a great source!
 
