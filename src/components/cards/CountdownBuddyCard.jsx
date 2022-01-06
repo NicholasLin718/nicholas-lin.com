@@ -95,6 +95,13 @@ export default function ImgMediaCard() {
                     style={chipStyle}
                 />
                 <Chip
+                    icon= {<i className = {"fas fa-database"} style={chipIconStyle}/>}
+                    label="MongoDB"
+                    size="small"
+                    variant="outlined"
+                    style={chipStyle}
+                />
+                <Chip
                     icon= {<i className = {"fas fa-file"} style={chipIconStyle}/>}
                     label="JSON"
                     size="small"
