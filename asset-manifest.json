@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.740196f9.chunk.css",
-    "main.js": "/static/js/main.17365483.chunk.js",
-    "main.js.map": "/static/js/main.17365483.chunk.js.map",
+    "main.css": "/static/css/main.9c06af65.chunk.css",
+    "main.js": "/static/js/main.e1daf525.chunk.js",
+    "main.js.map": "/static/js/main.e1daf525.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.62ff2d2f.js",
     "runtime-main.js.map": "/static/js/runtime-main.62ff2d2f.js.map",
     "static/js/2.cd631990.chunk.js": "/static/js/2.cd631990.chunk.js",
     "static/js/2.cd631990.chunk.js.map": "/static/js/2.cd631990.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.740196f9.chunk.css.map": "/static/css/main.740196f9.chunk.css.map",
+    "static/css/main.9c06af65.chunk.css.map": "/static/css/main.9c06af65.chunk.css.map",
     "static/js/2.cd631990.chunk.js.LICENSE.txt": "/static/js/2.cd631990.chunk.js.LICENSE.txt",
     "static/media/EphphathaImage.84f3238d.png": "/static/media/EphphathaImage.84f3238d.png",
     "static/media/LinkECMLogo.432b784a.png": "/static/media/LinkECMLogo.432b784a.png",
     "static/media/Resume.7a7f1bf7.pdf": "/static/media/Resume.7a7f1bf7.pdf",
-    "static/media/backgroundWebsite.2610e279.png": "/static/media/backgroundWebsite.2610e279.png",
+    "static/media/backgroundWebsite.e1121a6a.png": "/static/media/backgroundWebsite.e1121a6a.png",
     "static/media/badminton.9650ce4d.jpg": "/static/media/badminton.9650ce4d.jpg",
     "static/media/boggle.0ece6d79.png": "/static/media/boggle.0ece6d79.png",
     "static/media/catalyst.4e93fa57.png": "/static/media/catalyst.4e93fa57.png",
@@ -29,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.62ff2d2f.js",
     "static/js/2.cd631990.chunk.js",
-    "static/css/main.740196f9.chunk.css",
-    "static/js/main.17365483.chunk.js"
+    "static/css/main.9c06af65.chunk.css",
+    "static/js/main.e1daf525.chunk.js"
   ]
 }
