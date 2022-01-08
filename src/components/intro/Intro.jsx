@@ -19,35 +19,21 @@ export default function Intro() {
                         height: "100%",
                         objectFit: 'cover',
                         transform: "translate(-50%, -50%)",
-                        zIndex: "-1"
+                        zIndex: "0"
                     }
                 }
             >
                 <source src={backgroundvid} type = "video/mp4"/>
             </video>
-            {/* <section>
-                <div className = "home-icon-div">
-                    <h1>hi</h1>
-                    <i className="fab fa-github" id = "home-icons"/>
-                    <i className="fab fa-linkedin-in" id = "home-icons"/>
-                    <i className="fas fa-file" id = "home-icons"/>
-                </div>
-            </section> */}
-            <section className="home" id="home">
-                <div className="max-width">
-                    <div className="home-content">
+            <section className="home" id="home" style = {{zIndex: "2"}}>
+                <div className="max-width" style = {{zIndex: "2"}}>
+                    <div className="home-content" style = {{zIndex: "2"}}>
                         <Typist cursor={{show: false}}>
                             <div className="text-1">Hello, my name is</div>
                             <Typist.Delay ms={800} />
                             <div className="text-2" >Nicholas Lin</div>
                             <Typist.Delay ms={1200} />
                             <div className="text-3">Software Engineer from the University of Waterloo
-                                {/* <span className = "text-3" style={{fontFamily: 'Helvetica'}}> Programmer</span>                        
-                                <Typist.Backspace count={10} delay={1300} ms={1300} />
-                                <span className="text-3" style={{fontFamily: 'Helvetica'}}>Badminton Player</span>
-                                <Typist.Backspace count={16} delay={1300} ms={1300}/>
-                                <span className="text-3" style={{fontFamily: 'Helvetica'}}>Hobbyist</span>
-                                <Typist.Backspace count={8} delay={1300} ms={1300}/> */}
                             </div>
                         </Typist>
                         <div>                  
