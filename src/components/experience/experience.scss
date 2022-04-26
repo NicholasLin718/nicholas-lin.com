@@ -1,17 +1,20 @@
 @import "../../global.scss";
+.max-width{
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: auto;
+    overflow-y: hidden;
+}
 .experience{
     // background: url("../images/darkbluepatterned.jpg");
     // background-position: absolute;
     min-height: 1000px;
     background-color: rgb(24, 26, 29);
     overflow-y: hidden;
-    .grid{
-        padding-left: 200px;
-    }
     .header{
         padding-top: 75px;
         padding-bottom: 50px;
-        margin: 20px 70px;
+        // margin: 20px 70px;
         h3{
             color: $standoutColour;
             font-size: 40px;
@@ -21,87 +24,6 @@
             color: white;
             font-size: 18px;
             font-weight: 500;
-        }
-    }
-    .grid{
-        padding-left: 76px;
-        padding-right: 76px;
-    }
-}
-@media (max-width: 1920px){
-    .experience{
-        .grid{
-            padding-left: 200px;
-        }
-    }
-}
-@media (max-width: 1800px){
-    .experience{
-        .grid{
-            padding-left: 160px;
-        }
-    }
-}
-@media (max-width: 1700px){
-    .experience{
-        .grid{
-            padding-left: 135px;
-            // padding-right: 20px;
-        }
-    }
-}
-@media (max-width: 1600px){
-    .experience{
-        .grid{
-            padding-left: 85px;
-            // padding-right: 20px;
-        }
-    }
-}
-@media (max-width: 1500px){
-    .experience{
-        .grid{
-            padding-left: 70px;
-            // padding-right: 20px;
-        }
-    }
-}
-@media (max-width: 1400px){
-    .experience{
-        .grid{
-            padding-left: 70px;
-            // padding-right: 20px;
-        }
-    }
-}
-@media (max-width: 1300px){
-    .experience{
-        .grid{
-            padding-left: 70px;
-            // padding-right: 20px;
-        }
-    }
-}
-@media (max-width: 1240px){
-    .experience{
-        .grid{
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-    }
-}
-@media (max-width: 947px){
-    .experience{
-        .grid{
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-    }
-}
-@media (max-width: 400px){
-    .experience{
-        h3, h6{
-            text-align: center;
         }
     }
 }

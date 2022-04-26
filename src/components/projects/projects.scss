@@ -1,13 +1,19 @@
 @import "../../global.scss";
+.max-width{
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: auto;
+    overflow-y: hidden;
+}
 .projects{
     padding-top: 50px;
     min-height: 1000px;
+    max-width: 500;
     background-color: rgb(24, 26, 29);
     overflow-y: hidden;
     .header{
         padding-top: 25px;
         padding-bottom: 50px;
-        margin: 20px 70px;
         h3{
             color: $standoutColour;
             font-size: 40px;
@@ -19,27 +25,15 @@
             font-weight: 500;
         }
     }
-
+    .cards{
+        justify-content: center;
+    }
     .button{
         position: relative;
         left: 50%;
         margin-left: -50px;
-        // position: absolute;
         bottom: -60px;
-        // text-decoration: none;
-        // display: inline-block;
-        // background: #FFCD33;
-        // color: #fff;
-        // font-size: 15px;
-        // padding: 2px 32px;
-        // padding-top: 8px;
-        // margin-top: 16px;
-        // border-radius: 15px;
-        // border: 2px solid #FFCD33;
         transition: all 0.3s ease;
-        // text-align: center;
-        // color: #fff;
-        // font-size: 21px;
 
         text-decoration: none;
         border: 0 none;
@@ -63,88 +57,5 @@
     }
 
 }
-
-@media (max-width: 1920px){
-    .projects{
-        .grid{
-            padding-left: 350px;
-            padding-right: 295px;
-        }
-    }
-}
-@media (max-width: 1800px){
-    .projects{
-        .grid{
-            padding-left: 290px;
-            padding-right: 230px;
-        }
-    }
-}
-@media (max-width: 1700px){
-    .projects{
-        .grid{
-            padding-left: 240px;
-            padding-right: 185px;
-        }
-    }
-}
-@media (max-width: 1600px){
-    .projects{
-        .grid{
-            padding-left: 190px;
-            padding-right: 140px;
-        }
-    }
-}
-@media (max-width: 1500px){
-    .projects{
-        .grid{
-            padding-left: 140px;
-            padding-right: 100px;
-        }
-    }
-}
-@media (max-width: 1400px){
-    .projects{
-        .grid{
-            padding-left: 80px;
-            padding-right: 60px;
-        }
-    }
-}
-@media (max-width: 1300px){
-    .projects{
-        .grid{
-            // padding-left: 70px;
-            padding-right: 80px;
-        }
-    }
-}
-@media (max-width: 1240px){
-    .projects{
-        .grid{
-            padding-right: 80px;
-        }
-    }
-}
-@media (max-width: 960px){
-    .projects{
-        .grid{
-            padding-left: 85px;
-        }
-    }
-}
-@media (max-width: 400px){
-    .projects{
-        .grid{
-            padding-left: 35px;
-            padding-right: 35px;
-        }
-        h3, h6{
-            text-align: center;
-        }
-    }
-}
-
 
 
