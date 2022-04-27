@@ -1,4 +1,9 @@
 import boggleImage from "../images/boggle.png";
+import countdownImage from "../images/countdownBuddyDemo.png";
+import websiteImage from "../images/website.png";
+import EphphathaImage from "../images/EphphathaImage.png";
+import timelineImage from "../images/timeline-banner.png";
+
 import {
   faJsSquare,
   faRaspberryPi,
@@ -9,7 +14,6 @@ import {
   faHtml5,
   faCss3,
   faDiscord,
-  
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faRobot,
@@ -23,7 +27,7 @@ import {
 export const PROJECTS = [
   {
     name: "TimeLine",
-    image: boggleImage,
+    image: timelineImage,
     color: "#bf7394",
     githubLink: "https://github.com/NicholasLin718/TimeLine",
     ActionAreaLink: "https://github.com/NicholasLin718/TimeLine",
@@ -63,7 +67,7 @@ export const PROJECTS = [
   },
   {
     name: "Countdown Buddy",
-    image: boggleImage,
+    image: countdownImage,
     color: "#bf7394",
     githubLink: "https://github.com/NicholasLin718/Countdown-Buddy",
     ActionAreaLink: "https://github.com/NicholasLin718/Countdown-Buddy",
@@ -94,7 +98,7 @@ export const PROJECTS = [
   },
   {
     name: "Personal Website",
-    image: boggleImage,
+    image: websiteImage,
     color: "#bf7394",
     githubLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
     descriptions: [
@@ -144,7 +148,7 @@ export const PROJECTS = [
   },
   {
     name: "Ephphatha",
-    image: boggleImage,
+    image: EphphathaImage,
     color: "#bf7394",
     githubLink: "https://github.com/NicholasLin718/TimeLine",
     ActionAreaLink: "https://github.com/NicholasLin718/TimeLine",

@@ -10,93 +10,118 @@ import { Col, Container, Row} from "react-bootstrap";
 import { PROJECTS } from "./ProjectsList";
 import ProjectCards from "../template/ProjectCards";
 import "./projects.scss";
+import { makeStyles } from '@material-ui/core/styles';
 
-// const ExperienceCards = styled(Col)`
-//   display: flex;
-//   padding-bottom: 20px;
-// `;
+const projectCardStyles = makeStyles((theme) => ({
+    root: {
+      maxWidth: 345,
+    },
+    media: {
+      height: "259px",
+      width: '100%',
+    },
+    contentHeight: {
+      maxHeight: 305,
+      minHeight: 305,
+    },
+    chip: {
+      marginTop: "16px",
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      "& > *": {
+        margin: theme.spacing(0.5),
+      },
+    },
+}));
 
-// class Projects extends React.Component{
-//     render(){
-//         return(
-//             <div className="projects" id="projects">
+export default function Projects(){
+    const style = projectCardStyles();
+        return(
+            <section className="projects" id="projects">
+                <div className="max-width">
+                    <div className= "header">
+                        <h3 style = {{fontFamily: "Poppins, sans-serif"}}>Projects</h3>
+                        <h6 style = {{fontFamily: "Open Sans, sans-serif"}}>Here you can check out some of my past tech related projects and the technical skills I developed, and you can also watch some of the demo videos available!</h6>
+                    </div>
+                    <Grid container spacing={4} className = "grid" >
 
-//                 <div className="max-width">
-//                     <Container>
-//                         <Row>
-//                             {/* {PROJECTS.map((project) => {
-//                             return (
-//                                 <Col xs = {4} md = {3}>
-//                                     <ProjectCards
-//                                         key={project.name}
-//                                         page="projects"
-//                                         experience={project}
-//                                         height="350px"
-//                                         link={project.link}
-//                                     />
-//                                 </Col>
-//                             );
-//                             })} */}
-//                             <Col xs = {6} md = {4}>
-//                                 <TimeLineCard className = "cards"/>
-//                             </Col>
-//                             <Col xs = {4} md = {3}>
-//                                 <TimeLineCard className = "cards"/>
-//                             </Col>
-//                             <Col xs = {4} md = {3}>
-//                                 <TimeLineCard className = "cards"/>
-//                             </Col>
-//                             <Col xs = {4} md = {3}>
-//                                 <TimeLineCard className = "cards"/>
-//                             </Col>
-//                         </Row>
-//                         <br />
-//                         <br />
-//                     </Container>
-//                 </div>
-                    
-//                 {/* <div className="project-cards">
-//                     <TimeLineCard className = "cards"/>
-//                     <CountdownBuddyCard className = "cards"/>
-//                     <PersonalWebsiteCard className = "cards"/>
-//                     <BoggleCard className = "cards"/>
-//                     <EphphathaCard className = "cards"/>
-//                 </div> */}
-//                 <a className="button" href="#home"><i class="fas fa-chevron-up" id = "arrow"></i></a>
-//             </div>
-//         );
-//     }
-// }
-export default function Projects() {
-    return (
-        <section className="projects" id="projects">
-            <div className="max-width">
-                <div className= "header">
-                    <h3 style = {{fontFamily: "Poppins, sans-serif"}}>Projects</h3>
-                    <h6 style = {{fontFamily: "Open Sans, sans-serif"}}>Here you can check out some of my past tech related projects and the technical skills I developed, and you can also watch some of the demo videos available!</h6>
+                        {/* <Grid item xs = {12} sm ={6} md={4}>
+                            <TimeLineCard className = "cards"/>
+                        </Grid>
+                        <Grid item xs = {12} sm ={6} md={4}>
+                            <CountdownBuddyCard className = "cards"/>
+                        </Grid>
+                        <Grid item xs = {12} sm ={6} md={4}>
+                            <PersonalWebsiteCard className = "cards"/>
+                        </Grid>
+                        <Grid  item xs = {12} sm ={6} md={4}>
+                            <BoggleCard className = "cards"/>
+                        </Grid> */}
+                            {PROJECTS.map((project) => {
+                                return (
+                                    <Grid  item xs = {12} sm ={6} md={4}>
+                                        <ProjectCards
+                                            className = "cards"
+                                            key={project.name}
+                                            project= {project}
+                                            height="350px"
+                                            demoLink={project.DemoLink}
+                                            style = {style}
+                                        />
+                                    </Grid>
+                                );
+                            })}
+                    </Grid>
                 </div>
-                <Grid container spacing={4} className = "grid" >
-                    <Grid item xs = {12} sm ={6} md={4}>
-                        <TimeLineCard className = "cards"/>
-                    </Grid>
-                    <Grid item xs = {12} sm ={6} md={4}>
-                        <CountdownBuddyCard className = "cards"/>
-                    </Grid>
-                    <Grid item xs = {12} sm ={6} md={4}>
-                        <PersonalWebsiteCard className = "cards"/>
-                    </Grid>
-                    <Grid  item xs = {12} sm ={6} md={4}>
-                        <BoggleCard className = "cards"/>
-                    </Grid>
-                    <Grid  item xs = {12} sm ={6} md={4}>
-                        <EphphathaCard className = "cards"/>
-                    </Grid>
-                </Grid>
-            </div>
             <a className="button" href="#home"><i class="fas fa-chevron-up" id = "arrow"></i></a>
-        </section>
-        
+            </section>
+        );
+    }
 
-        
-    )
-}
+
+// export default Projects;
+
+// export default function Projects() {
+//     return (
+//         <section className="projects" id="projects">
+//             <div className="max-width">
+//                 <div className= "header">
+//                     <h3 style = {{fontFamily: "Poppins, sans-serif"}}>Projects</h3>
+//                     <h6 style = {{fontFamily: "Open Sans, sans-serif"}}>Here you can check out some of my past tech related projects and the technical skills I developed, and you can also watch some of the demo videos available!</h6>
+//                 </div>
+//                 <Grid container spacing={4} className = "grid" >
+
+//                     <Grid item xs = {12} sm ={6} md={4}>
+//                         <TimeLineCard className = "cards"/>
+//                     </Grid>
+//                     <Grid item xs = {12} sm ={6} md={4}>
+//                         <CountdownBuddyCard className = "cards"/>
+//                     </Grid>
+//                     <Grid item xs = {12} sm ={6} md={4}>
+//                         <PersonalWebsiteCard className = "cards"/>
+//                     </Grid>
+//                     <Grid  item xs = {12} sm ={6} md={4}>
+//                         <BoggleCard className = "cards"/>
+//                     </Grid>
+//                     <Grid  item xs = {12} sm ={6} md={4}>
+//                         {PROJECTS.map((project) => {
+//                             return (
+//                                 <ExperienceCards lg={6}>
+//                                 <ProjectCards
+//                                     key={project.name}
+//                                     page="projects"
+//                                     experience={project}
+//                                     height="350px"
+//                                     link={project.link}
+//                                 />
+//                                 </ExperienceCards>
+//                             );
+//                         })}
+//                     </Grid>
+//                 </Grid>
+//             </div>
+//             <a className="button" href="#home"><i class="fas fa-chevron-up" id = "arrow"></i></a>
+//         </section>
+//     )
+// }

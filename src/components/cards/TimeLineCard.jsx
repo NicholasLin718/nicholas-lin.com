@@ -9,7 +9,19 @@ import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import timelineImage from "../images/timeline-banner.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./cards.scss";
+
+import {
+  faJsSquare,
+  faRaspberryPi,
+  faReact,
+  faPython,
+  faAws,
+  faJava,
+  faHtml5,
+  faCss3
+} from "@fortawesome/free-brands-svg-icons";
 
 const timeLineStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +55,8 @@ export default function ImgMediaCard() {
     },
   });
 
-  const chipIconStyle = { marginTop: "4px",
+  const chipIconStyle = {
+    paddingRight: "1px",
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
@@ -52,14 +65,16 @@ export default function ImgMediaCard() {
     fontSize: '14px',
   }
 
-  const chipTextStyle = { backgroundColor: "#FFCD33",
-                          paddingRight: "6px",
-                          paddingLeft: "10px",
-                          overflow: "hidden",
-                          color: "#04132c",
-                          fontFamily: "Open Sans, sans-serif",
-                          fontWeight: "500"
-                        }
+  const chipTextStyle = { 
+    backgroundColor: "#FFCD33",
+    paddingRight: "6px",
+    paddingLeft: "10px",
+    overflow: "hidden",
+    color: "#04132c",
+    fontFamily: "Open Sans, sans-serif",
+    fontWeight: "500"
+  }
+
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
@@ -80,14 +95,14 @@ export default function ImgMediaCard() {
               </Typography>
               <div className={timeLine.chip}>
                 <Chip
-                    icon= {<i className = {"fab fa-html5"} style={chipIconStyle}/>}
+                    icon= {<FontAwesomeIcon icon={faHtml5} style = {chipIconStyle} />}
                     label="HTML"
                     size="small"
                     variant="outlined"
                     style={chipTextStyle}
                 />
                 <Chip
-                    icon= {<i className = {"fab fa-css3-alt"} style={chipIconStyle}/>}
+                    icon= {<i className = {faCss3} style={chipIconStyle}/>}
                     label="CSS"
                     size="small"
                     variant="outlined"
