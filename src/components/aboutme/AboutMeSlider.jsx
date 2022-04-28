@@ -55,7 +55,7 @@ const whyAbout =
     <div id = "twoText">
         <h2 style={{color: standoutColour, overflow: 'hidden', paddingBottom:"15px"}}>My Goals</h2>
         <p style={{fontSize: '16px', overflow: 'hidden'}}>
-        My goal as an aspiring software engineer is to delve into a variety of programming fields. I recently found myself working on web/web app development, as that has been my main focus in my past projects, and I look forward to improve and make an impact as a developer. However, I am also eager to explore and learn more backend work and perhaps even game development. I believe that the most important skill to have is to be flexible and integrate as many opportunities to learn as possible, especially in this rapidly evolving field.
+        My goal as a software engineer is still a undetermined, so I'm looking forward to exploring various aspects of programming to figure out what I'm truly interested in. I've recently found an interest in web and full stack development, and I'm eager to try new frameworks and learn what's available for me to use. I believe that the most important skill to have is to be flexible and integrate as many opportunities to learn as possible, especially in this rapidly evolving field.
         <br />
         <br />
         But, there's a lot more to me than just programming! Swipe to learn more about my hobbies :D
