@@ -157,7 +157,7 @@ export const PROJECTS = [
     descriptions: [
       {
         projectDescription:
-          "My personal website created using the React.js library to create components and Sass to style. The cards were created using Material UI's premade attributes.",
+          "In the world of silence, it is challenging to learn written English without knowing the sounds of words and letters. This project is an ASL translator built from a Raspberry Pi that recognizes ASL hand signals from a captured image and translates the signals into written English. ",
         tools: [
           {
             name: "Python",
