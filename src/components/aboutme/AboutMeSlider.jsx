@@ -8,8 +8,8 @@ import profilepic from "../images/lightsPortrait.png";
 export default function AboutMeSlider() {
     const standoutColour = "#FFCD33";
     const [currentSlide,setCurrentSlide] = useState(0);
-const mainAbout =                         
-<div className="about-content">
+    const mainAbout =                         
+    <div className="about-content">
     <div className="column left">
         <a href="mailto:n39lin@uwaterloo.ca" target="_blank" rel="noreferrer">
         <ReactRoundedImage 

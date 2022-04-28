@@ -50,12 +50,12 @@ export const PROJECTS = [
             icon: faPython,
           },
           {
-            name: "JavaScript",
-            icon: faJsSquare,
-          },
-          {
             name: "Flask",
             icon: faPepperHot,
+          },
+          {
+            name: "JavaScript",
+            icon: faJsSquare,
           },
           {
             name: "Google Maps APIs",
@@ -101,6 +101,7 @@ export const PROJECTS = [
     image: websiteImage,
     color: "#bf7394",
     githubLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
+    ActionAreaLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
     descriptions: [
       {
         projectDescription:
@@ -150,8 +151,8 @@ export const PROJECTS = [
     name: "Ephphatha",
     image: EphphathaImage,
     color: "#bf7394",
-    githubLink: "https://github.com/NicholasLin718/TimeLine",
-    ActionAreaLink: "https://github.com/NicholasLin718/TimeLine",
+    githubLink: "https://github.com/NicholasLin718/KNIVX-SE101-Project",
+    ActionAreaLink: "https://github.com/NicholasLin718/KNIVX-SE101-Project",
     DemoLink: "https://youtu.be/Kypr42PMlr0",
     descriptions: [
       {

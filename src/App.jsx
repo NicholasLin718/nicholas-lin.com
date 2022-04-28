@@ -5,7 +5,6 @@ import AboutMeSlider from "./components/aboutme/AboutMeSlider";
 import Intro from "./components/intro/Intro";
 import Footer from "./components/footer/Footer";
 import "./app.scss";
-// import Menu from "./components/menu/Menu";
 
 function App() {
   return (
