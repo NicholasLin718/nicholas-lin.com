@@ -17,13 +17,13 @@ export default function Experience() {
                 </div>
                 <Grid container spacing={4} className = "grid" direction= "row">
                     <Grid item xs = {12} sm ={6} md = {6}>
+                        <PortableIntelligenceCard className = "cards"/>
+                    </Grid>
+                    <Grid item xs = {12} sm ={6} md = {6}>
                         <ShadCard className = "cards"/>
                     </Grid>
                     <Grid item xs = {12} sm ={6} md = {6}>
                         <CatalystCard className = "cards"/>
-                    </Grid>
-                    <Grid item xs = {12} sm ={6} md = {6}>
-                        <PortableIntelligenceCard className = "cards"/>
                     </Grid>
                     <Grid item xs = {12} sm ={6} md = {6}>
                         <LinkECM className = "cards"/>
