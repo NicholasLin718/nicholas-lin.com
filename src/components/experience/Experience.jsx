@@ -2,6 +2,7 @@ import React from 'react'
 import ShadCard from "../cards/ShadCard";
 import CatalystCard from "../cards/CatalystCard";
 import OpportuniteensCard from "../cards/OpportuniteensCard";
+import PortableIntelligenceCard from "../cards/PortableIntelligenceCard";
 import LinkECM from "../cards/LinkECMCard";
 import { Grid } from "@material-ui/core";
 import "./experience.scss";
@@ -22,7 +23,7 @@ export default function Experience() {
                         <CatalystCard className = "cards"/>
                     </Grid>
                     <Grid item xs = {12} sm ={6} md = {6}>
-                        <OpportuniteensCard className = "cards"/>
+                        <PortableIntelligenceCard className = "cards"/>
                     </Grid>
                     <Grid item xs = {12} sm ={6} md = {6}>
                         <LinkECM className = "cards"/>

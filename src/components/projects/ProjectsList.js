@@ -3,7 +3,7 @@ import countdownImage from "../images/countdownBuddyDemo.png";
 import websiteImage from "../images/website.png";
 import EphphathaImage from "../images/EphphathaImage.png";
 import timelineImage from "../images/timeline-banner.png";
-
+import partyPlannerImage from "../images/partyplanner.png"
 import {
   faJsSquare,
   faRaspberryPi,
@@ -22,9 +22,47 @@ import {
   faPepperHot,
   faFile,
   faKeyboard,
+  faGear,
+  faBoltLightning,
+  faWind,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const PROJECTS = [
+  {
+    name: "Party Planner",
+    image: partyPlannerImage,
+    color: "#bf7394",
+    githubLink: "https://github.com/NicholasLin718/party-planner",
+    ActionAreaLink: "https://github.com/NicholasLin718/party-planner",
+    descriptions: [
+      {
+        projectDescription:
+          "Scheduling an event with friends can sometimes be a hassle, whether it would be finding a time where everyone is available, or figuring out how to delegate tasks in preparation to the event. Party planner is here to resolve that! With its room-based format, users can interact with one another to organize the event easily. No email required! ",
+        tools: [
+          {
+            name: "React",
+            icon: faReact,
+          },
+          {
+            name: "Redux",
+            icon: faReact,
+          },
+          {
+            name: "TailwindCSS",
+            icon: faWind,
+          },
+          {
+            name: "Express.js",
+            icon: faBoltLightning,
+          },
+          {
+            name: "MongoDB",
+            icon: faDatabase,
+          }
+        ],
+      },
+    ],
+  },
   {
     name: "TimeLine",
     image: timelineImage,
@@ -97,57 +135,6 @@ export const PROJECTS = [
     ],
   },
   {
-    name: "Personal Website",
-    image: websiteImage,
-    color: "#bf7394",
-    githubLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
-    ActionAreaLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
-    descriptions: [
-      {
-        projectDescription:
-          "My personal website created using the React.js library to create components and Sass to style. The cards were created using Material UI's premade attributes.",
-        tools: [
-          {
-            name: "React.js",
-            icon: faReact,
-          },
-          {
-            name: "Sass",
-            icon: faSass,
-          },
-          {
-            name: "Material UI",
-            icon: faKeyboard,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Boggle",
-    image: boggleImage,
-    color: "#bf7394",
-    githubLink: "https://github.com/NicholasLin718/Boggle",
-    ActionAreaLink: "https://en.wikipedia.org/wiki/Boggle",
-    DemoLink: "https://youtu.be/VZ8jEPalEM8",
-    descriptions: [
-      {
-        projectDescription:
-          "Created a Boggle Game (AKA Word Hunt) using Java and Java swing for the GUI. The game offers 3 modes, singleplayer, player vs player, and player vs computer. The computer has 3 difficulties, and can select certain words from a list of predetermined words that were calculated using a trie. This list is also used to check for the validity of the user's input word.",
-        tools: [
-          {
-            name: "Java",
-            icon: faJava,
-          },
-          {
-            name: "Java Swing",
-            icon: faJava,
-          },
-        ],
-      },
-    ],
-  },
-  {
     name: "Ephphatha",
     image: EphphathaImage,
     color: "#bf7394",
@@ -187,4 +174,56 @@ export const PROJECTS = [
       },
     ],
   },
+  {
+    name: "Personal Website",
+    image: websiteImage,
+    color: "#bf7394",
+    githubLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
+    ActionAreaLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
+    descriptions: [
+      {
+        projectDescription:
+          "My personal website created from scratch using React to create components and Sass to style. The cards were created using Material UI's premade attributes.",
+        tools: [
+          {
+            name: "React",
+            icon: faReact,
+          },
+          {
+            name: "Sass",
+            icon: faSass,
+          },
+          {
+            name: "Material UI",
+            icon: faKeyboard,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Boggle",
+    image: boggleImage,
+    color: "#bf7394",
+    githubLink: "https://github.com/NicholasLin718/Boggle",
+    ActionAreaLink: "https://en.wikipedia.org/wiki/Boggle",
+    DemoLink: "https://youtu.be/VZ8jEPalEM8",
+    descriptions: [
+      {
+        projectDescription:
+          "Created a Boggle Game (AKA Word Hunt) using Java and Java swing for the GUI. The game offers 3 modes, singleplayer, player vs player, and player vs computer. The computer has 3 difficulties, and can select certain words from a list of predetermined words that were calculated using a trie. This list is also used to check for the validity of the user's input word.",
+        tools: [
+          {
+            name: "Java",
+            icon: faJava,
+          },
+          {
+            name: "Java Swing",
+            icon: faJava,
+          },
+        ],
+      },
+    ],
+  },
+  
 ];

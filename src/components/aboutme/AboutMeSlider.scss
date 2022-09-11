@@ -154,6 +154,7 @@
                         margin-left: 80px;
                         color:rgba(255, 255, 255, 0.9);
                         ul{
+                            
                             overflow-x:visible;
                             li{
                                 margin-left: -40px;
@@ -170,6 +171,7 @@
         }
     }
         .container-dots {
+            pointer-events: none;
             position: absolute;
             bottom: 40px;
             left: 50%;
