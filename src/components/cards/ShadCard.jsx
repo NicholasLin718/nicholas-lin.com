@@ -120,7 +120,7 @@ export default function ImgMediaCard() {
                     style={chipStyle}
                 />
               </div>
-              <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px"}}>
+              <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
                 <b>Project:</b>
                 <br></br>
                 Collaborated with 7 individuals to formulate the business concept <i>Furnitire</i> as a solution to impactfully reduce Canada’s waste. Furnitire’s goal is to take old tires and repurpose them into sustainable and visually appealing furniture. We created a prototype for the product as well as a business report highlighting its impact, functionality, and analyzing the market for our company’s vision. Our team was awarded with the Most Impactful Award on campus after we pitched our product to a panel of judges.

@@ -116,7 +116,7 @@ export default function ImgMediaCard() {
                     style={chipStyle}
                 />
               </div>
-              <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px"}}>
+              <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
                 <b>Projects:</b> 
                 <br></br>
                 Collaborated with 5 individuals to devise a concept of a water tank that can filter and purify water for communal use as a means to tackle UN’s SDG #6.

@@ -3,7 +3,8 @@ import countdownImage from "../images/countdownBuddyDemo.png";
 import websiteImage from "../images/website.png";
 import EphphathaImage from "../images/EphphathaImage.png";
 import timelineImage from "../images/timeline-banner.png";
-import partyPlannerImage from "../images/partyplanner.png"
+import partyPlannerImage from "../images/partyplanner.png";
+import LodestoneImage from "../images/LodestoneImage.png";
 import {
   faJsSquare,
   faRaspberryPi,
@@ -14,6 +15,7 @@ import {
   faHtml5,
   faCss3,
   faDiscord,
+  faRust,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faRobot,
@@ -22,12 +24,58 @@ import {
   faPepperHot,
   faFile,
   faKeyboard,
-  faGear,
   faBoltLightning,
   faWind,
+  faWindowRestore,
+  faWindowMinimize,
+  faWindowMaximize,
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const PROJECTS = [
+  {
+    name: "Lodestone",
+    image: LodestoneImage,
+    color: "#bf7394",
+    githubLink: "https://github.com/Lodestone-Team/lodestone",
+    ActionAreaLink: "https://www.lodestone.cc/",
+    descriptions: [
+      {
+        projectDescription:
+          "Lodestone is a free and open-source multiplayer game hosting tool created by a passionate group of university students in the GTA. Lodestone focuses on the user experience, allowing anybody to host their own game server with ease.",
+        tools: [
+          {
+            name: "React",
+            icon: faReact,
+          },
+          {
+            name: "TypeScript",
+            icon: faJsSquare,
+          },
+          {
+            name: "Rust",
+            icon: faRust,
+          },
+          {
+            name: "Tauri",
+            icon: faWindowMaximize,
+          },
+          {
+            name: "TailwindCSS",
+            icon: faWind,
+          },
+          {
+            name: "HeadlessUI",
+            icon: faWindowRestore,
+          },
+          {
+            name: "Open Source",
+            icon: faUsers,
+          },
+        ],
+      },
+    ],
+  },
   {
     name: "Party Planner",
     image: partyPlannerImage,
@@ -58,7 +106,7 @@ export const PROJECTS = [
           {
             name: "MongoDB",
             icon: faDatabase,
-          }
+          },
         ],
       },
     ],
@@ -174,33 +222,33 @@ export const PROJECTS = [
       },
     ],
   },
-  {
-    name: "Personal Website",
-    image: websiteImage,
-    color: "#bf7394",
-    githubLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
-    ActionAreaLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
-    descriptions: [
-      {
-        projectDescription:
-          "My personal website created from scratch using React to create components and Sass to style. The cards were created using Material UI's premade attributes.",
-        tools: [
-          {
-            name: "React",
-            icon: faReact,
-          },
-          {
-            name: "Sass",
-            icon: faSass,
-          },
-          {
-            name: "Material UI",
-            icon: faKeyboard,
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   name: "Personal Website",
+  //   image: websiteImage,
+  //   color: "#bf7394",
+  //   githubLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
+  //   ActionAreaLink: "https://github.com/NicholasLin718/NicholasLinWebsite",
+  //   descriptions: [
+  //     {
+  //       projectDescription:
+  //         "My personal website created from scratch using React to create components and Sass to style. The cards were created using Material UI's premade attributes.",
+  //       tools: [
+  //         {
+  //           name: "React",
+  //           icon: faReact,
+  //         },
+  //         {
+  //           name: "Sass",
+  //           icon: faSass,
+  //         },
+  //         {
+  //           name: "Material UI",
+  //           icon: faKeyboard,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     name: "Boggle",
     image: boggleImage,
@@ -225,5 +273,4 @@ export const PROJECTS = [
       },
     ],
   },
-  
 ];

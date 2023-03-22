@@ -1,9 +1,8 @@
 import React from 'react'
 import ShadCard from "../cards/ShadCard";
 import CatalystCard from "../cards/CatalystCard";
-import OpportuniteensCard from "../cards/OpportuniteensCard";
 import PortableIntelligenceCard from "../cards/PortableIntelligenceCard";
-import LinkECM from "../cards/LinkECMCard";
+import LCBONext from "../cards/LCBONextCard"
 import { Grid } from "@material-ui/core";
 import "./experience.scss";
 
@@ -17,6 +16,9 @@ export default function Experience() {
                 </div>
                 <Grid container spacing={4} className = "grid" direction= "row">
                     <Grid item xs = {12} sm ={6} md = {6}>
+                        <LCBONext className = "cards"/>
+                    </Grid>
+                    <Grid item xs = {12} sm ={6} md = {6}>
                         <PortableIntelligenceCard className = "cards"/>
                     </Grid>
                     <Grid item xs = {12} sm ={6} md = {6}>
@@ -24,9 +26,6 @@ export default function Experience() {
                     </Grid>
                     <Grid item xs = {12} sm ={6} md = {6}>
                         <CatalystCard className = "cards"/>
-                    </Grid>
-                    <Grid item xs = {12} sm ={6} md = {6}>
-                        <LinkECM className = "cards"/>
                     </Grid>
                 </Grid>
             </div>

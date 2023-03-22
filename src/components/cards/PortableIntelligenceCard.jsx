@@ -111,7 +111,7 @@ export default function ImgMediaCard() {
                     style={chipStyle}
                 />
               </div>        
-              <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px"}}>
+              <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
               As a software developer, I learned to use a technical partner's SDK, and expanded the tracking capability of our prototype. I created a new positional tracking floor plan with a fellow co-worker and introduced serveral new UI features which enhanced the overall utility of the solution. I also contributed in presenting the product demo to the Ontario Minister of Economic Development and international 
 attendees from the Collision Tech Conference. 
               </Typography>

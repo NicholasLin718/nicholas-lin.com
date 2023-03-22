@@ -43,14 +43,13 @@ export default class ProjectCards extends React.Component {
         const project = this.props.project;
         const style = this.props.style;
 
-        let demoLink;
-        if (project.name !== "Countdown Buddy" && project.name !== "Personal Website") {
-            demoLink = (
+        let demoLink = project.DemoLink ? 
+            (
                 <a href={project.DemoLink} 
                 target= "_blank" rel = "noreferrer"><i class="fas fa-link" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
                 <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>Demo</span></a>          
-            );
-          }
+            ) : <></>
+          
 
         return (
             <ThemeProvider theme={darkTheme}>
@@ -94,7 +93,7 @@ export default class ProjectCards extends React.Component {
                 </CardContent>
             </CardActionArea>
             <CardActions style={{height: "50px"}}>
-            <a href = {project.githubLink} target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i></a>
+                <a href = {project.githubLink} target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i></a>
                 {demoLink}
             </CardActions>
             </Card>

@@ -41,7 +41,7 @@ export default function Intro() {
                                 <li><a className= "learn" href="#about-me">Learn more</a></li>
                                 <li><a href = "https://github.com/NicholasLin718" target="_blank" rel="noreferrer"><i className="fab fa-github" id = "home-icons"/></a></li>
                                 <li><a href = "https://www.linkedin.com/in/nicholas-lin-87368a20b/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin-in" id = "home-icons"/></a></li>
-                                <li><a href={resume} target="_blank"><i className="fas fa-file" id = "home-icons"/></a></li>
+                                {/* <li><a href={resume} target="_blank"><i className="fas fa-file" id = "home-icons"/></a></li>s */}
                             </ul>
                         </div>
                     </div>
