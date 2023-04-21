@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import LCBONextImage from "../images/LCBONext.jpg"
+import LCBODemoImage from "../images/LCBODemo.jpg" 
 import Chip from '@material-ui/core/Chip';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import { faAngular, faDocker, faJsSquare, faPython, faReact } from '@fortawesome/free-brands-svg-icons';
@@ -73,7 +74,7 @@ export default function ImgMediaCard() {
             <CardMedia 
               className={LCBO.media}
               alt="LCBO|next"
-              image={LCBONextImage}
+              image={LCBODemoImage}
               title="LCBO|next"
             />
             <CardContent className = {LCBO.contentHeight} id = "cardContent">
@@ -122,7 +123,7 @@ export default function ImgMediaCard() {
                 />   
               </div>        
               <Typography variant="body2" color="textSecondary" component="p" style={{paddingTop: "16px", fontSize: "15px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
-                I worked on improving past projects, such as implementing a Python optimization script that suppressed 94% of redundant data changes when preprocessing 100k+ products. I also worked on an end-to-end web application that acts as a theft prevention tool for LCBO stores. I brainstormed with the Product Manager and Designer to design the application from scratch, and collaborate with the other Full Stack Developer to release a beta version of the product in 2 weeks.
+                I developed an end-to-end web application that acts as a theft prevention tool for LCBO stores. I brainstormed with the Product Manager and Designer to design the application from scratch, and collaborated with the other Full Stack Developer to release an alpha version of the product within a month. The project was demoed to the CEO and the CRO of LCBO, which exceeded expectations and effectively showcased the product's capabilities before launch.
               </Typography>
               <div className={LCBO.chip}>
                 <Chip
