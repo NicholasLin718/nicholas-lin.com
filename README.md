@@ -1,7 +1,7 @@
 # 🌐 Personal Website 🌐
 My first version of my personal website! https://nicholas-lin.com
 
-If you want to learn more about me, my past experiences or projects, here's a great source!
+If you want to learn more about me, my past experiences or projects, here's a great source! I haven't gotten around to redesigning a new one, so this code is rather outdated, but I try to keep the content updated :)
 
 # 🐱‍💻 How I Built it
 
