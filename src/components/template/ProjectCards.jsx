@@ -24,7 +24,7 @@ const chipIconStyle = {
     flexWrap: "wrap",
     color: "#04132c",
     overflow: 'hidden',
-    fontSize: '14px',
+    fontSize: '12px',
 };
 
 const chipStyle = { 
@@ -34,7 +34,8 @@ const chipStyle = {
     overflow: "hidden",
     color: "#04132c",
     fontFamily: "Open Sans, sans-serif",
-    fontWeight: "500"
+    fontWeight: "500",
+    fontSize: "12px"
 };
 
 
@@ -46,7 +47,7 @@ export default class ProjectCards extends React.Component {
         let demoLink = project.DemoLink ? 
             (
                 <a href={project.DemoLink} 
-                target= "_blank" rel = "noreferrer"><i class="fas fa-link" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i>
+                target= "_blank" rel = "noreferrer"><i class="fas fa-link" style={{color: "#FFCD33", fontSize: "20px", marginLeft: 5}}></i>
                 <span style={{color: "#FFCD33", fontSize: "12px", display: 'inline-block', paddingLeft: "7px", paddingBottom: "2px", fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>Demo</span></a>          
             ) : <></>
           
@@ -69,7 +70,7 @@ export default class ProjectCards extends React.Component {
                 {project.descriptions.map((desc) => {
                     return(
                         <div className="body">
-                            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden'}}>
+                            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden', fontSize: "12px"}}>
                                 {desc.projectDescription}
                             </Typography>
                             <div className={style.chip}>
@@ -92,8 +93,8 @@ export default class ProjectCards extends React.Component {
                 
                 </CardContent>
             </CardActionArea>
-            <CardActions style={{height: "50px"}}>
-                <a href = {project.githubLink} target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "22px", marginLeft: 5}}></i></a>
+            <CardActions style={{height: "40px", overflow: 'hidden'}}>
+                <a href = {project.githubLink} target="_blank" rel = "noreferrer"><i class="fab fa-github" style={{color: "#FFCD33", fontSize: "20px", marginLeft: 2 , paddingX: 5}}></i></a>
                 {demoLink}
             </CardActions>
             </Card>

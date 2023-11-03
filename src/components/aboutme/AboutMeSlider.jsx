@@ -8,6 +8,41 @@ import profilepic from "../images/E7Portrait.jpg";
 export default function AboutMeSlider() {
     const standoutColour = "#FFCD33";
     const [currentSlide,setCurrentSlide] = useState(0);
+    const [touchStart, setTouchStart] = useState(null);
+    const [touchEnd, setTouchEnd] = useState(null);
+
+    const onTouchStart = (e) => {
+        setTouchEnd(null); // Reset touch end on new touch start
+        setTouchStart(e.targetTouches[0].clientX);
+    }
+
+    const onTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    }
+
+    const onTouchEnd = () => {
+        // Ensure there was a touch start and the touch was moved to be considered a swipe
+        if (touchStart !== null && touchEnd !== null) {
+            // Check the swipe direction
+            const distance = touchStart - touchEnd;
+            const isSwipe = Math.abs(distance) > 50; // Minimum distance to be considered a swipe
+            const isLeftSwipe = distance > 0;
+            const isRightSwipe = distance < 0;
+    
+            if (isSwipe) {
+                if (isLeftSwipe) {
+                    handleClick('right');
+                } else if (isRightSwipe) {
+                    handleClick('left');
+                }
+            }
+        }
+    
+        // Reset touch start and end
+        setTouchStart(null);
+        setTouchEnd(null);
+    }
+
     const mainAbout =                         
     <div className="about-content">
     <div className="column left">
@@ -111,7 +146,11 @@ const moveDot = index => {
 
 return (
     <div className="about-me" id="about-me">
-      <div className="slider" style={{transform: `translateX(-${currentSlide*100}vw)`}}>
+          <div className="slider" style={{transform: `translateX(-${currentSlide*100}vw)`}}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
           {data.map((d) => (
               <div className="container">
                   <div className="max-width">{d.div}</div>
@@ -125,7 +164,7 @@ return (
         
       <div className="container-dots">
         {Array.from({length: 3}).map((item, index) => (
-        <div onClick={() => moveDot(index + 1)} className={currentSlide === index ? "dot active" : "dot"}></div>
+        <div onClick={()=>setCurrentSlide(index)} className={currentSlide === index ? "dot active" : "dot"}></div>
          ))}
       </div>
     </div>

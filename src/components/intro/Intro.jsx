@@ -1,13 +1,27 @@
 import React from 'react';
 import "./intro.scss";
-import backgroundvid from "./nightsky.mp4";
+import backgroundvid from "./nightskyshort.mp4";
 import backgroundImage from "./backgroundWebsite.png";
 import Typist from "react-typist";
-// import Typical from 'react-typical'
-import resume from "../../files/Resume.pdf";
+
 export default function Intro() {
     return (
         <div className="intro" id="intro">
+            {/* <img src={backgroundImage} alt=""
+                style={
+                    {
+                        // position: "fixed",
+                        position: "absolute",
+                        width:"100%",
+                        left: "50%",
+                        top:"50%",
+                        height: "100%",
+                        objectFit: 'cover',
+                        transform: "translate(-50%, -50%)",
+                        zIndex: "0"
+                    }
+                }
+            /> */}
             <video autoPlay loop muted alt={backgroundImage}
                 style={
                     {
@@ -38,7 +52,7 @@ export default function Intro() {
                         </Typist>
                         <div>                  
                             <ul className = "home-icon-div">
-                                <li><a className= "learn" href="#about-me">Learn more</a></li>
+                                <li><a className= "learn" href="#about-me">Who am I?</a></li>
                                 <li><a href = "https://github.com/NicholasLin718" target="_blank" rel="noreferrer"><i className="fab fa-github" id = "home-icons"/></a></li>
                                 <li><a href = "https://www.linkedin.com/in/nicholas-lin-87368a20b/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin-in" id = "home-icons"/></a></li>
                                 {/* <li><a href={resume} target="_blank"><i className="fas fa-file" id = "home-icons"/></a></li>s */}

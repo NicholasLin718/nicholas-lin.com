@@ -7,15 +7,34 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const projectCardStyles = makeStyles((theme) => ({
     root: {
-      maxWidth: 380,
+      maxWidth: 'auto',
     },
     media: {
       height: "259px",
       width: '100%',
     },
     contentHeight: {
-      maxHeight: 325,
-      minHeight: 325,
+      maxHeight: 275,
+      minHeight: 275,
+      '&::-webkit-scrollbar': {
+        width: '16px',
+      },
+      '&::-webkit-scrollbar-track': {
+          background: 'transparent',
+      },
+      '&::-webkit-scrollbar-thumb': {
+          backgroundColor: '#d6dee1',
+          borderRadius: '16px',
+          border: '5px solid transparent',
+          backgroundClip: 'content-box',
+          '&:hover': {
+              backgroundColor: '#a8bbbf',
+          },
+      },
+      [theme.breakpoints.down('xs')]: {
+        maxHeight: 400, 
+        minHeight: 'auto',
+      },
     },
     chip: {
       marginTop: "16px",

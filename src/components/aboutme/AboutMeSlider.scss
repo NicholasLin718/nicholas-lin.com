@@ -171,12 +171,13 @@
         }
     }
         .container-dots {
-            pointer-events: none;
             position: absolute;
             bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
+            z-index: 99;
+            cursor: pointer;
         .dot {
             width: 20px;
             height: 20px;
@@ -193,19 +194,21 @@
 
 @media (max-width: 1076px){
     .about-me {
+        height: 850px;
         .arrows{
             #arrow-right{
-                top: 85%;
+                top: 91%;
                 // position: relative;
                 // left: 50%;
             }
             #arrow-left{
                 // position: relative;
                 // left: 50%;
-                top: 85%;
+                top: 91%;
               }
           }
         .slider{
+            height: 800px;
             .container{
                 .max-width{
                     .about-content{
