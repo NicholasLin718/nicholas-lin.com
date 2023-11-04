@@ -17,7 +17,7 @@
     opacity: 1;
     &.fade-out {
         opacity: 0;
-        pointer-events: none; // Ensures the screen doesn't block interaction after fading out
+        pointer-events: none;
     }
     
     .loading-content {
@@ -37,10 +37,10 @@
   
   @keyframes floatUp {
     0% {
-      transform: translateY(100vh); /* Start off screen */
+      transform: translateY(100vh);
     }
     100% {
-      transform: translateY(-100vh); /* End off screen */
+      transform: translateY(-100vh);
     }
   }
   

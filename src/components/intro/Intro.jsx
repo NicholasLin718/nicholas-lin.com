@@ -22,21 +22,7 @@ export default function Intro({ onVideoLoad }) {
                     }
                 }
             /> */}
-            <video onCanPlayThrough={onVideoLoad} autoPlay loop muted alt={backgroundImage}
-                style={
-                    {
-                        // position: "fixed",
-                        position: "absolute",
-                        width:"100%",
-                        left: "50%",
-                        top:"50%",
-                        height: "100%",
-                        objectFit: 'cover',
-                        transform: "translate(-50%, -50%)",
-                        zIndex: "0"
-                    }
-                }
-            >
+            <video onCanPlayThrough={onVideoLoad} autoPlay loop muted alt={backgroundImage} className='background-video'>
                 <source src={backgroundvid} type = "video/mp4"/>
             </video>
             <section className="home" id="home" style = {{zIndex: "2"}}>

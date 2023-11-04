@@ -4,6 +4,21 @@
     overflow-y: hidden;
     font-family: 'Poppins', sans-serif;
     // background-color: rgb(24, 26, 29);
+    .background-video {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+      
+        &::-webkit-media-controls-start-playback-button {
+          display: none !important;
+          -webkit-appearance: none;
+        }
+      }
     .max-width{
         padding: 0px 40px;
     }

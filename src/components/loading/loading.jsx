@@ -7,10 +7,9 @@ import { Typography } from '@material-ui/core';
 const LoadingScreen = ({ isLoading, onFadeComplete }) => {
     useEffect(() => {
       if (!isLoading) {
-        // Start fade-out
         const timer = setTimeout(() => {
-          onFadeComplete(); // Call the callback after the fade-out duration
-        }, 500); // This should match your CSS animation duration
+          onFadeComplete(); 
+        }, 500);
   
         return () => clearTimeout(timer);
       }
