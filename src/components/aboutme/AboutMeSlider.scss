@@ -17,44 +17,6 @@
     background: $mainColour;
     min-height: 400px;
     font-family: 'Open Sans', sans-serif;
-    .arrows{
-        #arrow-right{
-            position: absolute;
-            top: 85%;
-            right: 80px;
-            font-size: 3rem;
-            color: white;
-            z-index: 99;
-            cursor: pointer;
-            user-select: none;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            &:hover{
-                color: $standoutColour;
-                background: none;
-            }
-        }
-        #arrow-left{
-            position: absolute;
-            top: 85%;
-            left: 80px;
-            font-size: 3rem;
-            color: white;
-            z-index: 99;
-            cursor: pointer;
-            user-select: none;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            &:hover{
-                color: $standoutColour;
-                background: none;
-            }
-        }
-    }
     .slider{
         overflow: hidden;
         height: 450px;
@@ -69,6 +31,7 @@
             width: 100vw;
             display: flex;
             justify-content: center;
+
             &::-webkit-scrollbar {
                 width: 20px;
               }
@@ -178,42 +141,59 @@
             display: flex;
             z-index: 99;
             cursor: pointer;
-        .dot {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 2px solid #f1f1f1;
-            margin: 0 5px;
-            background: #f1f1f1;
+            .dot {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 2px solid #f1f1f1;
+                margin: 0 5px;
+                background: #f1f1f1;
+                &:hover{
+                    background: $standoutColour;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            .dot.active {
+                background: $standoutColour;
+            }
+            #arrows{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 2px solid #f1f1f1;
+                margin: 0 15px;
+                color: #f1f1f1;
+                &:hover{
+                    color: $standoutColour;
+                    background: none;
+                }
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+            #arrows-off{
+                width: 20px;
+                height: 20px;
+                margin: 0 15px;
+            }
         }
-        .dot.active {
-            background: $standoutColour;
-        }
-    }
 }
 
 @media (max-width: 1076px){
     .about-me {
-        height: 850px;
-        .arrows{
-            #arrow-right{
-                top: 91%;
-                // position: relative;
-                // left: 50%;
-            }
-            #arrow-left{
-                // position: relative;
-                // left: 50%;
-                top: 91%;
-              }
-          }
+        height: 700px;
+
         .slider{
-            height: 800px;
+            height: 650px;
             .container{
+                margin-bottom: 75px;
                 .max-width{
                     .about-content{
-                        padding-top: 50px;
-                        padding-bottom: 100px;
+                        padding-top: 10px;
                         // height: 1000px;
                         .column{
                             width: 100%;

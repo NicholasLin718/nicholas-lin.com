@@ -4,7 +4,7 @@ import backgroundvid from "./nightskyshort.mp4";
 import backgroundImage from "./backgroundWebsite.png";
 import Typist from "react-typist";
 
-export default function Intro() {
+export default function Intro({ onVideoLoad }) {
     return (
         <div className="intro" id="intro">
             {/* <img src={backgroundImage} alt=""
@@ -22,7 +22,7 @@ export default function Intro() {
                     }
                 }
             /> */}
-            <video autoPlay loop muted alt={backgroundImage}
+            <video onCanPlayThrough={onVideoLoad} autoPlay loop muted alt={backgroundImage}
                 style={
                     {
                         // position: "fixed",

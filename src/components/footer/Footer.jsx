@@ -5,6 +5,7 @@ class Footer extends Component {
   render() {
     return (
     <footer>
+     <div style = {{marginTop: "-16px", color: "white", fontFamily: "Open Sans, sans-serif", fontSize: "11px", fontStyle: "italic"}}>Bring me back up!</div>
      <div className="row">
         <div className="twelve columns">
            <ul className="social-links">

@@ -70,7 +70,7 @@ export default class ProjectCards extends React.Component {
                 {project.descriptions.map((desc) => {
                     return(
                         <div className="body">
-                            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden', fontSize: "12px"}}>
+                            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden', fontSize: "14px"}}>
                                 {desc.projectDescription}
                             </Typography>
                             <div className={style.chip}>

@@ -4,6 +4,7 @@ import ReactRoundedImage from "react-rounded-image";
 import treeImage from "../images/tree.jpg";
 import badmintonImage from "../images/badminton.jpg";
 import profilepic from "../images/E7Portrait.jpg";
+import { useEffect } from "react";
 
 export default function AboutMeSlider() {
     const standoutColour = "#FFCD33";
@@ -12,7 +13,7 @@ export default function AboutMeSlider() {
     const [touchEnd, setTouchEnd] = useState(null);
 
     const onTouchStart = (e) => {
-        setTouchEnd(null); // Reset touch end on new touch start
+        setTouchEnd(null);
         setTouchStart(e.targetTouches[0].clientX);
     }
 
@@ -21,11 +22,9 @@ export default function AboutMeSlider() {
     }
 
     const onTouchEnd = () => {
-        // Ensure there was a touch start and the touch was moved to be considered a swipe
         if (touchStart !== null && touchEnd !== null) {
-            // Check the swipe direction
             const distance = touchStart - touchEnd;
-            const isSwipe = Math.abs(distance) > 50; // Minimum distance to be considered a swipe
+            const isSwipe = Math.abs(distance) > 50; 
             const isLeftSwipe = distance > 0;
             const isRightSwipe = distance < 0;
     
@@ -37,8 +36,6 @@ export default function AboutMeSlider() {
                 }
             }
         }
-    
-        // Reset touch start and end
         setTouchStart(null);
         setTouchEnd(null);
     }
@@ -124,25 +121,23 @@ const handleClick = (way) =>{
     setCurrentSlide(currentSlide<data.length-1 ? currentSlide + 1 : 0)
 }
 
-var leftArrowDisplay = {display: "none"}
-var rightArrowDisplay = {display: "flex"}
-if(currentSlide === 0){
-    leftArrowDisplay = {display: "none"}
-    rightArrowDisplay = {display: "flex"}
+useEffect(() => {
+    const handleKeyDown = (event) => {
+        if (event.key === 'ArrowLeft') {
+            handleClick('left');
+        } else if (event.key === 'ArrowRight') {
+            handleClick('right');
+        }
+    };
 
-}
-else if (currentSlide === 1){
-    leftArrowDisplay = {display: "flex"}
-    rightArrowDisplay = {display: "flex"}
-}
-else{
-    leftArrowDisplay = {display: "flex"}
-    rightArrowDisplay = {display: "none"}
-}
+    // Add event listener
+    window.addEventListener('keydown', handleKeyDown);
 
-const moveDot = index => {
-    setCurrentSlide(index)
-}
+    // Remove event listener on cleanup
+    return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+    };
+}, [handleClick]); 
 
 return (
     <div className="about-me" id="about-me">
@@ -157,15 +152,17 @@ return (
               </div>
           ))}
       </div>
-      <div className="arrows">
-        <i className="fas fa-arrow-circle-left" id = "arrow-left" style = {leftArrowDisplay} onClick={()=>handleClick("left")}></i>
-        <i className="fas fa-arrow-circle-right" id = "arrow-right" style = {rightArrowDisplay} onClick={()=>handleClick("right")}></i>
-      </div>
-        
-      <div className="container-dots">
-        {Array.from({length: 3}).map((item, index) => (
-        <div onClick={()=>setCurrentSlide(index)} className={currentSlide === index ? "dot active" : "dot"}></div>
-         ))}
+            
+        <div className="container-dots">
+            {currentSlide !== 0 ?  <i className="fas fa-arrow-circle-left" id = "arrows" onClick={()=>handleClick("left")}></i>
+                : <div id="arrows-off"></div>            }
+            {Array.from({length: 3}).map((item, index) => (
+            <div onClick={()=>setCurrentSlide(index)} className={currentSlide === index ? "dot active" : "dot"}></div>
+            ))}
+            {
+                currentSlide !== 2 ? <i className="fas fa-arrow-circle-right" id = "arrows" onClick={()=>handleClick("right")}></i>
+                : <div id="arrows-off"></div>
+            }
       </div>
     </div>
   );

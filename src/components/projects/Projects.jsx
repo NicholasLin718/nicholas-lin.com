@@ -4,7 +4,7 @@ import { PROJECTS } from "./ProjectsList";
 import ProjectCards from "../template/ProjectCards";
 import "./projects.scss";
 import { makeStyles } from '@material-ui/core/styles';
-
+import balloon from "../images/balloon.png";
 const projectCardStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 'auto',
@@ -14,8 +14,8 @@ const projectCardStyles = makeStyles((theme) => ({
       width: '100%',
     },
     contentHeight: {
-      maxHeight: 275,
-      minHeight: 275,
+      maxHeight: 305,
+      minHeight: 305,
       '&::-webkit-scrollbar': {
         width: '16px',
       },
@@ -73,7 +73,7 @@ export default function Projects(){
                         })}
                 </Grid>
             </div>
-        <a className="button" href="#home"><i class="fas fa-chevron-up" id = "arrow"></i></a>
+        <a className="button" href="#home"><img src={balloon} style={{marginLeft: "22px", height: "55px", width: "auto"}} alt="Back to Top"/></a>
         </section>
     );
 }

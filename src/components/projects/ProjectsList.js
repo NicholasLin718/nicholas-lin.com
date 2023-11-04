@@ -192,7 +192,7 @@ export const PROJECTS = [
     descriptions: [
       {
         projectDescription:
-          "In the world of silence, it is challenging to learn written English without knowing the sounds of words and letters. This project is an ASL translator built from a Raspberry Pi that recognizes ASL hand signals from a captured image and translates the signals into written English. ",
+          "In the world of silence, it is challenging to learn written English without knowing the sounds of words and letters. This project is an ASL translator built from a Raspberry Pi that recognizes ASL hand signals from images and translates the signals into written English. ",
         tools: [
           {
             name: "Python",

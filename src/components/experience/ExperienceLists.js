@@ -32,10 +32,11 @@ export const EXPERIENCE = [
     image: VerdantRobotics,
     color: "#bf7394",
     ActionAreaLink: "https://www.verdantrobotics.com/",
+    location: "Hayward, CA",
     descriptions: [
       {
         experienceDescription:
-          "The next generation of transformative on-farm technology, with a mission to help growers ensure sustainable food supply through machine learning, perception, and robotics. As a full stack developer, I have been making UI and database improvements in our internal tools used for image labelling and verification. I am currently developing the tablet interface of our upcoming 2024 robot that the operator will use when operating the machine. The interface is built on FoxGlove Studios and is communicating with the robot in real time to keep track of status and analytics. ",
+          "The next generation of on-farm tech, with a mission to promote sustainable agriculture through ML, perception, and robotics. I have made improvements to the UI and database of our internal tools used for image labelling and verification. I am currently developing the tablet interface of our upcoming 2024 robot that the operator will use during operation. The interface receives live messaging from the robot to keep track of status and analytics. ",
         tools: [
           {
             name: "React",
@@ -75,7 +76,7 @@ export const EXPERIENCE = [
     footer: [
       {
         name: "Learn more",
-        icon: "far fa-file-video",
+        icon: "fab fa-youtube",
         target: "https://www.youtube.com/watch?v=sV0cR_Nhac0&t",
       },
     ],
@@ -85,6 +86,7 @@ export const EXPERIENCE = [
     subheading: "Full Stack Developer",
     image: LCBODemoImage,
     color: "#bf7394",
+    location: "Toronto, ON",
     ActionAreaLink: "https://www.lcbonext.com/",
     descriptions: [
       {
@@ -129,6 +131,7 @@ export const EXPERIENCE = [
     image: PIDemoImage,
     color: "#bf7394",
     ActionAreaLink: "https://portable-intelligence.com/",
+    location: "Markham, ON",
     descriptions: [
       {
         experienceDescription:
@@ -159,17 +162,13 @@ export const EXPERIENCE = [
     subheading: "Ryerson University",
     image: shadImage,
     color: "#bf7394",
+    location: "Toronto, ON",
     ActionAreaLink: "https://www.shad.ca/about-shad/",
     link: "https://docs.google.com/presentation/d/1k_6jDZFNFLPTgoY51hii79riYn_GcU_QEu5IXVq6Su0/edit#slide=id.g5dd95b87a5_0_0",
     descriptions: [
       {
         experienceDescription:
-          "Canada's premier month-long STEAM/entrepreneurship program, featuring workshops, seminars, team building events, and opportunities to meet amazing people!",
-        tools: [],
-      },
-      {
-        experienceDescription:
-          "For our final project, I formulated a solution with a team of 7 to reduce Canada's waste. The business Furnitire repurposes old tires into sustainable and visually appealing furniture. We built a prototype and composed a report analyzing the market, functionality, and impact. We were awarded with the Most Impactful Award by the panel of judges.",
+          "Canada's premier month-long STEAM/entrepreneurship program, featuring workshops, seminars, team building events, and opportunities to meet amazing people! For our final project, I formulated a solution with a team of 7 to reduce Canada's waste. The business Furnitire repurposes old tires into sustainable and visually appealing furniture. We built a prototype and composed a report analyzing the market, functionality, and impact. We were awarded with the Most Impactful Award by the panel of judges.",
         tools: [
           {
             name: "Problem Solving",
