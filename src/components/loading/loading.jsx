@@ -21,7 +21,7 @@ const LoadingScreen = ({ isLoading, onFadeComplete }) => {
         <div className="loading-content">
             <Typography variant="h6" style = {{fontFamily: "Poppins, sans-serif", color: "#FFCD33"}}>One Moment...</Typography>
         </div>
-        <img src={balloon} alt="Loading" className="balloon-animation" />
+        <img src={balloon} alt="balloon" className="balloon-animation" />
       </div>
     );
   };

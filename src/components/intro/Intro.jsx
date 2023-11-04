@@ -1,6 +1,6 @@
 import React from 'react';
 import "./intro.scss";
-import backgroundvid from "./nightskyshort.mp4";
+import backgroundvid from "./nightskyshort1.mp4";
 import backgroundImage from "./backgroundWebsite.png";
 import Typist from "react-typist";
 
