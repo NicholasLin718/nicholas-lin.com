@@ -117,8 +117,8 @@ const data = [
 ]
 
 const handleClick = (way) =>{
-    way === "left" ? setCurrentSlide(currentSlide > 0 ? currentSlide-1:2) :
-    setCurrentSlide(currentSlide<data.length-1 ? currentSlide + 1 : 0)
+    way === "left" ? setCurrentSlide(currentSlide > 0 ? currentSlide-1 : currentSlide) :
+    setCurrentSlide(currentSlide < data.length-1 ? currentSlide + 1 : currentSlide)
 }
 
 useEffect(() => {
