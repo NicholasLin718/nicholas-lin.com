@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.1f2fac19.chunk.css",
-    "main.js": "/static/js/main.6907f47c.chunk.js",
-    "main.js.map": "/static/js/main.6907f47c.chunk.js.map",
+    "main.js": "/static/js/main.167c126c.chunk.js",
+    "main.js.map": "/static/js/main.167c126c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.62ff2d2f.js",
     "runtime-main.js.map": "/static/js/runtime-main.62ff2d2f.js.map",
     "static/js/2.694a8f00.chunk.js": "/static/js/2.694a8f00.chunk.js",
@@ -11,29 +11,29 @@
     "static/css/main.1f2fac19.chunk.css.map": "/static/css/main.1f2fac19.chunk.css.map",
     "static/js/2.694a8f00.chunk.js.LICENSE.txt": "/static/js/2.694a8f00.chunk.js.LICENSE.txt",
     "static/media/Demo.fcbe9f4f.JPG": "/static/media/Demo.fcbe9f4f.JPG",
-    "static/media/E7Portrait.7de675c1.jpg": "/static/media/E7Portrait.7de675c1.jpg",
     "static/media/EphphathaImage.84f3238d.png": "/static/media/EphphathaImage.84f3238d.png",
     "static/media/LCBODemo.34703b80.jpg": "/static/media/LCBODemo.34703b80.jpg",
     "static/media/LodestoneImage.142114b2.png": "/static/media/LodestoneImage.142114b2.png",
     "static/media/Resume.d7bdd92a.pdf": "/static/media/Resume.d7bdd92a.pdf",
     "static/media/VerdantRobotics.3c988fca.png": "/static/media/VerdantRobotics.3c988fca.png",
     "static/media/backgroundWebsite.c2734106.png": "/static/media/backgroundWebsite.c2734106.png",
-    "static/media/badminton.9650ce4d.jpg": "/static/media/badminton.9650ce4d.jpg",
     "static/media/loading.scss": "/static/media/balloon.3a2e4b7f.png",
     "static/media/boggle.0ece6d79.png": "/static/media/boggle.0ece6d79.png",
     "static/media/catalyst.4e93fa57.png": "/static/media/catalyst.4e93fa57.png",
     "static/media/countdownBuddyDemo.3849feca.png": "/static/media/countdownBuddyDemo.3849feca.png",
+    "static/media/duckdude.e6a9294a.png": "/static/media/duckdude.e6a9294a.png",
+    "static/media/forestPortrait.fd3d6f77.JPG": "/static/media/forestPortrait.fd3d6f77.JPG",
+    "static/media/jump.f665e521.jpg": "/static/media/jump.f665e521.jpg",
     "static/media/nightskyshort1.613dfe26.mp4": "/static/media/nightskyshort1.613dfe26.mp4",
     "static/media/partyplanner.c9b08da8.png": "/static/media/partyplanner.c9b08da8.png",
     "static/media/shadImage.8c95623a.png": "/static/media/shadImage.8c95623a.png",
     "static/media/timeline-banner.2ca54543.png": "/static/media/timeline-banner.2ca54543.png",
-    "static/media/tree.78c7b4f7.jpg": "/static/media/tree.78c7b4f7.jpg",
     "static/media/website.23289158.png": "/static/media/website.23289158.png"
   },
   "entrypoints": [
     "static/js/runtime-main.62ff2d2f.js",
     "static/js/2.694a8f00.chunk.js",
     "static/css/main.1f2fac19.chunk.css",
-    "static/js/main.6907f47c.chunk.js"
+    "static/js/main.167c126c.chunk.js"
   ]
 }
