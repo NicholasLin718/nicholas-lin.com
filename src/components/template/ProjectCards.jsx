@@ -35,7 +35,7 @@ const chipStyle = {
     color: "#04132c",
     fontFamily: "Open Sans, sans-serif",
     fontWeight: "500",
-    fontSize: "12px"
+    fontSize: "11px"
 };
 
 
@@ -63,14 +63,14 @@ export default class ProjectCards extends React.Component {
                     title={project.name}
                 />
                 <CardContent className = {style.contentHeight} id = "cardContent">
-                <Typography gutterBottom variant="h5" component="h2" style = {{color:"white", fontWeight: "600", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>
+                <Typography gutterBottom variant="h6" component="h2" style = {{color:"white", fontWeight: "600", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>
                     {project.name}
                 </Typography>
 
                 {project.descriptions.map((desc) => {
                     return(
                         <div className="body">
-                            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden', fontSize: "14px"}}>
+                            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden', fontSize: "12px"}}>
                                 {desc.projectDescription}
                             </Typography>
                             <div className={style.chip}>

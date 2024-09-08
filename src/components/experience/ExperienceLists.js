@@ -1,14 +1,17 @@
 import shadImage from "../images/shadImage.png";
-import catalystImage from "../images/catalyst.png";
 import PIDemoImage from "../images/Demo.JPG";
 import LCBODemoImage from "../images/LCBODemo.jpg";
 import VerdantRobotics from "../images/VerdantRobotics.png";
+import Waabi from "../images/Waabi.jpg";
 import {
   faJsSquare,
   faReact,
   faPython,
   faDocker,
   faAngular,
+  faGolang,
+  faRust,
+  faVuejs,
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -27,6 +30,61 @@ import {
 
 export const EXPERIENCE = [
   {
+    name: "Waabi Innovation Inc.",
+    subheading: "Software Engineer",
+    image: Waabi,
+    color: "#bf7394",
+    ActionAreaLink: "https://waabi.ai/",
+    location: "Toronto, ON",
+    descriptions: [
+      {
+        experienceDescription:
+          "Waabi is the next generation of autonomous trucking powered by generative AI. As a member of the internal tools team, I was responsible for developing and maintaining services that solve Waabi-specific problems. I helped design a new lightweight and portable visualization of our final map layer, built as a relation of lane cells, allowing many visualization features to be extended off it for visibility and validations. I also created an interface for our new internal events system, which would speed up curation and triaging of our trucking events.",
+        tools: [
+          {
+            name: "React",
+            icon: faReact,
+          },
+          {
+            name: "TypeScript/JavaScript",
+            icon: faJsSquare,
+          },
+          {
+            name: "Python",
+            icon: faPython,
+          },
+          {
+            name: "Golang",
+            icon: faGolang,
+          },
+          {
+            name: "Rust",
+            icon: faRust,
+          },
+          {
+            name: "PostgreSQL",
+            icon: faDatabase,
+          },
+          {
+            name: "Vue.js",
+            icon: faVuejs,
+          },
+          {
+            name: "FoxGlove Studios",
+            icon: faCircleNodes,
+          },
+        ],
+      },
+    ],
+    footer: [
+      {
+        name: "Learn more",
+        icon: "fab fa-youtube",
+        target: "https://www.youtube.com/watch?v=_VvRlhVpRzA",
+      },
+    ],
+  },
+  {
     name: "Verdant Robotics",
     subheading: "Full Stack Developer",
     image: VerdantRobotics,
@@ -36,7 +94,7 @@ export const EXPERIENCE = [
     descriptions: [
       {
         experienceDescription:
-          "The next generation of on-farm tech, with a mission to promote sustainable agriculture through ML, perception, and robotics. I have made improvements to the UI and database of our internal tools used for image labelling and verification. I am currently developing the tablet interface of our upcoming 2024 robot that the operator will use during operation. The interface receives live messaging from the robot to keep track of status and analytics. ",
+          "The next generation of on-farm tech, with a mission to promote sustainable agriculture through ML, perception, and robotics. I have made improvements to the UI and database of our internal tools used for image labelling and verification. Migrated from a CLI to React UI for the tablet interface of our upcoming 2024 robot that the operator will use during operation. The interface receives live messaging from the robot to keep track of status and analytics. ",
         tools: [
           {
             name: "React",

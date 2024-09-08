@@ -13,8 +13,8 @@ const experienceCardStyles = makeStyles((theme) => ({
         width: '100%',
     },
     contentHeight: {
-        maxHeight: 300,
-        minHeight: 300,
+        maxHeight: 280,
+        minHeight: 280,
         '&::-webkit-scrollbar': {
             width: '16px',
         },
@@ -72,20 +72,6 @@ export default function Experience() {
                             );
                         })}
                 </Grid>
-                {/* <Grid container spacing={4} className = "grid" direction= "row">
-                    <Grid item xs = {12} sm ={6} md = {4}>
-                        <LCBONext className = "cards"/>
-                    </Grid>
-                    <Grid item xs = {12} sm ={6} md = {4}>
-                        <PortableIntelligenceCard className = "cards"/>
-                    </Grid>
-                    <Grid item xs = {12} sm ={6} md = {4}>
-                        <ShadCard className = "cards"/>
-                    </Grid>
-                    <Grid item xs = {12} sm ={6} md = {4}>
-                        <CatalystCard className = "cards"/>
-                    </Grid>
-                </Grid> */}
             </div>
         </section>
         

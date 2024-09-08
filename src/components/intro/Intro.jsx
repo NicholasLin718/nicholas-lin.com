@@ -2,7 +2,7 @@ import React from 'react';
 import "./intro.scss";
 import backgroundvid from "./nightskyshort1.mp4";
 import backgroundImage from "./backgroundWebsite.png";
-import Typist from "react-typist";
+// import Typist from "react-typist";
 
 export default function Intro({ onVideoLoad }) {
     return (
@@ -28,14 +28,14 @@ export default function Intro({ onVideoLoad }) {
             <section className="home" id="home" style = {{zIndex: "2"}}>
                 <div className="max-width" style = {{zIndex: "2"}}>
                     <div className="home-content" style = {{zIndex: "2"}}>
-                        <Typist cursor={{show: false}}>
+                        {/* <Typist cursor={{show: false}}> */}
                             <div className="text-1">Hello, my name is</div>
-                            <Typist.Delay ms={800} />
+                            {/* <Typist.Delay ms={800} /> */}
                             <div className="text-2" >Nicholas Lin</div>
-                            <Typist.Delay ms={1200} />
+                            {/* <Typist.Delay ms={1200} /> */}
                             <div className="text-3">Software Engineer from the University of Waterloo
                             </div>
-                        </Typist>
+                        {/* </Typist> */}
                         <div>                  
                             <ul className = "home-icon-div">
                                 <li><a className= "learn" href="#about-me">Who am I?</a></li>

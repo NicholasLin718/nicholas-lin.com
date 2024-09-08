@@ -23,7 +23,7 @@ const chipIconStyle = {
     flexWrap: "wrap",
     color: "#04132c",
     overflow: 'hidden',
-    fontSize: '12px',
+    fontSize: '11px',
 };
 
 const chipStyle = { 
@@ -55,15 +55,15 @@ export default class ExperienceCards extends React.Component {
                     title={experience.name}
                 />
                 <CardContent className = {style.contentHeight} id = "cardContent">
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h6" component="h2">
                     <div style= {{color:"white", fontWeight: "600", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>{experience.name}</div>
-                    <div style={{fontSize: "14px", marginTop: "3px", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>{experience.subheading}</div>
+                    <div style={{fontSize: "13px", marginTop: "3px", fontFamily: "Poppins, sans-serif", overflow: 'hidden'}}>{experience.subheading}</div>
                  </Typography>
 
                 {experience.descriptions.map((desc) => {
                     return(
                         <div className="body">
-                            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden', fontSize: "14px"}}>
+                            <Typography variant="body2" color="textSecondary" component="p" style = {{fontFamily: "Open Sans, sans-serif", overflow: 'hidden', fontSize: "12px"}}>
                                 {desc.experienceDescription}
                             </Typography>
                             <div className={style.chip}>

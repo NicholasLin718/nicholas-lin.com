@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "./footer.scss";
-import resume from "../../files/Resume.pdf";
 class Footer extends Component {
   render() {
     return (

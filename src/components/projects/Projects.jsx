@@ -14,8 +14,8 @@ const projectCardStyles = makeStyles((theme) => ({
       width: '100%',
     },
     contentHeight: {
-      maxHeight: 305,
-      minHeight: 305,
+      maxHeight: 275,
+      minHeight: 275,
       '&::-webkit-scrollbar': {
         width: '16px',
       },
