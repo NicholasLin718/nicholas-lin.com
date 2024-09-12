@@ -39,7 +39,7 @@ export const EXPERIENCE = [
     descriptions: [
       {
         experienceDescription:
-          "Waabi is the next generation of autonomous trucking powered by generative AI. As a member of the internal tools team, I was responsible for developing and maintaining services that solve Waabi-specific problems. I helped design a new lightweight and portable visualization of our final map layer, built as a relation of lane cells, allowing many visualization features to be extended off it for visibility and validations. I also created an interface for our new internal events system, which would speed up curation and triaging of our trucking events.",
+          "The next generation of autonomous trucking powered by generative AI. As a member of the internal tools team, I was responsible for developing and maintaining services that solve Waabi-specific problems. I helped design a new lightweight and portable visualization of our final map layer, built as a relation of lane cells, allowing many visualization features to be extended off it for visibility and validations. I also created an interface for our new internal events system, which would speed up curation and triaging of our trucking events.",
         tools: [
           {
             name: "React",
@@ -145,7 +145,7 @@ export const EXPERIENCE = [
     image: LCBODemoImage,
     color: "#bf7394",
     location: "Toronto, ON",
-    ActionAreaLink: "https://www.lcbonext.com/",
+    ActionAreaLink: "https://www.lcbo.com/",
     descriptions: [
       {
         experienceDescription:

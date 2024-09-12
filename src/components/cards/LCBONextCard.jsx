@@ -70,7 +70,7 @@ export default function ImgMediaCard() {
     <div>
       <ThemeProvider theme={darkTheme}>
         <Card className={LCBO.root} id = "card">
-          <CardActionArea href = "https://www.lcbonext.com/" target = "_blank" rel = "noreferrer">
+          <CardActionArea href = "https://www.lcbo.com/" target = "_blank" rel = "noreferrer">
             <CardMedia 
               className={LCBO.media}
               alt="LCBO|next"
