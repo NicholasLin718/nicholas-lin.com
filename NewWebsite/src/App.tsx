@@ -8,6 +8,10 @@ import skydioBg from './images/banners/skydio-bg.mp4';
 import skydioPreview from './images/banners/skydio-preview.jpg';
 import waabiBg from './images/banners/waabi-bg.mp4';
 import waabiPreview from './images/banners/waabi-preview.jpg';
+import verdantBg from './images/banners/verdant-bg.mp4';
+import verdantPreview from './images/banners/verdant-preview.jpg';
+import lcboPreview from './images/banners/lcbo-preview.jpg';
+import piPreview from './images/banners/pi-preview.png';
 
 function App() {
   const experiences = [
@@ -37,7 +41,9 @@ function App() {
       duration: 'Sep 2023 – Dec 2023',
       description: 'Worked on full-stack development for agricultural robotics, enhancing data visualization and user interaction.',
       logo: verdantLogo,
-      backgroundMedia: '/images/verdant-bg.jpg',
+      previewImage: verdantPreview,
+      backgroundMedia: verdantBg,
+      video: true,
     },
     {
       title: 'Full Stack Developer Intern',
@@ -45,7 +51,7 @@ function App() {
       duration: 'Jan 2023 – Apr 2023',
       description: 'Developed web applications for the LCBO, focusing on user experience and backend integration.',
       logo: lcboLogo,
-      backgroundMedia: '/images/lcbo-bg.jpg',
+      previewImage: lcboPreview,
     },
     {
       title: 'Software Developer Intern',
@@ -53,7 +59,7 @@ function App() {
       duration: 'May 2022 – Aug 2022',
       description: 'Contributed to the development of AI-driven applications, focusing on data analysis and machine learning.',
       logo: portableIntelligenceLogo,
-      backgroundMedia: '/images/portable-intelligence-bg.jpg',
+      previewImage: piPreview,
     },
   ];
 
