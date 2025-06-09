@@ -1,3 +1,4 @@
+// App.tsx
 import JobExperienceCard from './components/JobExperienceCard';
 import skydioLogo from './images/logos/skydio.png';
 import waabiLogo from './images/logos/waabi.png';
@@ -70,10 +71,30 @@ function App() {
         <p className="text-gray-600 mt-3 text-lg">Clean, bold, and visual.</p>
       </header>
 
-      <main className="space-y-10 max-w-5xl mx-auto">
-        {experiences.map((exp, i) => (
-          <JobExperienceCard key={i} {...exp} />
-        ))}
+      <main className="relative max-w-7xl mx-auto">
+        {/* Desktop timeline layout */}
+        <div className="hidden md:block before:content-[''] before:absolute before:left-1/2 before:transform before:-translate-x-1/2 before:w-1 before:bg-gray-300 before:h-full before:top-0">
+          {experiences.map((exp, i) => (
+            <div key={i} className={`w-full flex ${i % 2 === 0 ? 'justify-start pr-8' : 'justify-end pl-8'} relative z-10 items-center`}>
+              {/* Centered dot vertically with the card */}
+              <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow-md z-20" />
+              <div className="w-full md:w-1/2">
+                <JobExperienceCard {...exp} align={i % 2 === 0 ? 'left' : 'right'} />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Improved Mobile timeline */}
+        <div className="md:hidden space-y-10 relative">
+          <div className="absolute top-0 left-4 bottom-0 w-0.5 bg-gray-300"></div>
+          {experiences.map((exp, i) => (
+            <div key={i} className="pl-12 relative flex items-center">
+              <div className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow"></div>
+              <JobExperienceCard {...exp} align="mobile" />
+            </div>
+          ))}
+        </div>
       </main>
 
       <footer className="mt-16 text-center text-gray-500 text-sm">
