@@ -61,7 +61,9 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
           <img
             src={previewImage}
             alt={`${company} preview`}
-            className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+            loading="eager"
+            fetchPriority="high"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
           />
         )}
 
@@ -78,9 +80,10 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
         )}
       </div>
 
+
       <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition duration-500" />
 
-      <div className="relative z-10 h-full w-full flex items-end p-6 text-white transition-all duration-500 group-hover:translate-y-[-4px] group-hover:opacity-100 opacity-95">
+      <div className="relative z-10 h-full w-full flex items-end p-6 text-white transition-all duration-500 group-hover:opacity-100 opacity-95">
         <div className="flex items-center gap-4 w-full">
           {logo && (
             <img
@@ -92,9 +95,8 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
           <div className="transition-all duration-500 ease-in-out w-full">
             <h2 className="text-2xl font-bold text-white">{title}</h2>
             <p className="text-sm text-gray-200">{company} — {duration}</p>
-
-            <div className="overflow-hidden transition-all duration-500 ease-in-out h-0 group-hover:h-[1.5rem] mt-1">
-              <p className="text-sm text-gray-100 transition-opacity duration-300 delay-100 group-hover:opacity-100 opacity-0">
+            <div className="max-h-[1.5rem] overflow-hidden mt-1">
+              <p className="text-sm text-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                 {description}
               </p>
             </div>
