@@ -14,3 +14,5 @@ The website is deployed using [Github Pages](https://pages.github.com/)
 Finding the right colour scheme was definitely a big challenge I ran into, probably took me much longer than I should've because I was very stubborn about having yellow in there. For future designing, websites such as [Coolers](https://coolors.co/) and [FontPair](https://www.fontpair.co/) are definitely useful resources to use!
 
 This was also the first time I used github pages, and I stumbled a little as I mistakenly installed like 200 packages and caused vulnerable dependencies and whatnot on this Github Repo, but at the end it worked out fine 😊.
+
+## This project was created with the [Solid CLI](https://github.com/solidjs-community/solid-cli)
