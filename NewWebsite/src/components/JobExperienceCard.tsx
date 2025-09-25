@@ -9,7 +9,8 @@ interface JobExperienceCardProps {
   backgroundMedia?: string;
   previewImage?: string;
   video?: boolean;
-  align?: 'left' | 'right' | 'center' | 'mobile';
+  tech: string[];
+  url?: string;
 }
 
 const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
@@ -21,7 +22,8 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
   previewImage,
   backgroundMedia,
   video,
-  align = 'left',
+  tech,
+  url,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -49,26 +51,11 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
 
   return (
     <div
-      className={`relative h-44 md:h-48 xl:h-60 rounded-2xl overflow-hidden shadow-lg group ${
-        align === 'left' ? 'ml-auto' : align === 'right' ? 'mr-auto' : 'mx-auto'
-      }`}
+      className={`relative h-44 md:h-48 xl:h-60 rounded-2xl overflow-hidden shadow-lg group cursor-pointer`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => { if (url) window.open(url, '_blank'); }}
     >
-      {(align === 'left' || align === 'right') && (
-        <div
-          className="absolute top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center z-20"
-          style={{
-            left: align === 'left' ? '-1.75rem' : 'auto',
-            right: align === 'right' ? '-1.75rem' : 'auto',
-          }}
-        >
-          <span className="block w-8 h-8 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-700 rounded-full border-4 border-white shadow-lg animate-pulse relative">
-            <span className="absolute inset-0 m-auto w-3 h-3 bg-white rounded-full shadow-inner"></span>
-          </span>
-        </div>
-      )}
-
       <div className="absolute inset-0 overflow-hidden">
         <div className="w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-105">
           {previewImage && (
@@ -111,14 +98,24 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
             />
           )}
           <div className="transition-all duration-500 ease-in-out w-full">
-            <h2 className="text-2xl font-bold text-white">{title}</h2>
+            <h2 className="text-2xl font-bold text-white">{company}</h2>
             <p className="text-sm text-gray-200">
-              {company} — {duration}
+              {title} — {duration}
             </p>
             <div className="overflow-hidden mt-1 transition-all duration-500 max-h-0 group-hover:max-h-24">
               <p className="text-sm text-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                 {description}
               </p>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {tech.map((item, index) => (
+                  <span
+                    key={index}
+                    className="bg-gray-800 text-gray-200 text-xs font-medium px-2 py-1 rounded-full"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

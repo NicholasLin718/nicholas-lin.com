@@ -19,10 +19,33 @@ const HeroSection: React.FC = () => (
       transition={{ delay: 0.3 }}
     />
     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800">Nicholas Lin</h1>
-    <p className="text-gray-600 mt-3 text-lg max-w-xl mx-auto">
-      I'm a passionate software engineer focused on building intuitive user experiences and
-      performant web applications. Here's a look into my journey so far.
-    </p>
+    <motion.p
+      className="text-gray-700 mt-5 text-lg max-w-4xl mx-auto font-medium leading-relaxed"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      I'm a fourth-year Software Engineering student at the University of Waterloo. From designing frontend tools to scaling backend systems, I enjoy building software that puts users first 🫂 
+    </motion.p>
+
+    <motion.p
+      className="text-gray-600/90 mt-4 text-base max-w-4xl mx-auto leading-relaxed"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+    >
+      I'm also a washed competitive badminton player, overhang-enjoying rock climber, and I sometimes game until 4am.
+    </motion.p>
+
+    <motion.p
+      className="text-gray-500 mt-12 text-base italic max-w-2xl mx-auto"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+    >
+      Check out my experiences below!
+    </motion.p>
+
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -30,7 +53,7 @@ const HeroSection: React.FC = () => (
       className="flex justify-center gap-6 mt-6 text-gray-500"
     >
       <a
-        href="mailto:nicholas@example.com"
+        href="mailto:n39lin@uwaterloo.ca"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:text-yellow-500 transition-colors"
@@ -39,7 +62,7 @@ const HeroSection: React.FC = () => (
         <Mail size={22} />
       </a>
       <a
-        href="https://github.com/nicholaslin"
+        href="https://github.com/NicholasLin718"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:text-yellow-500 transition-colors"
@@ -48,7 +71,7 @@ const HeroSection: React.FC = () => (
         <Github size={22} />
       </a>
       <a
-        href="https://linkedin.com/in/nicholaslin"
+        href="https://www.linkedin.com/in/nicholaslin718/"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:text-yellow-500 transition-colors"
