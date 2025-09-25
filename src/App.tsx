@@ -58,7 +58,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-yellow-50 py-12 px-4 relative">
+    <div className="min-h-screen bg-yellow-50 py-16 px-4 relative">
       <AnimatePresence mode="wait">
         {loading ? (
           <motion.div

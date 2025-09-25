@@ -16,7 +16,7 @@ export const Experiences = [
   {
     title: 'Software Engineer Intern',
     company: 'Skydio',
-    duration: 'May 2025 – Present',
+    duration: 'May 2025 – Aug 2025',
     description:
       `Developed React dashboards, APIs, and automation supporting 2.5M+ drone flights to date, powering fleet management, livestream alerts, and dock hardware lifecycle.`,
     tech: [

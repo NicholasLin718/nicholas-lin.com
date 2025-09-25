@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin } from 'lucide-react';
 import profilePic from '../images/forestPortraitZoomed.png';
 
-const HeroSection: React.FC = () => (
+const Intro: React.FC = () => (
   <motion.section
     initial={{ opacity: 0, y: 40 }}
     animate={{ opacity: 1, y: 0 }}
@@ -83,4 +83,4 @@ const HeroSection: React.FC = () => (
   </motion.section>
 );
 
-export default HeroSection;
+export default Intro;
