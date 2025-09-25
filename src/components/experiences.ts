@@ -115,6 +115,6 @@ export const Experiences = [
     tech: ['C#', 'Angular', '.NET', 'MSSQL', 'WebSockets'],
     logo: portableIntelligenceLogo,
     previewImage: piPreview,
-    url: 'https://www.portableintelligence.com',
+    url: 'https://www.portable-intelligence.com',
   },
 ];

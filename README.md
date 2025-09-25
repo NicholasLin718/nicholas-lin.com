@@ -1,18 +1,56 @@
-# 🌐 Personal Website 🌐
-My first version of my personal website! https://nicholas-lin.com
+# React + TypeScript + Vite
 
-If you want to learn more about me, my past experiences or projects, here's a great source! I haven't gotten around to redesigning a new one, so this code is rather outdated, but I try to keep the content updated :)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-# 🐱‍💻 How I Built it
+Currently, two official plugins are available:
 
-Created the website with [React](https://reactjs.org/) from scratch using [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html). The website is designed with Sass (mainly because I like the formatting of Sass and wanted to try it out).
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-The website is deployed using [Github Pages](https://pages.github.com/)
+## Expanding the ESLint configuration
 
-# 🧠 Challenges I Ran into and What I Learned
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-Finding the right colour scheme was definitely a big challenge I ran into, probably took me much longer than I should've because I was very stubborn about having yellow in there. For future designing, websites such as [Coolers](https://coolors.co/) and [FontPair](https://www.fontpair.co/) are definitely useful resources to use!
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+});
+```
 
-This was also the first time I used github pages, and I stumbled a little as I mistakenly installed like 200 packages and caused vulnerable dependencies and whatnot on this Github Repo, but at the end it worked out fine 😊.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x';
+import reactDom from 'eslint-plugin-react-dom';
+
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+});
+```
 
 ## This project was created with the [Solid CLI](https://github.com/solidjs-community/solid-cli)
