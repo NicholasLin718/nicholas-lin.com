@@ -40,7 +40,19 @@ function App() {
           })
       );
 
-    Promise.all(imgPromises).then(() => {
+    const videoPromises = Experiences.map((exp) => exp.backgroundMedia)
+      .filter(Boolean)
+      .map(
+        (src) =>
+          new Promise((res) => {
+            const video = document.createElement('video');
+            video.onloadeddata = res;
+            video.onerror = res;
+            video.src = src!;
+          })
+      );
+
+    Promise.all([imgPromises].concat([videoPromises])).then(() => {
       setTimeout(() => setLoading(false), 1000);
     });
   }, []);

@@ -8,7 +8,7 @@ import skydioPreview from '../images/banners/skydio-preview.jpg';
 import waabiBg from '../images/banners/waabi-bg.mp4';
 import waabiPreview from '../images/banners/waabi-preview.jpg';
 import verdantBg from '../images/banners/verdant-bg.mp4';
-import verdantPreview from '../images/banners/verdant-preview.png';
+import verdantPreview from '../images/banners/verdant-preview.jpg';
 import lcboPreview from '../images/banners/lcbo-preview.jpg';
 import piPreview from '../images/banners/pi-preview.png';
 
