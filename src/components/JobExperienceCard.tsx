@@ -52,7 +52,6 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
     return () => observer.disconnect();
   }, [video, backgroundMedia]);
 
-  // Resize handler for mobile/desktop switch
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -78,7 +77,7 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
     <div
       ref={containerRef}
       className={`relative rounded-2xl overflow-hidden shadow-lg group
-        ${isMobile ? "min-h-48 cursor-default" : "h-44 md:h-56 xl:h-60 cursor-pointer"}
+        ${isMobile ? "min-h-48" : "h-44 md:h-56 xl:h-60"}
       `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -121,7 +120,10 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
           setShowInfo((prev) => !prev);
         }}
       >
-        <Info size={20} />
+        <Info
+          size={20}
+          className="cursor-pointer"
+        />
       </button>
 
       {/* Text + description */}
