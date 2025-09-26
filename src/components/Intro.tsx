@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin } from 'lucide-react';
-import profilePic from '../images/forestPortraitZoomed.png';
 
 const Intro: React.FC = () => (
   <motion.section
@@ -11,7 +10,7 @@ const Intro: React.FC = () => (
     className="max-w-5xl mx-auto mb-20 text-center"
   >
     <motion.img
-      src={profilePic}
+      src='/forestPortraitZoomed.png'
       alt="Profile"
       className="mx-auto w-64 h-64 rounded-full shadow-lg mb-4"
       initial={{ scale: 0.8, opacity: 0 }}

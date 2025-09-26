@@ -52,7 +52,14 @@ function App() {
           })
       );
 
-    Promise.all([imgPromises].concat([videoPromises])).then(() => {
+    const introPhotoPromise = new Promise((res) => {
+      const img = new Image();
+      img.onload = res;
+      img.onerror = res;
+      img.src = "/forestPortraitZoomed.png";
+    });
+
+    Promise.all([...imgPromises, ...videoPromises, introPhotoPromise]).then(() => {
       setTimeout(() => setLoading(false), 1000);
     });
   }, []);

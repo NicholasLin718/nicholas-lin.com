@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import profilePic from '../images/duck.png';
 
 const LoadingScreen: React.FC = () => (
   <div className="fixed inset-0 bg-gradient-to-br from-blue-50 via-white to-yellow-100 flex items-center justify-center z-50">
@@ -14,8 +13,8 @@ const LoadingScreen: React.FC = () => (
         <div className="absolute inset-0 animate-ping rounded-full bg-yellow-400 opacity-75"></div>
         <div className="relative w-24 h-24 bg-yellow-300 rounded-full shadow-lg overflow-hidden flex items-center justify-center">
           <img
-            src={profilePic}
-            alt="Profile"
+            src='/duck.png'
+            alt="Loading"
             className="w-full h-full object-cover rounded-full"
           />
         </div>

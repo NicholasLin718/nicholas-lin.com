@@ -64,11 +64,13 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
 
   return (
     <div
-      className="relative h-52 md:h-56 xl:h-60 rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+      className={`relative rounded-2xl overflow-hidden shadow-lg group
+        ${isMobile ? 'h-auto min-h-52 cursor-default' : 'h-52 md:h-56 xl:h-60 cursor-pointer'}
+      `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={() => {
-        if (url) window.open(url, '_blank');
+        if (!isMobile && url) window.open(url, '_blank');
       }}
     >
       <div className="absolute inset-0 overflow-hidden">
@@ -121,12 +123,26 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
             <img
               src={logo}
               alt={`${company} logo`}
-              className="w-10 h-10 md:w-12 md:h-12 object-contain rounded-md bg-white p-1 shadow mt-1"
+              className="w-8 h-8 md:w-12 md:h-12 object-contain rounded-md bg-white p-0.75 md:p-1 shadow mt-1"
             />
           )}
           <div className="transition-all duration-500 ease-in-out w-full">
-            <h2 className="text-lg md:text-2xl font-bold text-white">{company}</h2>
-            <p className="text-xs md:text-sm text-gray-200">
+            <h2 className="text-md md:text-2xl font-bold text-white">
+              {url && isMobile ? (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {company}
+                </a>
+              ) : (
+                company
+              )}
+            </h2>
+            <p className="text-[10px] md:text-sm text-gray-200">
               {title} — {duration}
             </p>
 
@@ -135,16 +151,16 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
                 ${isMobile ? (showInfo ? 'max-h-40' : 'max-h-0') : 'max-h-0 group-hover:max-h-24'}`}
             >
               <p
-                className={`text-xs md:text-sm text-gray-100 transition-opacity duration-300 delay-100
+                className={`text-[10px] md:text-sm text-gray-100 transition-opacity duration-300 delay-100
                   ${isMobile ? (showInfo ? 'opacity-100' : 'opacity-0') : 'opacity-0 group-hover:opacity-100'}`}
               >
                 {description}
               </p>
-              <div className="flex flex-wrap gap-2 mt-2">
+              <div className="flex flex-wrap gap-1 md:gap-2 mt-2">
                 {tech.map((item, index) => (
                   <span
                     key={index}
-                    className="bg-gray-800 text-gray-200 text-[10px] md:text-xs font-medium px-2 py-1 rounded-full"
+                    className="bg-gray-800 text-gray-200 text-[8px] md:text-xs font-medium px-2 py-1 rounded-full"
                   >
                     {item}
                   </span>
