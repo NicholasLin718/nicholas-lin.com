@@ -27,7 +27,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Preload images and videos
+    // Preload preview images
     const imgPromises = Experiences.map((exp) => exp.previewImage)
       .filter(Boolean)
       .map(
@@ -40,18 +40,7 @@ function App() {
           })
       );
 
-    const videoPromises = Experiences.map((exp) => exp.backgroundMedia)
-      .filter(Boolean)
-      .map(
-        (src) =>
-          new Promise((res) => {
-            const video = document.createElement("video");
-            video.onloadeddata = res;
-            video.onerror = res;
-            video.src = src!;
-          })
-      );
-
+    // Preload intro portrait
     const introPhotoPromise = new Promise((res) => {
       const img = new Image();
       img.onload = res;
@@ -59,19 +48,19 @@ function App() {
       img.src = "/forestPortraitZoomed.png";
     });
 
-    // Set a fallback timer to ensure the app doesn't get stuck
+    // Fallback so app isn’t stuck
     const fallbackTimer = setTimeout(() => {
       setLoading(false);
-    }, 5000); // 5 seconds fallback
+    }, 5000);
 
-    // Wait for all assets to load or fallback timer
-    Promise.all([...imgPromises, ...videoPromises, introPhotoPromise]).then(() => {
-      clearTimeout(fallbackTimer); // Clear the fallback timer if assets load successfully
-      setTimeout(() => setLoading(false), 1000); // Add a slight delay for a smoother transition
+    Promise.all([...imgPromises, introPhotoPromise]).then(() => {
+      clearTimeout(fallbackTimer);
+      setTimeout(() => setLoading(false), 600);
     });
 
-    return () => clearTimeout(fallbackTimer); // Cleanup the timer on unmount
+    return () => clearTimeout(fallbackTimer);
   }, []);
+
 
   return (
     <div className="min-h-screen bg-yellow-50 py-16 px-4 relative">

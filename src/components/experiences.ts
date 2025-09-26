@@ -16,7 +16,7 @@ export const Experiences = [
   {
     title: 'Software Engineer Intern',
     company: 'Skydio',
-    duration: 'May 2025 – Aug 2025',
+    duration: 'May – Aug 2025',
     description:
       `Developed React dashboards, APIs, and automation supporting 2.5M+ drone flights to date, powering fleet management, livestream alerts, and dock hardware lifecycle.`,
     tech: [
@@ -40,7 +40,7 @@ export const Experiences = [
   {
     title: 'Software Engineer Intern',
     company: 'Waabi',
-    duration: 'May 2024 – Apr 2025',
+    duration: 'May - Aug 2024, Jan – Apr 2025',
     description:
       'Developed simulation and visualization tools, geospatial data pipelines, and real-time streaming systems for autonomous trucks, while developing reusable frontend and backend services to improve efficiency across teams.',
     tech: [
@@ -65,7 +65,7 @@ export const Experiences = [
   {
     title: 'Full Stack Engineer Intern',
     company: 'Verdant Robotics',
-    duration: 'Sep 2023 – Dec 2023',
+    duration: 'Sep – Dec 2023',
     description:
       'Created a React dashboards to replace CLI-based robotic workflows and implemented multithreaded data pipelines for telemetry visualization.',
     tech: [
@@ -88,7 +88,7 @@ export const Experiences = [
   {
     title: 'Full Stack Developer Intern',
     company: 'LCBO Next',
-    duration: 'Jan 2023 – Apr 2023',
+    duration: 'Jan – Apr 2023',
     description:
       'Engineered web apps and ETL pipelines to improve retail operations, product updates, and theft-prevention systems.',
     tech: [
@@ -109,7 +109,7 @@ export const Experiences = [
   {
     title: 'Software Developer Intern',
     company: 'Portable Intelligence Inc.',
-    duration: 'May 2022 – Aug 2022',
+    duration: 'May – Aug 2022',
     description:
       'Designed and deployed warehouse intelligence tools with real-time tracking and analytics to boost operational efficiency.',
     tech: ['C#', 'Angular', '.NET', 'MSSQL', 'WebSockets'],

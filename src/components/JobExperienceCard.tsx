@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { Info } from 'lucide-react';
+import React, { useRef, useEffect, useState } from "react";
+import { Info } from "lucide-react";
 
 interface JobExperienceCardProps {
   title: string;
@@ -27,28 +27,40 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
   url,
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
 
+  // Detect viewport visibility for lazy video loading
+  useEffect(() => {
+    if (!video || !backgroundMedia) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShouldLoadVideo(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0 } // fire as soon as element enters viewport
+    );
+
+    if (containerRef.current) observer.observe(containerRef.current);
+
+    return () => observer.disconnect();
+  }, [video, backgroundMedia]);
+
+  // Resize handler for mobile/desktop switch
   useEffect(() => {
     const handleResize = () => {
-      const mobile = window.innerWidth < 768;
-      setIsMobile(mobile);
-      if (!mobile) setShowInfo(false); // reset when switching to desktop
+      setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth >= 768) setShowInfo(false);
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  useEffect(() => {
-    if (video && backgroundMedia) {
-      const preloadVideo = document.createElement('video');
-      preloadVideo.src = backgroundMedia;
-      preloadVideo.preload = 'metadata';
-      preloadVideo.load();
-    }
-  }, [video, backgroundMedia]);
 
   const handleMouseEnter = () => {
     setVideoLoaded(true);
@@ -64,14 +76,12 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
 
   return (
     <div
+      ref={containerRef}
       className={`relative rounded-2xl overflow-hidden shadow-lg group
-        ${isMobile ? 'h-auto min-h-52 cursor-default' : 'h-52 md:h-56 xl:h-60 cursor-pointer'}
+        ${isMobile ? "min-h-48 cursor-default" : "h-44 md:h-56 xl:h-60 cursor-pointer"}
       `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={() => {
-        if (!isMobile && url) window.open(url, '_blank');
-      }}
     >
       <div className="absolute inset-0 overflow-hidden">
         <div className="w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-105">
@@ -79,18 +89,17 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
             <img
               src={previewImage}
               alt={`${company} preview`}
-              loading="eager"
-              fetchPriority="high"
+              loading="lazy"
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-                video && videoLoaded ? 'opacity-0' : 'opacity-100'
+                video && videoLoaded ? "opacity-0" : "opacity-100"
               }`}
             />
           )}
-          {video && backgroundMedia && (
+          {video && shouldLoadVideo && backgroundMedia && (
             <video
               ref={videoRef}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-                videoLoaded ? 'opacity-100' : 'opacity-0'
+                videoLoaded ? "opacity-100" : "opacity-0"
               }`}
               src={backgroundMedia}
               muted
@@ -105,18 +114,17 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
       {/* dark overlay */}
       <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition duration-500" />
 
-      {isMobile && (
-        <button
-          className="absolute top-3 right-3 z-20 text-white p-1 rounded-full"
-          onClick={(e) => {
-            e.stopPropagation();
-            setShowInfo((prev) => !prev);
-          }}
-        >
-          <Info size={20} />
-        </button>
-      )}
+      <button
+        className={`absolute top-3 right-3 z-20 ${showInfo ? "text-yellow-500" : "text-gray-400"} p-1 rounded-full bg-black/10 hover:bg-black/50 transition`}
+        onClick={(e) => {
+          e.stopPropagation();
+          setShowInfo((prev) => !prev);
+        }}
+      >
+        <Info size={20} />
+      </button>
 
+      {/* Text + description */}
       <div className="absolute bottom-0 left-0 right-0 z-10 p-4 md:p-6 text-white transition-all duration-500 group-hover:opacity-100 opacity-95">
         <div className="flex items-start gap-3 w-full">
           {logo && (
@@ -128,19 +136,15 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
           )}
           <div className="transition-all duration-500 ease-in-out w-full">
             <h2 className="text-md md:text-2xl font-bold text-white">
-              {url && isMobile ? (
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {company}
-                </a>
-              ) : (
-                company
-              )}
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {company}
+              </a>
             </h2>
             <p className="text-[10px] md:text-sm text-gray-200">
               {title} — {duration}
@@ -148,12 +152,11 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
 
             <div
               className={`overflow-hidden mt-1 transition-all duration-500
-                ${isMobile ? (showInfo ? 'max-h-40' : 'max-h-0') : 'max-h-0 group-hover:max-h-24'}`}
+                ${showInfo ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
+                ${!isMobile ? "group-hover:max-h-24 group-hover:opacity-100" : ""}
+              `}
             >
-              <p
-                className={`text-[10px] md:text-sm text-gray-100 transition-opacity duration-300 delay-100
-                  ${isMobile ? (showInfo ? 'opacity-100' : 'opacity-0') : 'opacity-0 group-hover:opacity-100'}`}
-              >
+              <p className="text-[10px] xs:text-[12px] md:text-sm text-gray-100 transition-opacity duration-300 delay-100">
                 {description}
               </p>
               <div className="flex flex-wrap gap-1 md:gap-2 mt-2">
