@@ -26,8 +26,8 @@ const itemVariants: Variants = {
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // Preload images
   useEffect(() => {
+    // Preload images and videos
     const imgPromises = Experiences.map((exp) => exp.previewImage)
       .filter(Boolean)
       .map(
@@ -45,7 +45,7 @@ function App() {
       .map(
         (src) =>
           new Promise((res) => {
-            const video = document.createElement('video');
+            const video = document.createElement("video");
             video.onloadeddata = res;
             video.onerror = res;
             video.src = src!;
@@ -59,9 +59,18 @@ function App() {
       img.src = "/forestPortraitZoomed.png";
     });
 
+    // Set a fallback timer to ensure the app doesn't get stuck
+    const fallbackTimer = setTimeout(() => {
+      setLoading(false);
+    }, 5000); // 5 seconds fallback
+
+    // Wait for all assets to load or fallback timer
     Promise.all([...imgPromises, ...videoPromises, introPhotoPromise]).then(() => {
-      setTimeout(() => setLoading(false), 1000);
+      clearTimeout(fallbackTimer); // Clear the fallback timer if assets load successfully
+      setTimeout(() => setLoading(false), 1000); // Add a slight delay for a smoother transition
     });
+
+    return () => clearTimeout(fallbackTimer); // Cleanup the timer on unmount
   }, []);
 
   return (
@@ -101,9 +110,7 @@ function App() {
                   whileTap={{ scale: 0.98 }}
                   viewport={{ once: true, amount: 0.2 }}
                 >
-                  <JobExperienceCard
-                    {...exp}
-                  />
+                  <JobExperienceCard {...exp} />
                 </motion.div>
               ))}
             </motion.main>
