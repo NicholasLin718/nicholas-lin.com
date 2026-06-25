@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, type Variants } from 'framer-motion';
+import { motion, type Variants, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { Mail, Github, Linkedin } from 'lucide-react';
 
 const nameContainerVariants: Variants = {
@@ -12,23 +12,48 @@ const letterVariants: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut' } },
 };
 
-const Intro: React.FC = () => (
+const Intro: React.FC = () => {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [10, -10]), { stiffness: 300, damping: 30 });
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-10, 10]), { stiffness: 300, damping: 30 });
+
+  const handleTiltMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    mouseX.set((e.clientX - rect.left) / rect.width - 0.5);
+    mouseY.set((e.clientY - rect.top) / rect.height - 0.5);
+  };
+
+  const handleTiltLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
+
+  return (
   <motion.section
     initial={{ opacity: 0, y: 40 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1 }}
     className="max-w-5xl mx-auto mb-20 text-center"
   >
-    <motion.img
-      src='/forestPortraitZoomed.png'
-      alt="Profile"
-      className="mx-auto w-64 h-64 rounded-full shadow-lg mb-4"
+    <motion.div
+      className="mx-auto w-64 h-64 mb-4"
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 0.3 }}
-    />
+      style={{ perspective: '600px' }}
+      onMouseMove={handleTiltMove}
+      onMouseLeave={handleTiltLeave}
+    >
+      <motion.img
+        src='/forestPortraitZoomed.png'
+        alt="Profile"
+        className="w-full h-full rounded-full shadow-lg object-cover cursor-pointer"
+        style={{ rotateX, rotateY }}
+      />
+    </motion.div>
     <motion.h1
-      className="text-4xl md:text-5xl font-extrabold text-gray-800"
+      className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-gray-100"
       variants={nameContainerVariants}
       initial="hidden"
       animate="show"
@@ -40,16 +65,16 @@ const Intro: React.FC = () => (
       ))}
     </motion.h1>
     <motion.p
-      className="text-gray-700 mt-5 text-lg max-w-4xl mx-auto font-medium leading-relaxed"
+      className="text-gray-700 dark:text-gray-300 mt-5 text-lg max-w-4xl mx-auto font-medium leading-relaxed"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      I'm a fourth-year Software Engineering student at the University of Waterloo. From designing frontend tools to scaling backend systems, I enjoy building software that puts users first 🫂 
+      I'm a recent Software Engineering graduate from the University of Waterloo. From designing frontend tools to scaling backend systems, I enjoy building software that puts users first 🫂 
     </motion.p>
 
     <motion.p
-      className="text-gray-600/90 mt-4 text-base max-w-4xl mx-auto leading-relaxed"
+      className="text-gray-600/90 dark:text-gray-400 mt-4 text-base max-w-4xl mx-auto leading-relaxed"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
@@ -67,11 +92,11 @@ const Intro: React.FC = () => (
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
         <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
       </span>
-      <span className="text-sm text-gray-600 font-medium">Currently @ Skydio</span>
+      <span className="text-sm text-gray-600 dark:text-gray-300 font-medium">Incoming @ Heygen</span>
     </motion.div>
 
     <motion.p
-      className="text-gray-500 mt-6 text-base italic max-w-2xl mx-auto"
+      className="text-gray-500 dark:text-gray-400 mt-6 text-base italic max-w-2xl mx-auto"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.55 }}
@@ -83,7 +108,7 @@ const Intro: React.FC = () => (
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.7 }}
-      className="flex justify-center gap-6 mt-6 text-gray-500"
+      className="flex justify-center gap-6 mt-6 text-gray-500 dark:text-gray-400"
     >
       <a
         href="mailto:n39lin@uwaterloo.ca"
@@ -114,6 +139,7 @@ const Intro: React.FC = () => (
       </a>
     </motion.div>
   </motion.section>
-);
+  );
+};
 
 export default Intro;

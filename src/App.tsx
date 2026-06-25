@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { Sun, Moon } from "lucide-react";
 
 import JobExperienceCard from "./components/JobExperienceCard";
 import Intro from "./components/Intro";
 import LoadingScreen from "./components/LoadingScreen";
+import CursorTrail from "./components/CursorTrail";
 import { Experiences } from "./components/experiences";
 
 const containerVariants = {
@@ -25,6 +27,15 @@ const itemVariants: Variants = {
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark');
+
+  const toggleTheme = () => {
+    setIsDark(prev => {
+      const next = !prev;
+      localStorage.setItem('theme', next ? 'dark' : 'light');
+      return next;
+    });
+  };
 
   useEffect(() => {
     // Preload preview images
@@ -63,7 +74,21 @@ function App() {
 
 
   return (
-    <div className="min-h-screen py-16 px-4 relative" style={{ background: 'radial-gradient(ellipse at top, #fffff5 0%, #fefce8 60%)' }}>
+    <div
+      className={`${isDark ? 'dark' : ''} min-h-screen py-16 px-4 relative transition-colors duration-300`}
+      style={{ background: isDark
+        ? 'radial-gradient(ellipse at top, #1c1a0e 0%, #0f0e07 60%)'
+        : 'radial-gradient(ellipse at top, #fffff5 0%, #fefce8 60%)'
+      }}
+    >
+      <CursorTrail />
+      <button
+        onClick={toggleTheme}
+        className="fixed top-4 right-4 z-50 p-2 rounded-full bg-white/80 dark:bg-gray-800/80 shadow text-gray-500 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-400 backdrop-blur-sm transition-all duration-200"
+        aria-label="Toggle theme"
+      >
+        {isDark ? <Sun size={18} /> : <Moon size={18} />}
+      </button>
       <AnimatePresence mode="wait">
         {loading ? (
           <motion.div
@@ -93,7 +118,7 @@ function App() {
               <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 whitespace-nowrap">
                 Experience
               </h2>
-              <div className="flex-1 h-px bg-gray-200" />
+              <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
             </motion.div>
             <motion.main
               className="max-w-4xl mx-auto mt-8 relative z-10"
@@ -114,7 +139,7 @@ function App() {
                 </motion.div>
               ))}
             </motion.main>
-            <footer className="mt-16 text-center text-gray-500 text-sm">
+            <footer className="mt-16 text-center text-gray-500 dark:text-gray-500 text-sm">
               <p>&copy; 2025 Nicholas Lin</p>
             </footer>
           </motion.div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const LoadingScreen: React.FC = () => (
-  <div className="fixed inset-0 bg-yellow-50 flex items-center justify-center z-50">
+  <div className="fixed inset-0 bg-yellow-50 dark:bg-[#0f0e07] flex items-center justify-center z-50">
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -23,7 +23,7 @@ const LoadingScreen: React.FC = () => (
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="text-lg font-semibold text-gray-700"
+        className="text-lg font-semibold text-gray-700 dark:text-gray-300"
       >
         Please hold, Nicholas is buffering...
       </motion.p>

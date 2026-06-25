@@ -32,6 +32,7 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
+  const [spotlight, setSpotlight] = useState<{ x: number; y: number } | null>(null);
   const isMobile = useIsMobile();
 
   // Detect viewport visibility for lazy video loading
@@ -62,11 +63,17 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
     if (video && videoRef.current) videoRef.current.play().catch(() => {});
   };
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setSpotlight({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+
   const handleMouseLeave = () => {
     if (video && videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
+    setSpotlight(null);
   };
 
   return (
@@ -77,6 +84,7 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
       `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onMouseMove={handleMouseMove}
     >
       <div className="absolute inset-0 overflow-hidden">
         <div className="w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-105">
@@ -108,6 +116,16 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
 
       {/* dark overlay */}
       <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition duration-500" />
+
+      {/* spotlight glow */}
+      {spotlight && (
+        <div
+          className="absolute inset-0 pointer-events-none z-[5]"
+          style={{
+            background: `radial-gradient(200px circle at ${spotlight.x}px ${spotlight.y}px, rgba(251, 191, 36, 0.18), transparent 70%)`,
+          }}
+        />
+      )}
 
       <button
         className={`absolute top-3 right-3 z-20 ${showInfo ? "text-yellow-500" : "text-gray-400"} p-1 rounded-full bg-black/10 hover:bg-black/50 transition`}
