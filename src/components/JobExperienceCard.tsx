@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Info } from "lucide-react";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 interface JobExperienceCardProps {
   title: string;
@@ -31,7 +32,7 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
+  const isMobile = useIsMobile();
 
   // Detect viewport visibility for lazy video loading
   useEffect(() => {
@@ -53,17 +54,12 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
   }, [video, backgroundMedia]);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-      if (window.innerWidth >= 768) setShowInfo(false);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    if (!isMobile) setShowInfo(false);
+  }, [isMobile]);
 
   const handleMouseEnter = () => {
     setVideoLoaded(true);
-    if (video && videoRef.current) videoRef.current.play();
+    if (video && videoRef.current) videoRef.current.play().catch(() => {});
   };
 
   const handleMouseLeave = () => {
@@ -152,25 +148,45 @@ const JobExperienceCard: React.FC<JobExperienceCardProps> = ({
               {title} — {duration}
             </p>
 
+            {/* Always-visible: first 3 tech tags */}
+            <div className="flex flex-wrap gap-1 mt-1.5">
+              {tech.slice(0, 3).map((item, index) => (
+                <span
+                  key={index}
+                  className="bg-gray-800/80 text-gray-300 text-[8px] md:text-[10px] font-medium px-2 py-0.5 rounded-full"
+                >
+                  {item}
+                </span>
+              ))}
+              {tech.length > 3 && (
+                <span className="text-gray-400 text-[8px] md:text-[10px] px-1 py-0.5">
+                  +{tech.length - 3} more
+                </span>
+              )}
+            </div>
+
+            {/* Expand on hover/info: description + remaining tags */}
             <div
               className={`overflow-hidden mt-1 transition-all duration-500
                 ${showInfo ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
-                ${!isMobile ? "group-hover:max-h-24 group-hover:opacity-100" : ""}
+                ${!isMobile ? "group-hover:max-h-32 group-hover:opacity-100" : ""}
               `}
             >
               <p className="text-[10px] xs:text-[12px] md:text-sm text-gray-100 transition-opacity duration-300 delay-100">
                 {description}
               </p>
-              <div className="flex flex-wrap gap-1 md:gap-2 mt-2">
-                {tech.map((item, index) => (
-                  <span
-                    key={index}
-                    className="bg-gray-800 text-gray-200 text-[8px] md:text-xs font-medium px-2 py-1 rounded-full"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+              {tech.length > 3 && (
+                <div className="flex flex-wrap gap-1 md:gap-2 mt-2">
+                  {tech.slice(3).map((item, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-800 text-gray-200 text-[8px] md:text-xs font-medium px-2 py-1 rounded-full"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

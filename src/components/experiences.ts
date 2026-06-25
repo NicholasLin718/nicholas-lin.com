@@ -1,3 +1,16 @@
+export interface Experience {
+  title: string;
+  company: string;
+  duration: string;
+  description: string;
+  tech: string[];
+  logo?: string;
+  previewImage?: string;
+  backgroundMedia?: string;
+  video?: boolean;
+  url?: string;
+}
+
 import skydioLogo from '../images/logos/skydio.png';
 import waabiLogo from '../images/logos/waabi.png';
 import verdantLogo from '../images/logos/verdant.png';
@@ -12,7 +25,7 @@ import verdantPreview from '../images/banners/verdant-preview.jpg';
 import lcboPreview from '../images/banners/lcbo-preview.jpg';
 import piPreview from '../images/banners/pi-preview.png';
 
-export const Experiences = [
+export const Experiences: Experience[] = [
   {
     title: 'Software Engineer Intern',
     company: 'Skydio',

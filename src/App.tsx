@@ -63,7 +63,7 @@ function App() {
 
 
   return (
-    <div className="min-h-screen bg-yellow-50 py-16 px-4 relative">
+    <div className="min-h-screen py-16 px-4 relative" style={{ background: 'radial-gradient(ellipse at top, #fffff5 0%, #fefce8 60%)' }}>
       <AnimatePresence mode="wait">
         {loading ? (
           <motion.div
@@ -84,15 +84,26 @@ function App() {
             transition={{ duration: 0.6 }}
           >
             <Intro />
+            <motion.div
+              className="max-w-4xl mx-auto mb-6 flex items-center gap-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 whitespace-nowrap">
+                Experience
+              </h2>
+              <div className="flex-1 h-px bg-gray-200" />
+            </motion.div>
             <motion.main
               className="max-w-4xl mx-auto mt-8 relative z-10"
               variants={containerVariants}
               initial="hidden"
               animate="show"
             >
-              {Experiences.map((exp, i) => (
+              {Experiences.map((exp) => (
                 <motion.div
-                  key={i}
+                  key={exp.company}
                   variants={itemVariants}
                   className="mb-8"
                   whileHover={{ scale: 1.02 }}

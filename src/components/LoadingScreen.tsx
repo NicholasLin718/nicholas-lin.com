@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const LoadingScreen: React.FC = () => (
-  <div className="fixed inset-0 bg-gradient-to-br from-blue-50 via-white to-yellow-100 flex items-center justify-center z-50">
+  <div className="fixed inset-0 bg-yellow-50 flex items-center justify-center z-50">
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}

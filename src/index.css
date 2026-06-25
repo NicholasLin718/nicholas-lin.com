@@ -2,19 +2,6 @@
 
 @tailwind utilities;
 
-.body {
-    background-color: #fefce8;
-}
-
-@layer utilities {
-  .animate-ping-short {
-    animation: ping-short 0.5s cubic-bezier(0, 0, 0.2, 1);
-  }
-  @keyframes ping-short {
-    75%,
-    100% {
-      transform: scale(1.5);
-      opacity: 0;
-    }
-  }
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
