@@ -40,14 +40,11 @@ function SkillChip({ skill }: { skill: SkillLogo }) {
 
   return (
     <div
-      className="flex items-center gap-2 px-3 py-2 rounded-full border backdrop-blur-sm select-none shrink-0 transition-all duration-200 cursor-default"
+      className="flex items-center gap-2 px-3 py-2 rounded-full border backdrop-blur-sm select-none shrink-0 transition-all duration-200 cursor-default bg-amber-50/80 dark:bg-gray-800/75"
       style={{
-        background: hovered
-          ? "rgba(251,191,36,0.10)"
-          : "rgba(255,255,255,0.06)",
         borderColor: hovered
-          ? "rgba(251,191,36,0.45)"
-          : "rgba(156,163,175,0.25)",
+          ? "rgba(251,191,36,0.55)"
+          : "rgba(156,163,175,0.2)",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
