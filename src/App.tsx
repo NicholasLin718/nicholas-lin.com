@@ -7,6 +7,7 @@ import Intro from "./components/Intro";
 import LoadingScreen from "./components/LoadingScreen";
 import CursorTrail from "./components/CursorTrail";
 import KonamiEasterEgg from "./components/KonamiEasterEgg";
+import SkillsMarquee from "./components/SkillsMarquee";
 import { Experiences } from "./components/experiences";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 
@@ -113,6 +114,7 @@ function App() {
             transition={{ duration: 0.6 }}
           >
             <Intro />
+            <SkillsMarquee />
             <motion.div
               className="max-w-4xl mx-auto mb-6 flex items-center gap-4"
               initial={{ opacity: 0, y: 10 }}
