@@ -32,7 +32,7 @@ const itemVariants: Variants = {
 function App() {
   const [loading, setLoading] = useState(true);
   const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark');
-  const konamiTriggered = useKonamiCode();
+  const { triggered: konamiTriggered, origin: konamiOrigin } = useKonamiCode();
 
   const toggleTheme = () => {
     setIsDark(prev => {
@@ -81,7 +81,7 @@ function App() {
       }}
     >
       <CursorTrail />
-      <KonamiEasterEgg active={konamiTriggered} />
+      <KonamiEasterEgg active={konamiTriggered} origin={konamiOrigin} />
       <button
         onClick={toggleTheme}
         className="fixed top-4 right-4 z-50 p-2 rounded-full bg-white/80 dark:bg-gray-800/80 shadow text-gray-500 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-400 backdrop-blur-sm transition-all duration-200"
