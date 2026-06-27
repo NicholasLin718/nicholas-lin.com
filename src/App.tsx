@@ -6,7 +6,9 @@ import JobExperienceCard from "./components/JobExperienceCard";
 import Intro from "./components/Intro";
 import LoadingScreen from "./components/LoadingScreen";
 import CursorTrail from "./components/CursorTrail";
+import KonamiEasterEgg from "./components/KonamiEasterEgg";
 import { Experiences } from "./components/experiences";
+import { useKonamiCode } from "./hooks/useKonamiCode";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,6 +30,7 @@ const itemVariants: Variants = {
 function App() {
   const [loading, setLoading] = useState(true);
   const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark');
+  const konamiTriggered = useKonamiCode();
 
   const toggleTheme = () => {
     setIsDark(prev => {
@@ -82,6 +85,7 @@ function App() {
       }}
     >
       <CursorTrail />
+      <KonamiEasterEgg active={konamiTriggered} />
       <button
         onClick={toggleTheme}
         className="fixed top-4 right-4 z-50 p-2 rounded-full bg-white/80 dark:bg-gray-800/80 shadow text-gray-500 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-400 backdrop-blur-sm transition-all duration-200"
