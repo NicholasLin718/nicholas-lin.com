@@ -5,52 +5,56 @@ import { Skills, CategoryColors, type Skill, type SkillCategory } from "./skills
 const W = 800;
 const H = 340;
 const STAR_R = 4;
+const SPREAD = 80; // radius of the ring each cluster's stars sit on
 
-// Deterministic position from skill name so stars don't jump on re-render.
-// Category clusters: Frontend top-left, Backend top-right, Languages bottom-left, Infra bottom-right
 const CLUSTER_CENTERS: Record<SkillCategory, [number, number]> = {
-  Frontend:  [W * 0.25, H * 0.35],
-  Backend:   [W * 0.72, H * 0.35],
-  Languages: [W * 0.28, H * 0.72],
-  Infra:     [W * 0.70, H * 0.70],
+  Frontend:  [W * 0.25, H * 0.38],
+  Backend:   [W * 0.72, H * 0.38],
+  Languages: [W * 0.28, H * 0.74],
+  Infra:     [W * 0.70, H * 0.72],
 };
-const SPREAD = 90;
 
-function hashStr(s: string): number {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
-  return Math.abs(h);
+// Rotate each cluster's ring by a fixed offset so they look distinct
+const CLUSTER_ROTATION: Record<SkillCategory, number> = {
+  Frontend:  15,
+  Backend:   -20,
+  Languages: 40,
+  Infra:     -10,
+};
+
+// Place n stars evenly on a circle of radius SPREAD around the cluster center.
+// Stars are equidistant — no overlap, no randomness.
+function buildCluster(skills: Skill[], category: SkillCategory) {
+  const [cx, cy] = CLUSTER_CENTERS[category];
+  const rotOffset = CLUSTER_ROTATION[category] * (Math.PI / 180);
+  return skills.map((skill, i) => {
+    const angle = rotOffset + (2 * Math.PI * i) / skills.length;
+    return {
+      skill,
+      pos: [cx + Math.cos(angle) * SPREAD, cy + Math.sin(angle) * SPREAD] as [number, number],
+    };
+  });
 }
 
-function starPos(skill: Skill): [number, number] {
-  const h = hashStr(skill.name);
-  const [cx, cy] = CLUSTER_CENTERS[skill.category];
-  const angle = (h % 360) * (Math.PI / 180);
-  const radius = SPREAD * 0.3 + (h % 1000) / 1000 * SPREAD * 0.7;
-  return [cx + Math.cos(angle) * radius, cy + Math.sin(angle) * radius];
-}
+// Group skills by category then build each cluster
+const byCategory = Skills.reduce<Record<string, Skill[]>>((acc, s) => {
+  (acc[s.category] ??= []).push(s);
+  return acc;
+}, {});
 
-const starPositions = Skills.map((s) => ({ skill: s, pos: starPos(s) }));
+const starPositions = (Object.entries(byCategory) as [SkillCategory, Skill[]][])
+  .flatMap(([cat, skills]) => buildCluster(skills, cat));
 
-// Pair stars of the same category for lines
-const lines = useMemoLines();
-function useMemoLines() {
-  const result: Array<{ x1: number; y1: number; x2: number; y2: number; category: SkillCategory }> = [];
-  const byCategory: Record<string, typeof starPositions> = {};
-  for (const sp of starPositions) {
-    const c = sp.skill.category;
-    if (!byCategory[c]) byCategory[c] = [];
-    byCategory[c].push(sp);
-  }
-  for (const [cat, entries] of Object.entries(byCategory)) {
-    for (let i = 0; i < entries.length - 1; i++) {
-      const [x1, y1] = entries[i].pos;
-      const [x2, y2] = entries[i + 1].pos;
-      result.push({ x1, y1, x2, y2, category: cat as SkillCategory });
-    }
-  }
-  return result;
-}
+// Connect adjacent stars within each cluster ring (wrap around to close the shape)
+const lines = (Object.entries(byCategory) as [SkillCategory, Skill[]][]).flatMap(([cat, skills]) => {
+  const cluster = buildCluster(skills, cat);
+  return cluster.map((entry, i) => {
+    const next = cluster[(i + 1) % cluster.length];
+    const [x1, y1] = entry.pos;
+    const [x2, y2] = next.pos;
+    return { x1, y1, x2, y2, category: cat };
+  });
+});
 
 export default function SkillsConstellation() {
   const [hovered, setHovered] = useState<string | null>(null);
