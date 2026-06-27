@@ -6,7 +6,7 @@ import JobExperienceCard from "./components/JobExperienceCard";
 import Intro from "./components/Intro";
 import LoadingScreen from "./components/LoadingScreen";
 import CursorTrail from "./components/CursorTrail";
-import SkillsConstellation from "./components/SkillsConstellation";
+import SkillsMarquee from "./components/SkillsMarquee";
 import { Experiences } from "./components/experiences";
 
 const containerVariants = {
@@ -110,7 +110,7 @@ function App() {
             transition={{ duration: 0.6 }}
           >
             <Intro />
-            <SkillsConstellation />
+            <SkillsMarquee />
             <motion.div
               className="max-w-4xl mx-auto mb-6 flex items-center gap-4"
               initial={{ opacity: 0, y: 10 }}
