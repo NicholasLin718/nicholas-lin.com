@@ -7,6 +7,7 @@ import Intro from "./components/Intro";
 import LoadingScreen from "./components/LoadingScreen";
 import CursorTrail from "./components/CursorTrail";
 import KonamiEasterEgg from "./components/KonamiEasterEgg";
+import MagneticCard from "./components/MagneticCard";
 import { Experiences } from "./components/experiences";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 
@@ -41,7 +42,6 @@ function App() {
   };
 
   useEffect(() => {
-    // Preload preview images
     const imgPromises = Experiences.map((exp) => exp.previewImage)
       .filter(Boolean)
       .map(
@@ -54,7 +54,6 @@ function App() {
           })
       );
 
-    // Preload intro portrait
     const introPhotoPromise = new Promise((res) => {
       const img = new Image();
       img.onload = res;
@@ -62,10 +61,7 @@ function App() {
       img.src = "/forestPortraitZoomed.png";
     });
 
-    // Fallback so app isn’t stuck
-    const fallbackTimer = setTimeout(() => {
-      setLoading(false);
-    }, 5000);
+    const fallbackTimer = setTimeout(() => setLoading(false), 5000);
 
     Promise.all([...imgPromises, introPhotoPromise]).then(() => {
       clearTimeout(fallbackTimer);
@@ -74,7 +70,6 @@ function App() {
 
     return () => clearTimeout(fallbackTimer);
   }, []);
-
 
   return (
     <div
@@ -122,7 +117,14 @@ function App() {
               <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 whitespace-nowrap">
                 Experience
               </h2>
-              <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
+              <motion.div
+                className="flex-1 h-px bg-gray-200 dark:bg-gray-700"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                style={{ originX: 0 }}
+                viewport={{ once: true }}
+              />
             </motion.div>
             <motion.main
               className="max-w-4xl mx-auto mt-8 relative z-10"
@@ -131,15 +133,10 @@ function App() {
               animate="show"
             >
               {Experiences.map((exp) => (
-                <motion.div
-                  key={exp.company}
-                  variants={itemVariants}
-                  className="mb-8"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                >
-                  <JobExperienceCard {...exp} />
+                <motion.div key={exp.company} variants={itemVariants} className="mb-8">
+                  <MagneticCard>
+                    <JobExperienceCard {...exp} />
+                  </MagneticCard>
                 </motion.div>
               ))}
             </motion.main>

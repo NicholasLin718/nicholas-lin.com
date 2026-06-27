@@ -1,18 +1,13 @@
 import React from 'react';
-import { motion, type Variants, useMotionValue, useTransform, useSpring } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { Mail, Github, Linkedin } from 'lucide-react';
+import { useScrambleText } from '../hooks/useScrambleText';
 
-const nameContainerVariants: Variants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.04, delayChildren: 0.3 } },
-};
-
-const letterVariants: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut' } },
-};
+const springBounce = { type: "spring" as const, stiffness: 400, damping: 15 };
 
 const Intro: React.FC = () => {
+  const scrambledName = useScrambleText("Nicholas Lin", 300);
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [10, -10]), { stiffness: 300, damping: 30 });
@@ -52,25 +47,18 @@ const Intro: React.FC = () => {
         style={{ rotateX, rotateY }}
       />
     </motion.div>
-    <motion.h1
-      className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-gray-100"
-      variants={nameContainerVariants}
-      initial="hidden"
-      animate="show"
-    >
-      {"Nicholas Lin".split("").map((char, i) => (
-        <motion.span key={i} variants={letterVariants} style={{ display: 'inline-block' }}>
-          {char === " " ? "\u00A0" : char}
-        </motion.span>
-      ))}
-    </motion.h1>
+
+    <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-gray-100 font-mono tracking-tight">
+      {scrambledName}
+    </h1>
+
     <motion.p
       className="text-gray-700 dark:text-gray-300 mt-5 text-lg max-w-4xl mx-auto font-medium leading-relaxed"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      I'm a recent Software Engineering graduate from the University of Waterloo. From designing frontend tools to scaling backend systems, I enjoy building software that puts users first 🫂 
+      I'm a recent Software Engineering graduate from the University of Waterloo. From designing frontend tools to scaling backend systems, I enjoy building software that puts users first 🫂
     </motion.p>
 
     <motion.p
@@ -110,33 +98,24 @@ const Intro: React.FC = () => {
       transition={{ delay: 0.7 }}
       className="flex justify-center gap-6 mt-6 text-gray-500 dark:text-gray-400"
     >
-      <a
-        href="mailto:n39lin@uwaterloo.ca"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-yellow-500 transition-colors"
-        aria-label="Email"
-      >
-        <Mail size={22} />
-      </a>
-      <a
-        href="https://github.com/NicholasLin718"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-yellow-500 transition-colors"
-        aria-label="GitHub"
-      >
-        <Github size={22} />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/nicholaslin718/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-yellow-500 transition-colors"
-        aria-label="LinkedIn"
-      >
-        <Linkedin size={22} />
-      </a>
+      {[
+        { href: "mailto:n39lin@uwaterloo.ca", label: "Email", icon: <Mail size={22} /> },
+        { href: "https://github.com/NicholasLin718", label: "GitHub", icon: <Github size={22} /> },
+        { href: "https://www.linkedin.com/in/nicholaslin718/", label: "LinkedIn", icon: <Linkedin size={22} /> },
+      ].map(({ href, label, icon }) => (
+        <motion.a
+          key={label}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={label}
+          className="hover:text-yellow-500 transition-colors"
+          whileHover={{ y: -4, transition: springBounce }}
+          whileTap={{ y: 0 }}
+        >
+          {icon}
+        </motion.a>
+      ))}
     </motion.div>
   </motion.section>
   );
