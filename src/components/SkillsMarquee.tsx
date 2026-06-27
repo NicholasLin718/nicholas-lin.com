@@ -44,7 +44,7 @@ function SkillChip({ skill }: { skill: SkillLogo }) {
       style={{
         borderColor: hovered
           ? "rgba(251,191,36,0.55)"
-          : "rgba(156,163,175,0.2)",
+          : "rgba(156,163,175,0.4)",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -59,7 +59,7 @@ function SkillChip({ skill }: { skill: SkillLogo }) {
         onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
       />
       <span
-        className="text-xs font-medium whitespace-nowrap transition-colors duration-200"
+        className="text-xs font-medium whitespace-nowrap transition-colors duration-200 text-gray-700 dark:text-gray-200"
         style={{ color: hovered ? "#facc15" : undefined }}
       >
         {skill.name}
