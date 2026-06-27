@@ -35,9 +35,44 @@ const ROW_2: SkillLogo[] = [
   { name: "Datadog",        slug: "datadog" },
 ];
 
+function SkillChip({ skill }: { skill: SkillLogo }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      className="flex items-center gap-2 px-3 py-2 rounded-full border backdrop-blur-sm select-none shrink-0 transition-all duration-200 cursor-default"
+      style={{
+        background: hovered
+          ? "rgba(251,191,36,0.10)"
+          : "rgba(255,255,255,0.06)",
+        borderColor: hovered
+          ? "rgba(251,191,36,0.45)"
+          : "rgba(156,163,175,0.25)",
+      }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <img
+        src={`https://cdn.simpleicons.org/${skill.slug}`}
+        alt={skill.name}
+        width={16}
+        height={16}
+        className="dark:invert dark:brightness-75"
+        style={{ minWidth: 16, opacity: hovered ? 1 : 0.7, transition: "opacity 0.2s" }}
+        onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+      />
+      <span
+        className="text-xs font-medium whitespace-nowrap transition-colors duration-200"
+        style={{ color: hovered ? "#facc15" : undefined }}
+      >
+        {skill.name}
+      </span>
+    </div>
+  );
+}
+
 function MarqueeRow({ skills, reverse }: { skills: SkillLogo[]; reverse?: boolean }) {
   const [paused, setPaused] = useState(false);
-  // Duplicate items for seamless infinite loop
   const items = [...skills, ...skills];
 
   return (
@@ -47,30 +82,14 @@ function MarqueeRow({ skills, reverse }: { skills: SkillLogo[]; reverse?: boolea
       onMouseLeave={() => setPaused(false)}
     >
       <div
-        className="flex gap-3 w-max"
+        className="flex gap-2 w-max"
         style={{
-          animation: `${reverse ? "marquee-right" : "marquee-left"} 28s linear infinite`,
+          animation: `${reverse ? "marquee-right" : "marquee-left"} 32s linear infinite`,
           animationPlayState: paused ? "paused" : "running",
         }}
       >
         {items.map((skill, i) => (
-          <div
-            key={`${skill.slug}-${i}`}
-            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/60 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 backdrop-blur-sm select-none shrink-0"
-          >
-            <img
-              src={`https://cdn.simpleicons.org/${skill.slug}`}
-              alt={skill.name}
-              width={18}
-              height={18}
-              className="dark:invert dark:brightness-90"
-              style={{ minWidth: 18 }}
-              onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-            />
-            <span className="text-xs font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
-              {skill.name}
-            </span>
-          </div>
+          <SkillChip key={`${skill.slug}-${i}`} skill={skill} />
         ))}
       </div>
     </div>
@@ -86,7 +105,7 @@ export default function SkillsMarquee() {
         </h2>
         <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
       </div>
-      <div className="flex flex-col gap-3 overflow-hidden rounded-xl">
+      <div className="flex flex-col gap-3">
         <MarqueeRow skills={ROW_1} />
         <MarqueeRow skills={ROW_2} reverse />
       </div>
